@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дом у реки — Макеты лендингов для согласования</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #06090e radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 80, 70, 0.35), transparent 70%);
+      color: #e5edf5;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      min-height: 100vh;
+      padding: 48px 24px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header {
+      max-width: 860px;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(84, 214, 178, 0.12);
+      border: 1px solid rgba(84, 214, 178, 0.3);
+      color: #54d6b2;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 40%, #a5c2d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #8c9dae;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+      max-width: 1140px;
+      width: 100%;
+    }
+    .card {
+      background: rgba(14, 20, 29, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(16px);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(84, 214, 178, 0.4);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(84, 214, 178, 0.1);
+    }
+    .card-num {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #54d6b2;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .card-desc {
+      font-size: 14px;
+      color: #9ab0c4;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1b3834, #122825);
+      border: 1px solid rgba(84, 214, 178, 0.35);
+      color: #54d6b2;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .card-btn:hover {
+      background: #54d6b2;
+      color: #06110f;
+      border-color: #54d6b2;
+      box-shadow: 0 4px 16px rgba(84, 214, 178, 0.3);
+    }
+    .card-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .featured {
+      border-color: rgba(84, 214, 178, 0.3);
+      background: linear-gradient(135deg, rgba(16, 32, 38, 0.8), rgba(12, 22, 28, 0.8));
+    }
+    .tag {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(84, 214, 178, 0.15);
+      color: #54d6b2;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 13px;
+      color: #54687a;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">Согласование макетов</div>
+    <h1>Дом у реки — Все 7 вариантов лендинга</h1>
+    <p class="subtitle">Интерактивные макеты барнхауса на берегу реки Слогавка.<br>Выберите макет для просмотра в полноэкранном режиме.</p>
+  </div>
+
+  <div class="grid">
+    <!-- 1. Лендинг 1 -->
+    <div class="card">
+      <div class="card-num">Вариант 01</div>
+      <h2 class="card-title">Лендинг 1 (Gemini 1)</h2>
+      <p class="card-desc">Концепция «Timeless Village»: природный стиль, тёплые песочные акценты, видео первого экрана и галерея уюта.</p>
+      <a href="landing-1.html" class="card-btn" target="_blank">
+        Открыть макет
+        <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+      </a>
+    </div>
+
+    <!-- 2. Лендинг 2 -->
+    <div class="card">
+      <div class="card-num">Вариант 02</div>
+      <h2 class="card-title">Лендинг 2 Gemini</h2>
+      <p class="card-desc">Концепция «Panorama Glass Lodge»: панорамные виды, стеклянный барнхаус, глубокие изумрудные тона и полный набор 18 фото.</p>
+      <a href="landing-2.html" class="card-btn" target="_blank">
+        Открыть макет
+        <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+      </a>
+    </div>
+
+    <!-- 3. Лендинг 3 (Финальный с сиянием) -->
+    <div class="card featured">
+      <div class="tag">Свежий / Доработанный</div>
+      <div class="card-num">Вариант 03</div>
+      <h2 class="card-title">Лендинг 3 Gemini</h2>
+      <p class="card-desc">Атмосферный скандинавский прототип: видео-херо, северное сияние, закатные облака, компас Вегвизир, созвездия и звёздное небо.</p>
+      <a href="landing-3.html" class="card-btn" target="_blank">
+        Открыть макет
+        <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+      </a>
+    </div>
+
+    <!-- 4. Лендинг 4 — белая тема -->
+    <div class="card">
+      <div class="card-num">Вариант 04</div>
+      <h2 class="card-title">Лендинг 4 (Белая тема)</h2>
+      <p class="card-desc">Светлый премиальный дизайн от Gemini 4: чистые линии, светлый фон, минималистичные карточки и воздушный интерфейс.</p>
+      <a href="landing-4-light.html" class="card-btn" target="_blank">
+        Открыть макет
+        <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+      </a>
+    </div>
+
+    <!-- 5. Лендинг 4 — тёмная тема -->
+    <div class="card">
+      <div class="card-num">Вариант 05</div>
+      <h2 class="card-title">Лендинг 4 (Тёмная тема)</h2>
+      <p class="card-desc">Неоновый тёмный стиль Gemini 4: глубокий тёмный фон, неоновые акценты и свежие градиентные кнопки.</p>
+      <a href="landing-4-dark.html" class="card-btn" target="_blank">
+        Открыть макет
+        <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+      </a>
+    </div>
+
+    <!-- 6. Кодекс 1 -->
+    <div class="card">
+      <div class="card-num">Вариант 06</div>
+      <h2 class="card-title">Кодекс</h2>
+      <p class="card-desc">Базовый вариант от Кодекса: структурированная сетка блоков, сезонные сценарии, праздничные детали и техническая база.</p>
+      <a href="landing-codex.html" class="card-btn" target="_blank">
+        Открыть макет
+        <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+      </a>
+    </div>
+
+    <!-- 7. Кодекс + Gemini -->
+    <div class="card">
+      <div class="card-num">Вариант 07</div>
+      <h2 class="card-title">Кодекс + Gemini</h2>
+      <p class="card-desc">Гибридная интерактивная версия: мощная семантическая структура от Кодекса с дизайнерским интерактивом от Gemini.</p>
+      <a href="landing-codex-gemini.html" class="card-btn" target="_blank">
+        Открыть макет
+        <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Проект «Дом у реки» · река Слогавка · Опубликовано на GitHub Pages</p>
+  </footer>
+</body>
+</html>

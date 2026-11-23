@@ -1,0 +1,2771 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дом у реки — Снять барнхаус посуточно на берегу реки Слогавка</title>
+  <meta name="description" content="Снять Дом у реки посуточно: современный барнхаус 65,9 м² с панорамными окнами на уединённом участке 15 соток в 60 км от Москвы по Носовихинскому шоссе." />
+
+  <!-- Google Fonts: Forum / Cormorant Garamond (editorial display) + Manrope (clean UI & body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Forum&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            olive: '#545A42',
+            oliveLight: '#646B50',
+            olivePill: '#636A4F',
+            oliveHover: '#6A7156',
+            oliveStroke: '#7A8263',
+            espresso: '#25231C',
+            espressoCard: '#2A2820',
+            espressoDeep: '#1E1C16',
+            borderWarm: '#3E3C32',
+            cream: '#F4F1EA',
+            creamSoft: '#C7C1B5',
+            beigeTitle: '#B5AEA0',
+          },
+          fontFamily: {
+            display: ['"Forum"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* =========================================================================
+     * CORE THEME & SCROLLBAR
+     * ========================================================================= */
+    html, body {
+      background-color: #25231C;
+      color: #F4F1EA;
+      font-family: 'Manrope', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Custom subtle dark scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #1E1C16; }
+    ::-webkit-scrollbar-thumb { background: #545A42; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6A7156; }
+
+    /* Native date picker dark color scheme */
+    input[type="date"] {
+      color-scheme: dark;
+    }
+
+    /* Editorial large headings matching Timeless Village */
+    .tv-hero-title {
+      font-family: 'Forum', 'Cormorant Garamond', serif;
+      font-size: clamp(2.75rem, 6.8vw, 5.4rem);
+      line-height: 1.02;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .tv-section-title {
+      font-family: 'Forum', 'Cormorant Garamond', serif;
+      font-size: clamp(2.15rem, 5vw, 4.1rem);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #B5AEA0;
+    }
+
+    /* =========================================================================
+     * SPRINGY HOVER JUMP & SCALE CARDS (Rules, Pricing, "Как добраться?")
+     * ========================================================================= */
+    .spring-card {
+      transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  box-shadow 0.38s ease,
+                  border-color 0.3s ease,
+                  background-color 0.3s ease;
+      will-change: transform;
+    }
+
+    .spring-card:hover {
+      transform: translateY(-9px) scale(1.022);
+      box-shadow: 0 22px 44px -14px rgba(0, 0, 0, 0.55);
+    }
+
+    .spring-card-route {
+      transition: transform 0.44s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  box-shadow 0.4s ease,
+                  background-color 0.3s ease;
+      will-change: transform;
+    }
+
+    .spring-card-route:hover {
+      transform: translateY(-11px) scale(1.025);
+      background-color: #5D6449;
+      box-shadow: 0 26px 50px -14px rgba(0, 0, 0, 0.6);
+    }
+
+    /* =========================================================================
+     * SEAMLESS NON-STOPPING AUTO-RUNNING MARQUEE CAROUSEL (NEVER PAUSES)
+     * ========================================================================= */
+    .marquee-viewport {
+      width: 100%;
+      overflow: hidden;
+      background-color: #545A42;
+      padding: 10px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: tvMarqueeRun 58s linear infinite;
+      animation-play-state: running !important;
+      will-change: transform;
+    }
+
+    /* Explicitly keep running even on hover or touch as requested */
+    .marquee-viewport:hover .marquee-track,
+    .marquee-track:hover {
+      animation-play-state: running !important;
+    }
+
+    @keyframes tvMarqueeRun {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    .marquee-set {
+      display: flex;
+      gap: 10px;
+      padding-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .marquee-card {
+      position: relative;
+      width: clamp(235px, 24vw, 370px);
+      aspect-ratio: 3 / 4;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      background-color: #2A2820;
+      cursor: pointer;
+    }
+
+    .marquee-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .marquee-card:hover img {
+      transform: scale(1.04);
+    }
+
+    /* =========================================================================
+     * INTERACTIVE SLIDER TRANSITIONS & SCROLL REVEAL
+     * ========================================================================= */
+    .slider-img-fade {
+      transition: opacity 0.35s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+
+    /* Full-window drag & drop highlight */
+    #pageDropOverlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-espresso text-cream overflow-x-hidden selection:bg-olive selection:text-cream">
+
+  <!-- ======================================================================= -->
+  <!-- 1. STICKY OLIVE HEADER (#545A42) — TIMELESS VILLAGE SIGNATURE BAR       -->
+  <!-- ======================================================================= -->
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 bg-olive/95 backdrop-blur-md border-b border-cream/10 transition-shadow duration-300">
+    <div class="max-w-[1360px] mx-auto px-3 sm:px-6 lg:px-10 h-[66px] sm:h-[72px] flex items-center justify-between gap-3">
+      <!-- Left: Circular Logo Emblem -->
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-cream/35 bg-espressoCard shadow-md shrink-0 group-hover:border-cream/70 transition-colors">
+          <img
+            src="8P1A2821.jpg"
+            data-photo-key="8P1A2821"
+            alt="Логотип Дом у реки"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="leading-tight">
+          <span class="block font-display text-lg sm:text-xl text-cream tracking-wide">Дом у реки</span>
+          <span class="hidden sm:block text-[10px] uppercase tracking-[0.16em] text-cream/75">Слогавка · 60 км</span>
+        </div>
+      </a>
+
+      <!-- Center: Desktop Navigation -->
+      <nav aria-label="Основная навигация" class="hidden lg:flex items-center gap-7 xl:gap-9 text-[15px] font-normal text-cream/95">
+        <a href="#rules" class="hover:text-white hover:opacity-75 transition-opacity py-1">О доме</a>
+        <a href="#spaces" class="hover:text-white hover:opacity-75 transition-opacity py-1">Пространства</a>
+        <a href="#rates" class="hover:text-white hover:opacity-75 transition-opacity py-1">Тарифы</a>
+        <a href="#route" class="hover:text-white hover:opacity-75 transition-opacity py-1">Как добраться</a>
+        <a href="#contacts" class="hover:text-white hover:opacity-75 transition-opacity py-1">Контакты</a>
+      </nav>
+
+      <!-- Right: Phone Icon Square + Dark Espresso CTA + Mobile Hamburger -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a
+          href="tel:+79154575972"
+          aria-label="Позвонить +7 (915) 457-59-72"
+          title="+7 (915) 457-59-72"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-oliveLight hover:bg-oliveHover border border-cream/15 flex items-center justify-center text-cream transition-all hover:scale-105"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          data-scroll-booking
+          class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-xl bg-espresso hover:bg-espressoDeep text-cream text-sm font-medium tracking-wide border border-cream/10 shadow-sm transition-all hover:scale-[1.03]"
+        >
+          Арендовать
+        </button>
+
+        <button
+          id="mobileMenuBtn"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          class="lg:hidden w-10 h-10 rounded-xl bg-espresso/90 text-cream border border-cream/15 flex items-center justify-center hover:bg-espressoDeep transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileDrawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
+    <div id="mobileDrawerBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
+    <aside id="mobileDrawerPanel" class="absolute top-0 right-0 h-full w-full max-w-[300px] bg-espresso text-cream border-l border-borderWarm p-6 flex flex-col justify-between translate-x-full transition-transform duration-300">
+      <div>
+        <div class="flex items-center justify-between pb-5 border-b border-borderWarm">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-full overflow-hidden border border-cream/30">
+              <img src="8P1A2821.jpg" data-photo-key="8P1A2821" alt="Дом у реки" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-display text-xl text-cream">Дом у реки</span>
+          </div>
+          <button id="mobileMenuClose" type="button" aria-label="Закрыть меню" class="p-2 text-creamSoft hover:text-cream">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mt-4 flex flex-col">
+          <a href="#rules" class="mobile-nav-link py-3.5 text-sm text-cream/90 hover:text-white border-b border-borderWarm/70">О доме и правила</a>
+          <a href="#spaces" class="mobile-nav-link py-3.5 text-sm text-cream/90 hover:text-white border-b border-borderWarm/70">Пространства и удобства</a>
+          <a href="#marquee" class="mobile-nav-link py-3.5 text-sm text-cream/90 hover:text-white border-b border-borderWarm/70">Фотолента</a>
+          <a href="#rates" class="mobile-nav-link py-3.5 text-sm text-cream/90 hover:text-white border-b border-borderWarm/70">Тарифы и Новый год</a>
+          <a href="#route" class="mobile-nav-link py-3.5 text-sm text-cream/90 hover:text-white border-b border-borderWarm/70">Как добраться</a>
+          <a href="#contacts" class="mobile-nav-link py-3.5 text-sm text-cream/90 hover:text-white">Контакты</a>
+        </nav>
+      </div>
+
+      <div class="pt-5 border-t border-borderWarm space-y-3">
+        <a href="tel:+79154575972" class="block text-base font-medium text-cream hover:text-beigeTitle">+7 (915) 457-59-72</a>
+        <a href="mailto:domyreki@inbox.ru" class="block text-xs text-creamSoft hover:text-cream">domyreki@inbox.ru</a>
+        <button
+          type="button"
+          data-open-booking
+          class="w-full py-3.5 rounded-xl bg-olive hover:bg-oliveHover text-cream text-sm font-medium transition-colors"
+        >
+          Арендовать дом
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- 2. FULL-SCREEN VIDEO HERO + HORIZONTAL BOOKING CALCULATOR BAR           -->
+  <!-- ======================================================================= -->
+  <section id="hero" class="relative min-h-[100svh] pt-[84px] pb-12 sm:pb-16 flex flex-col justify-center overflow-hidden bg-espressoDeep">
+    <!-- Fallback Scenic Image Behind Video -->
+    <img
+      id="heroFallbackImg"
+      src="8P1A2821.jpg"
+      data-photo-key="8P1A2821"
+      alt="Дом у реки — современный барнхаус на берегу реки Слогавка"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+
+    <!-- Primary Full-Bleed Background Video (hero-video.mp4) -->
+    <video
+      id="heroVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="8P1A2821.jpg"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700"
+    >
+      <source src="hero-video.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Warm Deep Charcoal Gradient Scrim for Effortless Legibility -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      style="background: linear-gradient(180deg, rgba(24,23,18,0.52) 0%, rgba(28,27,21,0.44) 48%, rgba(30,29,22,0.78) 100%);"
+    ></div>
+
+    <!-- Centered Hero Content + Booking Bar -->
+    <div class="relative z-10 max-w-[1140px] w-full mx-auto px-4 sm:px-6 lg:px-8 text-center my-auto py-8 sm:py-12">
+      <h1 class="tv-hero-title text-cream drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]">
+        Дом у реки
+      </h1>
+
+      <p class="mt-3 sm:mt-4 text-lg sm:text-2xl md:text-[26px] font-semibold text-cream/95 leading-snug max-w-2xl mx-auto drop-shadow-sm">
+        Снять современный барнхаус посуточно в&nbsp;60&nbsp;км от&nbsp;Москвы
+      </p>
+
+      <p class="mt-4 sm:mt-5 text-xs sm:text-sm md:text-[15px] text-cream/85 font-light leading-relaxed max-w-2xl mx-auto">
+        Современный дом с&nbsp;панорамными окнами в&nbsp;популярном стиле барнхаус (65,9&nbsp;м² на&nbsp;участке 15&nbsp;соток) в&nbsp;уединённом месте на&nbsp;живописном берегу реки Слогавка. Носовихинское шоссе, дом 2023&nbsp;года постройки с&nbsp;новой мебелью и&nbsp;техникой&nbsp;&mdash; для комфортного отдыха до&nbsp;4&nbsp;гостей вдали от&nbsp;городской суеты.
+      </p>
+
+      <!-- Horizontal Dark Espresso Booking & Live Calculator Bar (Timeless Village Bnovo Style) -->
+      <div id="bookingBar" class="mt-8 sm:mt-10 max-w-[960px] mx-auto bg-espresso/95 backdrop-blur-md border border-cream/20 rounded-2xl p-3.5 sm:p-4 shadow-[0_24px_60px_rgba(0,0,0,0.55)] text-left">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 sm:gap-3 items-stretch">
+          <!-- Check-in -->
+          <div class="md:col-span-3 relative">
+            <label for="calcCheckin" class="block text-[11px] text-creamSoft px-3 pt-2 leading-none">Заезд (с 16:00)</label>
+            <input
+              type="date"
+              id="calcCheckin"
+              class="w-full bg-espressoDeep/90 border border-borderWarm hover:border-oliveLight focus:border-oliveLight rounded-xl px-3 pt-5 pb-2.5 -mt-4 text-sm text-cream font-medium focus:outline-none transition-colors cursor-pointer"
+            />
+          </div>
+
+          <!-- Check-out -->
+          <div class="md:col-span-3 relative">
+            <label for="calcCheckout" class="block text-[11px] text-creamSoft px-3 pt-2 leading-none">Выезд (до 12:00)</label>
+            <input
+              type="date"
+              id="calcCheckout"
+              class="w-full bg-espressoDeep/90 border border-borderWarm hover:border-oliveLight focus:border-oliveLight rounded-xl px-3 pt-5 pb-2.5 -mt-4 text-sm text-cream font-medium focus:outline-none transition-colors cursor-pointer"
+            />
+          </div>
+
+          <!-- Guests Interactive Dropdown Popover -->
+          <div class="md:col-span-3 relative" id="guestsDropdownWrap">
+            <button
+              type="button"
+              id="guestsDropdownBtn"
+              aria-expanded="false"
+              class="w-full h-full min-h-[54px] bg-espressoDeep/90 border border-borderWarm hover:border-oliveLight rounded-xl px-3.5 py-2 text-left flex items-center justify-between gap-2 transition-colors"
+            >
+              <div class="min-w-0">
+                <span class="block text-[11px] text-creamSoft leading-none mb-1">Количество гостей</span>
+                <span id="guestsSummaryLabel" class="block text-sm text-cream font-medium truncate">2 взрослых</span>
+              </div>
+              <svg id="guestsChevron" class="w-4 h-4 text-creamSoft shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Panel -->
+            <div id="guestsPopover" class="hidden absolute left-0 right-0 sm:w-[290px] top-[calc(100%+8px)] z-30 bg-espressoCard border border-oliveLight/60 rounded-xl p-4 shadow-2xl space-y-3.5">
+              <!-- Adults -->
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-sm font-medium text-cream">Взрослые</p>
+                  <p class="text-[11px] text-creamSoft">База 2 чел., доп. +1 000 ₽/сут</p>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <button type="button" data-calc-step="adults" data-delta="-1" aria-label="Уменьшить число взрослых" class="w-8 h-8 rounded-lg bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream flex items-center justify-center">&minus;</button>
+                  <span id="calcAdultsVal" class="w-5 text-center text-sm font-semibold text-cream">2</span>
+                  <button type="button" data-calc-step="adults" data-delta="1" aria-label="Увеличить число взрослых" class="w-8 h-8 rounded-lg bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream flex items-center justify-center">+</button>
+                </div>
+              </div>
+
+              <!-- Children under 12 -->
+              <div class="flex items-center justify-between gap-3 pt-2.5 border-t border-borderWarm/70">
+                <div>
+                  <p class="text-sm font-medium text-cream">Дети до 12 лет</p>
+                  <p class="text-[11px] text-beigeTitle">Проживают бесплатно</p>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <button type="button" data-calc-step="children" data-delta="-1" aria-label="Уменьшить число детей" class="w-8 h-8 rounded-lg bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream flex items-center justify-center">&minus;</button>
+                  <span id="calcChildrenVal" class="w-5 text-center text-sm font-semibold text-cream">0</span>
+                  <button type="button" data-calc-step="children" data-delta="1" aria-label="Увеличить число детей" class="w-8 h-8 rounded-lg bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream flex items-center justify-center">+</button>
+                </div>
+              </div>
+
+              <!-- Day guests -->
+              <div class="flex items-center justify-between gap-3 pt-2.5 border-t border-borderWarm/70">
+                <div>
+                  <p class="text-sm font-medium text-cream">Без ночёвки</p>
+                  <p class="text-[11px] text-creamSoft">+500 ₽ / человек</p>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <button type="button" data-calc-step="dayguests" data-delta="-1" aria-label="Уменьшить число гостей без ночёвки" class="w-8 h-8 rounded-lg bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream flex items-center justify-center">&minus;</button>
+                  <span id="calcDayguestsVal" class="w-5 text-center text-sm font-semibold text-cream">0</span>
+                  <button type="button" data-calc-step="dayguests" data-delta="1" aria-label="Увеличить число гостей без ночёвки" class="w-8 h-8 rounded-lg bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream flex items-center justify-center">+</button>
+                </div>
+              </div>
+
+              <button type="button" id="guestsDoneBtn" class="w-full py-2 rounded-lg bg-olive hover:bg-oliveHover text-xs font-medium text-cream transition-colors">
+                Готово
+              </button>
+            </div>
+          </div>
+
+          <!-- Olive Submit Button -->
+          <div class="md:col-span-3">
+            <button
+              type="button"
+              id="heroCalcSubmitBtn"
+              class="w-full h-full min-h-[54px] px-4 py-3 rounded-xl bg-olive hover:bg-oliveHover text-cream text-sm font-medium tracking-wide transition-all hover:scale-[1.02] active:scale-[0.99] shadow-md"
+            >
+              Рассчитать и забронировать
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Calculation Summary Strip Inside Booking Bar -->
+        <div class="mt-3 pt-3 border-t border-cream/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+          <div id="heroCalcBreakdown" class="text-creamSoft leading-relaxed"></div>
+          <div class="flex items-center gap-2.5 shrink-0">
+            <span id="heroCalcBadge" class="hidden px-2.5 py-1 rounded-md bg-olive/80 text-cream text-[11px] font-medium"></span>
+            <span class="text-creamSoft">Итого:</span>
+            <span id="heroCalcTotal" class="font-display text-2xl sm:text-[26px] text-cream leading-none">19 800 ₽</span>
+          </div>
+        </div>
+
+        <!-- Friendly 2-night minimum hint -->
+        <p id="calcMinHint" class="hidden mt-2 text-[11px] text-beigeTitle bg-olive/30 border border-oliveLight/40 rounded-lg px-3 py-1.5">
+          Бронирование от 2-х суток — дата выезда автоматически скорректирована на минимальный срок.
+        </p>
+      </div>
+
+      <!-- Quiet Video Toggle (shows automatically when hero-video.mp4 plays) -->
+      <div id="heroVideoControls" class="hidden mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-espresso/75 border border-cream/15 text-[11px] text-creamSoft">
+        <span class="w-2 h-2 rounded-full bg-oliveLight animate-pulse"></span>
+        <span>Видео-обзор дома</span>
+        <span class="opacity-40">|</span>
+        <button id="heroTogglePlay" type="button" class="text-cream hover:underline">Пауза</button>
+        <span class="opacity-40">|</span>
+        <button id="heroToggleMode" type="button" class="text-cream hover:underline">Показать фото</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 3. OLIVE-GREEN BAND WITH 4 DARK ESPRESSO CARDS (SCREENSHOT 1 & 2)       -->
+  <!-- ======================================================================= -->
+  <section id="rules" class="scroll-mt-[72px] bg-olive py-10 sm:py-14 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1320px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <!-- Card 1: No parties -->
+      <article class="spring-card bg-espressoCard rounded-2xl p-6 sm:p-7 border border-cream/5 shadow-lg flex flex-col justify-between min-h-[210px] reveal">
+        <div class="text-oliveStroke mb-6">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="1.35" viewBox="0 0 48 48">
+            <circle cx="24" cy="26" r="12" />
+            <path d="M24 14V6M19 15l-4-4M29 15l4-4M12 26h24M24 14c-3.8 3.5-3.8 20.5 0 24M24 14c3.8 3.5 3.8 20.5 0 24" stroke-linecap="round" />
+            <path d="M9 9l30 30" stroke="#9AA37F" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2 class="text-base sm:text-[17px] font-semibold text-cream leading-snug">
+          Дом не подходит для вечеринок и&nbsp;шумных компаний
+        </h2>
+      </article>
+
+      <!-- Card 2: No smoking & fireworks -->
+      <article class="spring-card bg-espressoCard rounded-2xl p-6 sm:p-7 border border-cream/5 shadow-lg flex flex-col justify-between min-h-[210px] reveal reveal-delay-1">
+        <div class="text-oliveStroke mb-6">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="1.35" viewBox="0 0 48 48">
+            <rect x="8" y="29" width="24" height="6" rx="1.5" />
+            <path d="M26 29v6M36 29v6M36 25c0-4 4-4 4-8 0-3-2-5-4-6" stroke-linecap="round" />
+            <path d="M9 9l30 30" stroke="#9AA37F" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2 class="text-base sm:text-[17px] font-semibold text-cream leading-snug">
+          Курение в&nbsp;доме и&nbsp;фейерверки строго запрещены
+        </h2>
+      </article>
+
+      <!-- Card 3: Minimum 2 nights & check-in/out -->
+      <article class="spring-card bg-espressoCard rounded-2xl p-6 sm:p-7 border border-cream/5 shadow-lg flex flex-col justify-between min-h-[210px] reveal reveal-delay-2">
+        <div class="text-oliveStroke mb-6">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="1.35" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="15" />
+            <path d="M24 15v9l6 4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 6h16" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2 class="text-base sm:text-[17px] font-semibold text-cream leading-snug">
+          Бронирование от&nbsp;2-х суток · Заезд с&nbsp;16:00, выезд до&nbsp;12:00
+        </h2>
+      </article>
+
+      <!-- Card 4: Private 15-sotok plot, forest & river -->
+      <article class="spring-card bg-espressoCard rounded-2xl p-6 sm:p-7 border border-cream/5 shadow-lg flex flex-col justify-between min-h-[210px] reveal reveal-delay-3">
+        <div class="text-oliveStroke mb-6">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="1.35" viewBox="0 0 48 48">
+            <path d="M24 7l-9 12h4.5L13 29h22l-6.5-10H33L24 7z" stroke-linejoin="round" />
+            <path d="M24 29v6" stroke-linecap="round" />
+            <path d="M8 38c3 2 6 2 9 0s6-2 9 0 6 2 9 0 3.5-1 5-1" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2 class="text-base sm:text-[17px] font-semibold text-cream leading-snug">
+          Уединённый участок 15&nbsp;соток · Свой выход в&nbsp;лес и&nbsp;к&nbsp;реке Слогавка
+        </h2>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 4. DARK ESPRESSO HOUSE SHOWCASE BLOCKS (EXACT SCREENSHOT 2 LAYOUT)      -->
+  <!--    Left: Interactive Photo Slider | Right: Title + Olive Pill Badges    -->
+  <!-- ======================================================================= -->
+  <section id="spaces" class="scroll-mt-[72px] bg-espresso py-16 sm:py-24 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1160px] mx-auto space-y-20 sm:space-y-28">
+
+      <!-- =================================================================== -->
+      <!-- SHOWCASE BLOCK 1: ИНТЕРЬЕР И КУХНЯ-ГОСТИНАЯ (5 ФОТО)                -->
+      <!-- =================================================================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start reveal">
+        <!-- Left Interactive Slider -->
+        <div class="lg:col-span-6" data-slider="living">
+          <div class="relative rounded-2xl overflow-hidden bg-espressoCard border border-borderWarm shadow-2xl aspect-[4/4.3] sm:aspect-[4/4.2] group">
+            <img
+              data-slider-img
+              src="8P1A2921.jpg"
+              data-photo-key="8P1A2921"
+              alt="Панорамные окна, гостиная и обеденная зона"
+              class="slider-img-fade w-full h-full object-cover cursor-pointer"
+            />
+
+            <!-- Subtle bottom caption gradient -->
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/75 via-black/30 to-transparent pointer-events-none"></div>
+
+            <!-- Slide Counter Top-Left -->
+            <span data-slider-counter class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-espresso/80 backdrop-blur-sm border border-cream/15 text-xs font-medium text-cream">
+              1 / 5
+            </span>
+
+            <!-- Expand Lightbox Hint Top-Right -->
+            <button type="button" data-slider-zoom aria-label="Открыть фото во весь экран" class="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-espresso/75 hover:bg-olive backdrop-blur-sm border border-cream/15 text-cream flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" />
+              </svg>
+            </button>
+
+            <!-- Prev / Next Arrows -->
+            <button type="button" data-slider-prev aria-label="Предыдущее фото" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-espresso/75 hover:bg-olive text-cream border border-cream/20 flex items-center justify-center transition-all hover:scale-105">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button type="button" data-slider-next aria-label="Следующее фото" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-espresso/75 hover:bg-olive text-cream border border-cream/20 flex items-center justify-center transition-all hover:scale-105">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <!-- Caption & Dots Bottom -->
+            <div class="absolute inset-x-0 bottom-0 p-4 flex flex-col gap-2.5">
+              <p data-slider-caption class="text-xs sm:text-sm text-cream/95 font-medium">Панорамные окна, гостиная и обеденная зона</p>
+              <div data-slider-dots class="flex items-center gap-1.5"></div>
+            </div>
+          </div>
+
+          <!-- Compact Thumbnail Strip Under Slider -->
+          <div data-slider-thumbs class="mt-3 grid grid-cols-5 gap-2"></div>
+        </div>
+
+        <!-- Right Info & Olive Pill Badges -->
+        <div class="lg:col-span-6 space-y-5">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold uppercase tracking-wide text-cream">
+              ДОМ У РЕКИ · БАРНХАУС FL&nbsp;43.2-1
+            </h2>
+            <p class="mt-1 text-base sm:text-lg font-medium uppercase tracking-wide text-cream/90">
+              КУХНЯ-ГОСТИНАЯ, 2&nbsp;СПАЛЬНИ И&nbsp;ТЕРРАСА
+            </p>
+            <p class="mt-2.5 text-xs sm:text-sm uppercase tracking-[0.12em] text-beigeTitle">
+              65,9&nbsp;М² · УЧАСТОК 15&nbsp;СОТОК · КОМФОРТНО ДО&nbsp;4&nbsp;ГОСТЕЙ
+            </p>
+          </div>
+
+          <!-- Olive-Green Highlight Pill Badges with Icons (Screenshot 2 signature) -->
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5L12 3l9 7.5V21H3V10.5z"/></svg>
+              Кухня-гостиная 26,5 м²
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Яндекс ТВ 55"
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+              Яндекс Алиса
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><circle cx="15.5" cy="12" r="2"/></svg>
+              Индукция 2 конфорки
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M9 6h6"/></svg>
+              Посудомойка
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M16 6v12"/></svg>
+              Микроволновка
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14M9 6v2M9 13v3"/></svg>
+              Холодильник
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 3v7a3 3 0 006 0V3M9 10v11M17 3v18M17 3c2 2 2 7 0 9"/></svg>
+              Посуда на 6 персон
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1" fill="currentColor"/><circle cx="15" cy="15" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/><circle cx="9" cy="15" r="1" fill="currentColor"/></svg>
+              Настольные игры
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M12 4v16M3 12h18"/></svg>
+              Панорамные окна
+            </span>
+          </div>
+
+          <!-- Detailed Text (zero omissions) -->
+          <div class="space-y-3 text-sm sm:text-[15px] text-cream/85 font-light leading-relaxed pt-1">
+            <p class="font-medium text-cream">
+              Просторная кухня-гостиная 26,5&nbsp;м² с&nbsp;двумя удобными диванами и&nbsp;обеденной зоной — сердце дома, где свет панорамных окон соединяется с&nbsp;уютом дерева.
+            </p>
+            <p>
+              <strong class="text-cream font-medium">Техника и&nbsp;кухня:</strong> Яндекс телевизор 55", Яндекс колонка с&nbsp;Алисой, холодильник с&nbsp;морозильной камерой, микроволновая печь, индукционная стеклокерамическая варочная панель на&nbsp;2&nbsp;конфорки, посудомоечная машина и&nbsp;вся необходимая кухонная посуда на&nbsp;6&nbsp;персон.
+            </p>
+            <p>
+              <strong class="text-cream font-medium">Дополнительно уже в&nbsp;доме:</strong> чай, кофе, соль, сахар, специи, уксус, мука, масло — а&nbsp;также настольные игры для тёплых семейных вечеров.
+            </p>
+            <p class="text-xs sm:text-sm text-creamSoft pt-1 border-t border-borderWarm/70">
+              Дом построен зимой 2023&nbsp;года компанией <strong class="text-cream font-medium">FL&nbsp;-&nbsp;Haus, проект FL&nbsp;43.2&nbsp;-1</strong>, укомплектован новой мебелью и&nbsp;техникой.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <button
+              type="button"
+              data-open-booking
+              class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-olive hover:bg-oliveHover text-cream text-sm font-medium tracking-wide transition-all hover:scale-[1.03] shadow-lg"
+            >
+              Арендовать
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- SHOWCASE BLOCK 2: СПАЛЬНИ И САНУЗЕЛ (6 ФОТО, БЕЗ ДУБЛЕЙ 2867/2882)  -->
+      <!-- =================================================================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-12 border-t border-borderWarm/60 reveal">
+        <!-- Left Interactive Slider -->
+        <div class="lg:col-span-6" data-slider="bedrooms">
+          <div class="relative rounded-2xl overflow-hidden bg-espressoCard border border-borderWarm shadow-2xl aspect-[4/4.3] sm:aspect-[4/4.2] group">
+            <img
+              data-slider-img
+              src="8P1A2943.jpg"
+              data-photo-key="8P1A2943"
+              alt="Первая спальня 6,1 м² с ортопедическим матрасом 140×200"
+              class="slider-img-fade w-full h-full object-cover cursor-pointer"
+            />
+
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/75 via-black/30 to-transparent pointer-events-none"></div>
+
+            <span data-slider-counter class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-espresso/80 backdrop-blur-sm border border-cream/15 text-xs font-medium text-cream">
+              1 / 6
+            </span>
+
+            <button type="button" data-slider-zoom aria-label="Открыть фото во весь экран" class="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-espresso/75 hover:bg-olive backdrop-blur-sm border border-cream/15 text-cream flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" />
+              </svg>
+            </button>
+
+            <button type="button" data-slider-prev aria-label="Предыдущее фото" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-espresso/75 hover:bg-olive text-cream border border-cream/20 flex items-center justify-center transition-all hover:scale-105">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button type="button" data-slider-next aria-label="Следующее фото" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-espresso/75 hover:bg-olive text-cream border border-cream/20 flex items-center justify-center transition-all hover:scale-105">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <div class="absolute inset-x-0 bottom-0 p-4 flex flex-col gap-2.5">
+              <p data-slider-caption class="text-xs sm:text-sm text-cream/95 font-medium">Первая спальня 6,1 м² с ортопедическим матрасом 140×200</p>
+              <div data-slider-dots class="flex items-center gap-1.5"></div>
+            </div>
+          </div>
+
+          <div data-slider-thumbs class="mt-3 grid grid-cols-6 gap-2"></div>
+        </div>
+
+        <!-- Right Info & Olive Pill Badges -->
+        <div class="lg:col-span-6 space-y-5">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold uppercase tracking-wide text-cream">
+              КОМФОРТНЫЙ СОН И&nbsp;САНУЗЕЛ
+            </h2>
+            <p class="mt-1 text-base sm:text-lg font-medium uppercase tracking-wide text-cream/90">
+              2&nbsp;ИЗОЛИРОВАННЫЕ СПАЛЬНИ И&nbsp;ДУШЕВАЯ
+            </p>
+            <p class="mt-2.5 text-xs sm:text-sm uppercase tracking-[0.12em] text-beigeTitle">
+              СПАЛЬНИ ПО&nbsp;6,1&nbsp;М² · САНУЗЕЛ 4,1&nbsp;М² · ВСЁ ДЛЯ ОТДЫХА
+            </p>
+          </div>
+
+          <!-- Olive Pill Badges -->
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 18v-5a3 3 0 013-3h12a3 3 0 013 3v5M3 15h18M7 10V8a2 2 0 012-2h6a2 2 0 012 2v2"/></svg>
+              2 спальни по 6,1 м²
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"/><path d="M7 7v10M17 7v10"/></svg>
+              Матрасы 140×200
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M7 4v4a5 5 0 0010 0V4M4 20h16"/></svg>
+              Санузел 4,1 м²
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 4h6a5 5 0 015 5v1M12 14v1M15 14v2M18 14v1M13.5 18v1M16.5 18v1"/></svg>
+              Душевая зона
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 3v10m0 0c-3 0-5 2-5 5h10c0-3-2-5-5-5z"/></svg>
+              Гигиенический душ
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 10a5 5 0 015-5h6l4 2v6l-4 2h-4l-2 5H6l2-5a5 5 0 01-4-5z"/></svg>
+              Гостиничный фен
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M6 15h12"/></svg>
+              Набор полотенец
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 4l4 3 4-3 3 4-2 2v10H7V10L5 8l3-4z"/></svg>
+              Халаты и тапочки
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M9 3h6M12 3v3m-3 3h6a2 2 0 012 2v8a2 2 0 01-2 2H9a2 2 0 01-2-2v-8a2 2 0 012-2z"/></svg>
+              Косметика и уход
+            </span>
+          </div>
+
+          <div class="space-y-3 text-sm sm:text-[15px] text-cream/85 font-light leading-relaxed pt-1">
+            <p class="font-medium text-cream">
+              Две уютные изолированные спальни по&nbsp;6,1&nbsp;м² с&nbsp;кроватями и&nbsp;ортопедическими матрасами 140×200&nbsp;см — всё для крепкого загородного сна.
+            </p>
+            <p>
+              <strong class="text-cream font-medium">Санузел 4,1&nbsp;м²</strong> оснащён душевой зоной и&nbsp;туалетом с&nbsp;гигиеническим душем.
+            </p>
+            <p>
+              <strong class="text-cream font-medium">Гостиничная забота:</strong> для вас уже подготовлены гостиничный фен, свежий набор полотенец, уютные халаты и&nbsp;резиновые тапочки.
+            </p>
+            <p>
+              <strong class="text-cream font-medium">Ванные принадлежности включены:</strong> гель для душа, шампунь, кондиционер, мицеллярная вода, ватные диски, ватные палочки и&nbsp;детский крем.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <button
+              type="button"
+              data-scroll-booking
+              class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-olive hover:bg-oliveHover text-cream text-sm font-medium tracking-wide transition-all hover:scale-[1.03] shadow-lg"
+            >
+              Проверить даты
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- SHOWCASE BLOCK 3: ТЕРРАСА, УЧАСТОК И МАНГАЛЬНАЯ ЗОНА (5 ФОТО)       -->
+      <!-- =================================================================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-12 border-t border-borderWarm/60 reveal">
+        <!-- Left Interactive Slider -->
+        <div class="lg:col-span-6" data-slider="territory">
+          <div class="relative rounded-2xl overflow-hidden bg-espressoCard border border-borderWarm shadow-2xl aspect-[4/4.3] sm:aspect-[4/4.2] group">
+            <img
+              data-slider-img
+              src="8P1A2821.jpg"
+              data-photo-key="8P1A2821"
+              alt="Вечерний фасад дома в огнях гирлянд"
+              class="slider-img-fade w-full h-full object-cover cursor-pointer"
+            />
+
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/75 via-black/30 to-transparent pointer-events-none"></div>
+
+            <span data-slider-counter class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-espresso/80 backdrop-blur-sm border border-cream/15 text-xs font-medium text-cream">
+              1 / 5
+            </span>
+
+            <button type="button" data-slider-zoom aria-label="Открыть фото во весь экран" class="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-espresso/75 hover:bg-olive backdrop-blur-sm border border-cream/15 text-cream flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" />
+              </svg>
+            </button>
+
+            <button type="button" data-slider-prev aria-label="Предыдущее фото" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-espresso/75 hover:bg-olive text-cream border border-cream/20 flex items-center justify-center transition-all hover:scale-105">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button type="button" data-slider-next aria-label="Следующее фото" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-espresso/75 hover:bg-olive text-cream border border-cream/20 flex items-center justify-center transition-all hover:scale-105">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <div class="absolute inset-x-0 bottom-0 p-4 flex flex-col gap-2.5">
+              <p data-slider-caption class="text-xs sm:text-sm text-cream/95 font-medium">Вечерний фасад дома в огнях гирлянд</p>
+              <div data-slider-dots class="flex items-center gap-1.5"></div>
+            </div>
+          </div>
+
+          <div data-slider-thumbs class="mt-3 grid grid-cols-5 gap-2"></div>
+        </div>
+
+        <!-- Right Info & Olive Pill Badges -->
+        <div class="lg:col-span-6 space-y-5">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold uppercase tracking-wide text-cream">
+              ТЕРРАСА И&nbsp;УЧАСТОК 15&nbsp;СОТОК
+            </h2>
+            <p class="mt-1 text-base sm:text-lg font-medium uppercase tracking-wide text-cream/90">
+              МАНГАЛЬНАЯ ЗОНА, ЛЕС И&nbsp;РЕКА СЛОГАВКА
+            </p>
+            <p class="mt-2.5 text-xs sm:text-sm uppercase tracking-[0.12em] text-beigeTitle">
+              ОТКРЫТАЯ ТЕРРАСА 23,5&nbsp;М² · ПАРКОВКА НА&nbsp;3&nbsp;АВТО
+            </p>
+          </div>
+
+          <!-- Olive Pill Badges -->
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 10l9-6 9 6M5 10v10M19 10v10M3 20h18"/></svg>
+              Терраса 23,5 м²
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 12h16M7 12v7M17 12v7M8 12V7h8v5"/></svg>
+              Уличная мебель
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2 3 5 5.5 5 9.5a5 5 0 11-10 0c0-2 1-4 2.5-5.5C9.5 9.5 11 10 12 3z"/></svg>
+              Мангальная зона
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Уголь и розжиг в цене
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 20L20 4M14 4h6v6"/></svg>
+              Шампуры
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 17h14v-5l-2-5H7l-2 5v5zM7.5 17v2M16.5 17v2"/></svg>
+              Парковка на 3 авто
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l-5 7h3l-4 6h12l-4-6h3l-5-7zM12 16v5"/></svg>
+              Выход в лес и к реке
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-olivePill text-cream text-xs font-medium">
+              <svg class="w-3.5 h-3.5 opacity-90 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h12l-1 13H7L6 7zM9 7a3 3 0 016 0"/></svg>
+              Доставка ВкусВилл / Пятёрочка
+            </span>
+          </div>
+
+          <div class="space-y-3 text-sm sm:text-[15px] text-cream/85 font-light leading-relaxed pt-1">
+            <p class="font-medium text-cream">
+              На открытой террасе 23,5&nbsp;м² установлен комплект уличной мебели — идеально для утреннего кофе и&nbsp;тихих вечеров на&nbsp;свежем воздухе.
+            </p>
+            <p>
+              <strong class="text-cream font-medium">Мангальная зона под навесом:</strong> шампуры, упаковка угля и&nbsp;жидкость для розжига уже входят в&nbsp;стоимость.
+            </p>
+            <div class="p-3.5 rounded-xl bg-espressoCard border-l-2 border-oliveLight text-xs sm:text-sm text-cream/90">
+              Дорогие гости, решётку для гриля предлагаем привезти с&nbsp;собой&nbsp;😊
+            </div>
+            <p>
+              <strong class="text-cream font-medium">На участке:</strong> удобная парковка на&nbsp;3&nbsp;автомобиля и&nbsp;отдельный выход прямо в&nbsp;лес и&nbsp;к&nbsp;живописному берегу реки Слогавка.
+            </p>
+            <p>
+              <strong class="text-cream font-medium">Удобная доставка:</strong> к&nbsp;дому приезжает доставка продуктов и&nbsp;готовой еды из&nbsp;<strong class="text-cream font-medium">ВкусВилл</strong> и&nbsp;<strong class="text-cream font-medium">Пятёрочки</strong>.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <button
+              type="button"
+              data-open-booking
+              class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-olive hover:bg-oliveHover text-cream text-sm font-medium tracking-wide transition-all hover:scale-[1.03] shadow-lg"
+            >
+              Забронировать отдых
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 5. FULL-WIDTH SEAMLESS AUTO-RUNNING PHOTO MARQUEE (EXACT SCREENSHOT 3)  -->
+  <!--    Runs continuously without pausing on hover; click opens lightbox     -->
+  <!-- ======================================================================= -->
+  <section id="marquee" aria-label="Атмосферная фотолента дома" class="w-full overflow-hidden">
+    <div class="marquee-viewport">
+      <div id="marqueeTrack" class="marquee-track">
+        <!-- Set A & Duplicate Set B populated via JS for zero-seam infinite loop -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 6. PRICING & NEW YEAR SPECIAL SECTION (DARK + OLIVE SPRING CARDS)       -->
+  <!-- ======================================================================= -->
+  <section id="rates" class="scroll-mt-[72px] bg-espresso py-20 sm:py-28 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1160px] mx-auto">
+      <div class="text-center mb-12 sm:mb-14 reveal">
+        <h2 class="tv-section-title">СТОИМОСТЬ АРЕНДЫ</h2>
+        <p class="mt-3 text-sm sm:text-base text-creamSoft font-light">
+          Базовая стоимость указана за&nbsp;2&nbsp;гостей · Бронирование от&nbsp;2-х суток
+        </p>
+      </div>
+
+      <!-- 3 Main Rate Cards with Springy Hover Lift & Scale -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+        <!-- Mon-Thu -->
+        <div class="spring-card bg-espressoCard border border-borderWarm rounded-2xl p-7 sm:p-8 flex flex-col justify-between reveal">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-lg bg-olive/70 text-cream text-xs uppercase tracking-wider font-medium">
+              Будни
+            </span>
+            <h3 class="mt-4 text-xl font-semibold text-cream">Понедельник &ndash; Четверг</h3>
+            <p class="mt-1.5 text-xs text-creamSoft">Тихий отдых в будние дни за 2 гостей</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-borderWarm/80 flex items-baseline justify-between gap-2">
+            <span class="font-display text-4xl sm:text-5xl text-cream">5 900 ₽</span>
+            <span class="text-xs text-creamSoft">/ сутки</span>
+          </div>
+        </div>
+
+        <!-- Fri-Sat & Holidays (Highlighted Olive) -->
+        <div class="spring-card bg-olive border border-oliveLight rounded-2xl p-7 sm:p-8 flex flex-col justify-between shadow-xl reveal reveal-delay-1">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-lg bg-espresso/85 text-cream text-xs uppercase tracking-wider font-medium">
+              Выходные и праздники
+            </span>
+            <h3 class="mt-4 text-xl font-semibold text-cream">Пятница &ndash; Суббота и&nbsp;праздничные дни</h3>
+            <p class="mt-1.5 text-xs text-cream/80">Базовая стоимость за 2 гостей</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-cream/20 flex items-baseline justify-between gap-2">
+            <span class="font-display text-4xl sm:text-5xl text-cream">9 900 ₽</span>
+            <span class="text-xs text-cream/80">/ сутки</span>
+          </div>
+        </div>
+
+        <!-- Sunday -->
+        <div class="spring-card bg-espressoCard border border-borderWarm rounded-2xl p-7 sm:p-8 flex flex-col justify-between reveal reveal-delay-2">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-lg bg-olive/70 text-cream text-xs uppercase tracking-wider font-medium">
+              Воскресенье
+            </span>
+            <h3 class="mt-4 text-xl font-semibold text-cream">Воскресенье</h3>
+            <p class="mt-1.5 text-xs text-creamSoft">Продлите уикенд на берегу реки</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-borderWarm/80 flex items-baseline justify-between gap-2">
+            <span class="font-display text-4xl sm:text-5xl text-cream">6 900 ₽</span>
+            <span class="text-xs text-creamSoft">/ сутки</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured New Year Offer Card -->
+      <div class="spring-card mt-6 sm:mt-8 rounded-2xl bg-gradient-to-r from-[#3A3E2D] via-[#4D533C] to-[#3A3E2D] border border-oliveLight/80 p-6 sm:p-9 shadow-xl flex flex-col lg:flex-row lg:items-center justify-between gap-6 reveal">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-espresso/75 border border-cream/15 text-xs text-cream uppercase tracking-wider">
+            <span>Новогоднее предложение</span>
+          </div>
+          <h3 class="font-display text-3xl sm:text-4xl text-cream">
+            С 31&nbsp;декабря по 3&nbsp;января &mdash; 55&nbsp;000&nbsp;₽ для 4&nbsp;гостей
+          </h3>
+          <p class="text-sm text-cream/85 font-light max-w-2xl">
+            Встречайте Новый год в&nbsp;тёплом барнхаусе с&nbsp;панорамными окнами, гирляндами, снегом и&nbsp;тишиной леса у&nbsp;реки Слогавка.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          id="btnBookNewYear"
+          class="shrink-0 px-7 py-4 rounded-xl bg-espresso hover:bg-espressoDeep text-cream text-sm font-medium tracking-wide border border-cream/15 transition-all hover:scale-[1.03]"
+        >
+          Забронировать Новый год
+        </button>
+      </div>
+
+      <!-- Transparent Conditions Grid -->
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 reveal">
+        <div class="bg-espressoCard border border-borderWarm/80 rounded-xl p-4">
+          <p class="text-xs text-creamSoft">Дополнительный гость</p>
+          <p class="mt-1 text-base font-semibold text-cream">+ 1 000 ₽ / сутки</p>
+        </div>
+        <div class="bg-espressoCard border border-borderWarm/80 rounded-xl p-4">
+          <p class="text-xs text-creamSoft">Гости без ночёвки</p>
+          <p class="mt-1 text-base font-semibold text-cream">500 ₽ / человек</p>
+        </div>
+        <div class="bg-espressoCard border border-borderWarm/80 rounded-xl p-4">
+          <p class="text-xs text-creamSoft">Дети до 12 лет</p>
+          <p class="mt-1 text-base font-semibold text-[#B4C08E]">Бесплатно</p>
+        </div>
+        <div class="bg-espressoCard border border-oliveLight/60 rounded-xl p-4">
+          <p class="text-xs text-creamSoft">От 5 и более суток</p>
+          <p class="mt-1 text-base font-semibold text-[#B4C08E]">Доп. скидка!</p>
+        </div>
+        <div class="bg-espressoCard border border-borderWarm/80 rounded-xl p-4">
+          <p class="text-xs text-creamSoft">Время заезда и выезда</p>
+          <p class="mt-1 text-base font-semibold text-cream">с 16:00 / до 12:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 7. «КАК ДОБРАТЬСЯ?» SECTION (EXACT SCREENSHOT 4 + SPRINGY HOVER JUMP)   -->
+  <!-- ======================================================================= -->
+  <section id="route" class="scroll-mt-[72px] bg-espresso pb-20 sm:pb-28 pt-8 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1060px] mx-auto">
+      <h2 class="tv-section-title text-center mb-12 sm:mb-16 reveal">
+        КАК ДОБРАТЬСЯ?
+      </h2>
+
+      <!-- Two Large Olive-Green Cards with Springy Jump & Scale on Hover -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
+        <!-- Card 1: НА МАШИНЕ -->
+        <article class="spring-card-route bg-olive rounded-2xl p-8 sm:p-11 flex flex-col justify-between min-h-[340px] sm:min-h-[380px] shadow-xl reveal">
+          <div>
+            <!-- Crisp White Outline Car Icon -->
+            <div class="text-cream mb-10">
+              <svg class="w-16 h-16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 64 64">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 38V29l6-12a5 5 0 014.5-2.8h23a5 5 0 014.5 2.8l6 12v9M6 29h52M12 38v6a2 2 0 002 2h4a2 2 0 002-2v-6M44 38v6a2 2 0 002 2h4a2 2 0 002-2v-6M10 38h44" />
+                <circle cx="19" cy="33.5" r="2.2" />
+                <circle cx="45" cy="33.5" r="2.2" />
+              </svg>
+            </div>
+
+            <h3 class="text-lg sm:text-xl font-bold uppercase tracking-wider text-cream">
+              НА МАШИНЕ
+            </h3>
+
+            <p class="mt-4 text-sm sm:text-base text-cream/90 font-light leading-relaxed">
+              60&nbsp;км от&nbsp;Москвы по&nbsp;Носовихинскому шоссе. Московская область, Павлово-Посадский городской округ, деревня Дмитрово, улица Снежная,&nbsp;20. На&nbsp;участке предусмотрена удобная парковка на&nbsp;3&nbsp;автомобиля.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE-%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9+%D0%BE%D0%BA%D1%80%D1%83%D0%B3,+%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F+%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%BE,+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F+20"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-espresso hover:bg-espressoDeep text-cream text-sm font-medium tracking-wide transition-colors shadow-md"
+            >
+              Построить маршрут
+            </a>
+            <button
+              type="button"
+              id="copyAddressBtn"
+              class="text-xs text-cream/80 hover:text-cream underline underline-offset-4 px-2 py-2 transition-colors"
+            >
+              Скопировать адрес
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: ДОСТАВКА И МЕСТНОСТЬ -->
+        <article class="spring-card-route bg-olive rounded-2xl p-8 sm:p-11 flex flex-col justify-between min-h-[340px] sm:min-h-[380px] shadow-xl reveal reveal-delay-1">
+          <div>
+            <!-- Crisp White Outline Map-Pin & Bag Icon -->
+            <div class="text-cream mb-10">
+              <svg class="w-16 h-16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 64 64">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M32 54s16-13.5 16-27A16 16 0 1016 27c0 13.5 16 27 16 27z" />
+                <circle cx="32" cy="27" r="6" />
+              </svg>
+            </div>
+
+            <h3 class="text-lg sm:text-xl font-bold uppercase tracking-wider text-cream">
+              ДОСТАВКА И&nbsp;МЕСТНОСТЬ
+            </h3>
+
+            <p class="mt-4 text-sm sm:text-base text-cream/90 font-light leading-relaxed">
+              Уединённое место на&nbsp;живописном берегу реки Слогавка с&nbsp;отдельным выходом в&nbsp;лес и&nbsp;к&nbsp;воде. При этом всё под рукой: к&nbsp;дому работает доставка продуктов и&nbsp;готовой еды из&nbsp;<strong class="font-semibold text-cream">ВкусВилл</strong> и&nbsp;<strong class="font-semibold text-cream">Пятёрочки</strong>.
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <button
+              type="button"
+              id="toggleMapBtn"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-espresso hover:bg-espressoDeep text-cream text-sm font-medium tracking-wide transition-colors shadow-md"
+            >
+              Открыть на карте
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Clean Collapsible / Embedded Interactive Yandex Map -->
+      <div id="mapSectionWrap" class="mt-8 rounded-2xl overflow-hidden border border-borderWarm bg-espressoCard shadow-xl reveal">
+        <div class="px-5 py-3.5 bg-espressoDeep border-b border-borderWarm flex flex-wrap items-center justify-between gap-2 text-xs text-creamSoft">
+          <span>Московская область, Павлово-Посадский г.о., д. Дмитрово, ул. Снежная, 20</span>
+          <a
+            href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE-%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9+%D0%BE%D0%BA%D1%80%D1%83%D0%B3,+%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F+%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%BE,+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F+20"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-cream hover:underline"
+          >
+            Яндекс Карты &rarr;
+          </a>
+        </div>
+        <div class="relative w-full h-[320px] sm:h-[380px]">
+          <iframe
+            title="Карта проезда — Дом у реки, д. Дмитрово, ул. Снежная 20"
+            src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE-%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3%2C%20%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%2020&z=13"
+            class="absolute inset-0 w-full h-full border-0"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 8. FOOTER & CONTACTS (#25231C WITH SUBTLE TOP BORDER)                   -->
+  <!-- ======================================================================= -->
+  <footer id="contacts" class="scroll-mt-[72px] bg-espressoDeep border-t border-borderWarm pt-14 pb-20 sm:pb-14 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1260px] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-borderWarm/80">
+        <!-- Brand & Navigation -->
+        <div class="lg:col-span-3 space-y-4">
+          <a href="#hero" class="inline-flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full overflow-hidden border border-cream/30">
+              <img src="8P1A2821.jpg" data-photo-key="8P1A2821" alt="Дом у реки" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-display text-2xl text-cream">Дом у реки</span>
+          </a>
+          <nav class="flex flex-col gap-2 text-sm text-creamSoft pt-1">
+            <a href="#rules" class="hover:text-cream transition-colors">О доме</a>
+            <a href="#spaces" class="hover:text-cream transition-colors">Пространства</a>
+            <a href="#rates" class="hover:text-cream transition-colors">Тарифы</a>
+            <a href="#route" class="hover:text-cream transition-colors">Как добраться</a>
+          </nav>
+        </div>
+
+        <!-- Contacts -->
+        <div class="lg:col-span-5 space-y-4">
+          <h3 class="text-xs uppercase tracking-[0.18em] text-beigeTitle font-semibold">Контакты</h3>
+          <div class="space-y-2.5">
+            <a href="tel:+79154575972" class="block font-display text-3xl text-cream hover:text-beigeTitle transition-colors">
+              +7 (915) 457-59-72
+            </a>
+            <a href="mailto:domyreki@inbox.ru" class="block text-sm text-cream/90 hover:text-beigeTitle transition-colors">
+              domyreki@inbox.ru
+            </a>
+            <p class="text-sm text-creamSoft font-light leading-relaxed pt-1">
+              Московская область, Павлово-Посадский городской округ, деревня Дмитрово, улица Снежная,&nbsp;20
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <a href="https://wa.me/79154575972" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-olive hover:bg-oliveHover text-xs font-medium text-cream transition-colors">WhatsApp</a>
+            <a href="https://t.me/+79154575972" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-olive hover:bg-oliveHover text-xs font-medium text-cream transition-colors">Telegram</a>
+            <a href="tel:+79154575972" class="px-4 py-2 rounded-xl bg-espressoCard hover:bg-borderWarm border border-borderWarm text-xs font-medium text-cream transition-colors">Позвонить</a>
+          </div>
+        </div>
+
+        <!-- Project & Rules -->
+        <div class="lg:col-span-4 space-y-3.5">
+          <h3 class="text-xs uppercase tracking-[0.18em] text-beigeTitle font-semibold">О проекте и правилах</h3>
+          <p class="text-sm text-cream/85 font-light leading-relaxed">
+            Дом построен зимой 2023&nbsp;года компанией <strong class="text-cream font-medium">FL&nbsp;-&nbsp;Haus, проект FL&nbsp;43.2&nbsp;-1</strong>.
+          </p>
+          <p class="text-xs text-creamSoft font-light leading-relaxed">
+            Бронирование от 2-х суток · Заезд с 16:00, выезд до 12:00. Дом не подходит для вечеринок и шумных компаний. Курение в доме и фейерверки запрещены.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-7 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-creamSoft/80">
+        <p>&copy; 2026 Дом у реки</p>
+        <p>Барнхаус на берегу реки Слогавка · 60 км от Москвы</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- FLOATING BOTTOM-RIGHT «СВЯЖИТЕСЬ С НАМИ» WIDGET (SCREENSHOT 1 & 4)      -->
+  <!-- ======================================================================= -->
+  <div id="floatingContactWrap" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5">
+    <!-- Quick Contact Popover -->
+    <div id="floatingContactMenu" class="hidden w-[250px] bg-espressoCard border border-oliveLight/60 rounded-2xl p-3.5 shadow-2xl space-y-1.5">
+      <p class="text-[11px] uppercase tracking-wider text-beigeTitle px-2.5 py-1">Связаться с нами</p>
+      <a href="tel:+79154575972" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-olive/50 text-sm text-cream transition-colors">
+        <svg class="w-4 h-4 text-beigeTitle shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+        <span>+7 (915) 457-59-72</span>
+      </a>
+      <a href="https://wa.me/79154575972" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-olive/50 text-sm text-cream transition-colors">
+        <span class="w-4 h-4 text-center text-xs font-bold text-beigeTitle">W</span>
+        <span>Написать в WhatsApp</span>
+      </a>
+      <a href="https://t.me/+79154575972" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-olive/50 text-sm text-cream transition-colors">
+        <span class="w-4 h-4 text-center text-xs font-bold text-beigeTitle">T</span>
+        <span>Написать в Telegram</span>
+      </a>
+      <a href="mailto:domyreki@inbox.ru" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-olive/50 text-sm text-cream transition-colors">
+        <svg class="w-4 h-4 text-beigeTitle shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/></svg>
+        <span>domyreki@inbox.ru</span>
+      </a>
+      <button type="button" data-open-booking class="w-full mt-1 py-2.5 rounded-xl bg-olive hover:bg-oliveHover text-xs font-medium text-cream transition-colors">
+        Оставить заявку
+      </button>
+    </div>
+
+    <!-- Pill + Round Button -->
+    <div class="flex items-center gap-2">
+      <button
+        type="button"
+        id="floatingContactPill"
+        class="hidden sm:inline-flex items-center px-3.5 py-2 rounded-lg bg-oliveLight/95 hover:bg-oliveHover text-cream text-xs font-medium shadow-lg border border-cream/15 transition-colors"
+      >
+        свяжитесь с нами
+      </button>
+      <button
+        type="button"
+        id="floatingContactCircle"
+        aria-label="Связаться с нами"
+        class="w-12 h-12 rounded-full bg-oliveLight hover:bg-oliveHover text-cream shadow-xl border border-cream/25 flex items-center justify-center transition-transform hover:scale-105"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h8M8 14h5m-9 6l1.8-4.5A8 8 0 1120 12a8 8 0 01-11.4 7.2L4 20z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- FULLSCREEN LIGHTBOX (FOR ALL 16 PHOTOS — KEYBOARD & TOUCH SWIPE)        -->
+  <!-- ======================================================================= -->
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-espressoDeep/95 backdrop-blur-md p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
+    <div class="absolute top-4 left-4 right-4 sm:top-6 sm:left-8 sm:right-8 flex items-center justify-between">
+      <span id="lightboxCounter" class="text-xs uppercase tracking-widest text-beigeTitle">1 / 16</span>
+      <button id="lightboxClose" type="button" aria-label="Закрыть просмотр" class="w-10 h-10 rounded-full bg-espressoCard border border-borderWarm hover:bg-olive text-cream flex items-center justify-center transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <button id="lightboxPrev" type="button" aria-label="Предыдущее фото" class="absolute left-3 sm:left-7 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-espressoCard/90 border border-borderWarm hover:bg-olive text-cream flex items-center justify-center transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <div class="max-w-5xl w-full flex flex-col items-center justify-center px-10 sm:px-16">
+      <img id="lightboxImg" src="" alt="" class="max-h-[78vh] max-w-full w-auto h-auto object-contain rounded-xl border border-borderWarm bg-espressoCard shadow-2xl" />
+      <p id="lightboxCaption" class="mt-4 text-center text-sm sm:text-base text-cream/90 font-light"></p>
+    </div>
+
+    <button id="lightboxNext" type="button" aria-label="Следующее фото" class="absolute right-3 sm:right-7 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-espressoCard/90 border border-borderWarm hover:bg-olive text-cream flex items-center justify-center transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- BOOKING CONFIRMATION MODAL (PRE-FILLED WITH LIVE CALCULATOR DATA)       -->
+  <!-- ======================================================================= -->
+  <div id="bookingModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <div id="bookingModalBackdrop" class="fixed inset-0 bg-black/70 backdrop-blur-xs"></div>
+
+    <div class="relative z-10 w-full max-w-lg bg-espressoCard text-cream border border-oliveLight/60 rounded-2xl p-6 sm:p-8 my-auto shadow-2xl">
+      <button id="bookingModalClose" type="button" aria-label="Закрыть окно" class="absolute top-5 right-5 p-2 text-creamSoft hover:text-cream transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <p class="text-[11px] uppercase tracking-[0.2em] text-beigeTitle">Заявка на бронирование</p>
+      <h3 id="bookingModalTitle" class="font-display text-3xl text-cream mt-1">Дом у реки</h3>
+      <p class="text-xs text-creamSoft mt-0.5">От 2-х суток · Заезд с 16:00, выезд до 12:00</p>
+
+      <!-- Live Summary -->
+      <div id="bookingSummary" class="mt-4 p-3.5 rounded-xl bg-espressoDeep border border-borderWarm text-xs text-cream/90 leading-relaxed"></div>
+
+      <!-- Form -->
+      <form id="bookingForm" class="mt-4 space-y-3.5" novalidate>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="bookName" class="block text-[11px] text-creamSoft mb-1">Ваше имя *</label>
+            <input type="text" id="bookName" required placeholder="Например, Анна" class="w-full px-3.5 py-2.5 rounded-xl bg-espressoDeep border border-borderWarm text-sm text-cream focus:outline-none focus:border-oliveLight" />
+          </div>
+          <div>
+            <label for="bookPhone" class="block text-[11px] text-creamSoft mb-1">Телефон *</label>
+            <input type="tel" id="bookPhone" required placeholder="+7 (999) 000-00-00" class="w-full px-3.5 py-2.5 rounded-xl bg-espressoDeep border border-borderWarm text-sm text-cream focus:outline-none focus:border-oliveLight" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="bookDates" class="block text-[11px] text-creamSoft mb-1">Даты</label>
+            <input type="text" id="bookDates" placeholder="Например, 15.01 — 17.01" class="w-full px-3.5 py-2.5 rounded-xl bg-espressoDeep border border-borderWarm text-sm text-cream focus:outline-none focus:border-oliveLight" />
+          </div>
+          <div>
+            <label for="bookGuests" class="block text-[11px] text-creamSoft mb-1">Гости</label>
+            <input type="text" id="bookGuests" placeholder="2 взрослых" class="w-full px-3.5 py-2.5 rounded-xl bg-espressoDeep border border-borderWarm text-sm text-cream focus:outline-none focus:border-oliveLight" />
+          </div>
+        </div>
+
+        <div>
+          <label for="bookComment" class="block text-[11px] text-creamSoft mb-1">Комментарий</label>
+          <textarea id="bookComment" rows="2" placeholder="Пожелания по заезду или вопросы" class="w-full px-3.5 py-2.5 rounded-xl bg-espressoDeep border border-borderWarm text-sm text-cream focus:outline-none focus:border-oliveLight resize-none"></textarea>
+        </div>
+
+        <p id="bookingError" class="hidden text-xs text-amber-200 bg-amber-900/40 border border-amber-500/40 px-3 py-2 rounded-lg">
+          Пожалуйста, укажите ваше имя и номер телефона.
+        </p>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-olive hover:bg-oliveHover text-cream text-sm font-medium tracking-wide transition-colors">
+          Подготовить заявку
+        </button>
+      </form>
+
+      <!-- Ready Message State -->
+      <div id="bookingSuccess" class="hidden mt-4 space-y-3.5">
+        <div class="p-4 rounded-xl bg-espressoDeep border border-oliveLight/60 space-y-2">
+          <p class="font-display text-2xl text-cream">Заявка готова к отправке</p>
+          <p class="text-xs text-creamSoft">Отправьте текст в WhatsApp, Telegram или на почту — мы быстро подтвердим свободные даты.</p>
+          <pre id="bookingPreparedMsg" class="mt-2 p-3 rounded-lg bg-espressoCard border border-borderWarm text-[11px] text-cream/90 whitespace-pre-wrap font-sans"></pre>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <a id="bookingWhatsappLink" href="https://wa.me/79154575972" target="_blank" rel="noopener noreferrer" class="text-center py-3 px-4 rounded-xl bg-olive hover:bg-oliveHover text-cream text-xs font-medium transition-colors">
+            Отправить в WhatsApp
+          </a>
+          <a id="bookingTelegramLink" href="https://t.me/+79154575972" target="_blank" rel="noopener noreferrer" class="text-center py-3 px-4 rounded-xl bg-olive hover:bg-oliveHover text-cream text-xs font-medium transition-colors">
+            Написать в Telegram
+          </a>
+          <a id="bookingMailLink" href="mailto:domyreki@inbox.ru" class="text-center py-2.5 px-4 rounded-xl bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream text-xs transition-colors">
+            Отправить на e-mail
+          </a>
+          <button type="button" id="bookingCopyBtn" class="py-2.5 px-4 rounded-xl bg-espressoDeep border border-borderWarm hover:border-oliveLight text-cream text-xs transition-colors">
+            Скопировать текст
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between pt-1 text-xs">
+          <a href="tel:+79154575972" class="text-cream hover:underline">Позвонить: +7 (915) 457-59-72</a>
+          <button type="button" id="bookingEditAgain" class="text-creamSoft hover:text-cream underline underline-offset-4">Изменить данные</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- UNOBTRUSIVE BOTTOM-LEFT LOCAL MEDIA CONNECTOR & EXPORTER                -->
+  <!-- ======================================================================= -->
+  <div id="mediaLoaderPillWrap" class="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-40 flex items-center bg-espressoCard/95 backdrop-blur-md border border-oliveLight/60 rounded-xl shadow-xl">
+    <button
+      type="button"
+      id="openMediaModalBtn"
+      class="flex items-center gap-2 pl-3.5 pr-3 py-2.5 text-xs text-cream hover:text-beigeTitle transition-colors"
+    >
+      <span id="mediaPillDot" class="w-2 h-2 rounded-full bg-oliveLight shrink-0"></span>
+      <span class="truncate max-w-[205px] sm:max-w-none">Загрузить фото и hero-video.mp4</span>
+    </button>
+    <button
+      type="button"
+      id="closeMediaPillBtn"
+      aria-label="Скрыть панель загрузки"
+      class="px-2.5 py-2.5 border-l border-borderWarm text-creamSoft hover:text-cream text-sm leading-none"
+    >
+      &times;
+    </button>
+  </div>
+
+  <!-- Media Connector & Exporter Modal -->
+  <div id="mediaModal" class="fixed inset-0 z-[65] hidden items-center justify-center p-4 sm:p-6 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
+    <div id="mediaModalBackdrop" class="fixed inset-0 bg-black/70 backdrop-blur-xs"></div>
+
+    <div class="relative z-10 w-full max-w-2xl bg-espressoCard text-cream border border-oliveLight/60 rounded-2xl p-6 sm:p-8 my-auto shadow-2xl">
+      <button id="mediaModalClose" type="button" aria-label="Закрыть окно" class="absolute top-5 right-5 p-2 text-creamSoft hover:text-cream transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <p class="text-[11px] uppercase tracking-[0.2em] text-beigeTitle">Локальные медиафайлы</p>
+      <h3 id="mediaModalTitle" class="font-display text-3xl text-cream mt-1">Подключить ваши фото и видео</h3>
+      <p class="mt-2 text-xs sm:text-sm text-creamSoft font-light leading-relaxed">
+        Выберите все ваши фотографии и видео <code class="px-1.5 py-0.5 rounded bg-espressoDeep border border-borderWarm text-cream text-xs">hero-video.mp4</code> — они мгновенно появятся в слайдерах, бегущей ленте и Hero. Дубли спален (<code class="text-cream/80">2867</code>, <code class="text-cream/80">2882</code>) пропускаются автоматически.
+      </p>
+
+      <!-- Dropzone -->
+      <div class="mt-5 p-6 rounded-xl bg-espressoDeep border border-dashed border-oliveLight text-center">
+        <p class="font-display text-2xl text-cream">Перетащите фото и hero-video.mp4 сюда</p>
+        <p class="text-xs text-creamSoft mt-1">или выберите файлы с компьютера / телефона одним пакетом</p>
+        <button
+          type="button"
+          id="selectMediaFilesBtn"
+          class="mt-4 px-6 py-3 rounded-xl bg-olive hover:bg-oliveHover text-cream text-xs font-medium uppercase tracking-wider transition-colors"
+        >
+          Выбрать фото и видео
+        </button>
+        <input type="file" id="mediaFilesInput" multiple accept="image/*,video/*" class="hidden" />
+      </div>
+
+      <!-- Status -->
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs">
+        <span id="mediaModalStatus" class="font-medium text-cream">Загружено фото: 0 / 16 · Видео: не загружено</span>
+        <span class="text-creamSoft">Файлы можно перетаскивать прямо на страницу</span>
+      </div>
+
+      <!-- Checklist -->
+      <div id="mediaChecklist" class="mt-3 max-h-36 overflow-y-auto grid grid-cols-2 sm:grid-cols-3 gap-1.5 p-3 rounded-xl bg-espressoDeep border border-borderWarm text-[11px]"></div>
+
+      <!-- Two Export Buttons -->
+      <div class="mt-5 pt-5 border-t border-borderWarm grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button
+          type="button"
+          id="exportHostingBtn"
+          class="py-3.5 px-4 rounded-xl bg-olive hover:bg-oliveHover text-cream text-xs font-medium transition-colors"
+        >
+          Скачать чистый index.html для хостинга
+        </button>
+        <button
+          type="button"
+          id="exportAutonomousBtn"
+          class="py-3.5 px-4 rounded-xl bg-espressoDeep border border-oliveLight hover:bg-olive/40 text-cream text-xs font-medium transition-colors"
+        >
+          Скачать автономный HTML с вшитыми фото
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-Window Drag & Drop Overlay -->
+  <div id="pageDropOverlay" class="fixed inset-0 z-[70] bg-espressoDeep/90 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200 flex items-center justify-center p-6">
+    <div class="max-w-lg w-full border-2 border-dashed border-oliveLight bg-espressoCard rounded-2xl p-10 text-center shadow-2xl">
+      <p class="text-xs uppercase tracking-[0.2em] text-beigeTitle mb-2">Дом у реки</p>
+      <p class="font-display text-3xl text-cream">Отпустите ваши фото и hero-video.mp4</p>
+      <p class="mt-2 text-xs text-creamSoft">Все 16 кадров и видео в Hero подключатся автоматически</p>
+    </div>
+  </div>
+
+  <!-- Toast Notification Stack -->
+  <div id="toastContainer" class="fixed top-20 right-4 sm:right-6 z-[75] pointer-events-none flex flex-col gap-2 max-w-sm"></div>
+
+  <!-- ======================================================================= -->
+  <!-- APPLICATION JAVASCRIPT                                                  -->
+  <!-- ======================================================================= -->
+  <script>
+    /**
+     * Complete catalog of all 16 unique photos (strictly excluding 8P1A2867, 8P1A2882 & screenshot).
+     * Each entry specifies its exact local filename and a warm forest/cabin Unsplash fallback
+     * so previews outside the local folder look cohesive with zero broken image icons.
+     */
+    const PHOTO_CATALOG = [
+      {
+        key: '2821',
+        filename: '8P1A2821.jpg',
+        caption: 'Вечерний фасад дома в огнях гирлянд',
+        fallback: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1600&q=80'
+      },
+      {
+        key: '2921',
+        filename: '8P1A2921.jpg',
+        caption: 'Панорамные окна, гостиная и обеденная зона',
+        fallback: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80'
+      },
+      {
+        key: '2900',
+        filename: '8P1A2900.jpg',
+        caption: 'Два удобных дивана в просторной гостиной',
+        fallback: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2905',
+        filename: '8P1A2905.jpg',
+        caption: 'Просторная кухня-гостиная 26,5 м²',
+        fallback: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2928',
+        filename: '8P1A2928 copy.jpg',
+        caption: 'Яндекс ТВ 55" с эффектом камина и полностью оснащённая кухня',
+        fallback: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2903',
+        filename: '8P1A2903.jpg',
+        caption: 'Обеденная зона и гостиная с высоким потолком',
+        fallback: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2943',
+        filename: '8P1A2943.jpg',
+        caption: 'Первая спальня 6,1 м² с ортопедическим матрасом 140×200',
+        fallback: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1400&q=80'
+      },
+      {
+        key: '3008',
+        filename: '8P1A3008.jpg',
+        caption: 'Вторая уютная спальня 6,1 м²',
+        fallback: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2872',
+        filename: '8P1A2872.jpg',
+        caption: 'Тёплый свет и уютные детали спальни',
+        fallback: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2837',
+        filename: '8P1A2837.jpg',
+        caption: 'Санузел 4,1 м² с душевой зоной и гостиничным феном',
+        fallback: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2843',
+        filename: '8P1A2843.jpg',
+        caption: 'Подвесной туалет с гигиеническим душем',
+        fallback: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2841',
+        filename: '8P1A2841.jpg',
+        caption: 'Раковина и полный набор ванных принадлежностей',
+        fallback: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2954',
+        filename: '8P1A2954.jpg',
+        caption: 'Открытая терраса 23,5 м² с комплектом уличной мебели',
+        fallback: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1400&q=80'
+      },
+      {
+        key: '2972',
+        filename: '8P1A2972.jpg',
+        caption: 'Крытая мангальная зона на участке 15 соток',
+        fallback: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2963',
+        filename: '8P1A2963.jpg',
+        caption: 'Шампуры, уголь и жидкость для розжига входят в стоимость',
+        fallback: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '2981',
+        filename: '8P1A2981.jpg',
+        caption: 'Дневной вид на барнхаус со стороны мангальной зоны',
+        fallback: 'https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=1400&q=80'
+      }
+    ];
+
+    /* Slider groupings covering all 16 unique photos (5 + 6 + 5 = 16) */
+    const SLIDER_GROUPS = {
+      living: ['2921', '2900', '2905', '2928', '2903'],
+      bedrooms: ['2943', '3008', '2872', '2837', '2843', '2841'],
+      territory: ['2821', '2954', '2972', '2963', '2981']
+    };
+
+    /* Curated 12-photo sequence for the continuous full-bleed marquee ribbon */
+    const MARQUEE_KEYS = [
+      '2821', '2921', '2954', '2963', '2900', '2943',
+      '2837', '2928', '2981', '3008', '2872', '2972'
+    ];
+
+    const PHOTO_BY_KEY = {};
+    PHOTO_CATALOG.forEach((p) => {
+      PHOTO_BY_KEY[p.key] = p;
+      PHOTO_BY_KEY['8P1A' + p.key] = p;
+    });
+
+    /* Runtime store for uploaded local media or embedded Base64 exports */
+    const mediaStore = {
+      customUrls: Object.assign({}, window.__EMBEDDED_PHOTOS__ || {}),
+      rawFiles: {},
+      videoUrl: null,
+      videoVisible: true
+    };
+
+    function normalizeKey(raw) {
+      if (!raw) return '';
+      const clean = String(raw).replace(/^8P1A/i, '');
+      return PHOTO_BY_KEY[clean] ? clean : '';
+    }
+
+    function resolvePhotoSrc(rawKey) {
+      const key = normalizeKey(rawKey);
+      if (!key) return '';
+      if (mediaStore.customUrls[key]) return mediaStore.customUrls[key];
+      if (mediaStore.customUrls['8P1A' + key]) return mediaStore.customUrls['8P1A' + key];
+      return PHOTO_BY_KEY[key].filename;
+    }
+
+    /* -----------------------------------------------------------------------
+     * Toast & Safe Clipboard Helpers (zero alert/confirm)
+     * ----------------------------------------------------------------------- */
+    function showToast(message) {
+      const wrap = document.getElementById('toastContainer');
+      if (!wrap) return;
+      const el = document.createElement('div');
+      el.className = 'pointer-events-auto px-4 py-3 rounded-xl bg-espressoCard border border-oliveLight text-xs text-cream shadow-2xl transition-all duration-300 opacity-0 -translate-y-2';
+      el.textContent = message;
+      wrap.appendChild(el);
+      requestAnimationFrame(() => el.classList.remove('opacity-0', '-translate-y-2'));
+      setTimeout(() => {
+        el.classList.add('opacity-0', '-translate-y-2');
+        setTimeout(() => el.remove(), 300);
+      }, 3400);
+    }
+
+    function copyText(text) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+     * Seamless Image Fallback Manager
+     * ----------------------------------------------------------------------- */
+    function attachImageFallback(imgEl) {
+      const key = normalizeKey(imgEl.dataset.photoKey);
+      const meta = PHOTO_BY_KEY[key];
+      if (!meta) return;
+
+      imgEl.dataset.fallbackStage = '0';
+      imgEl.onerror = () => {
+        const stage = Number(imgEl.dataset.fallbackStage || '0');
+        if (stage === 0) {
+          imgEl.dataset.fallbackStage = '1';
+          imgEl.src = meta.fallback;
+        } else if (stage === 1) {
+          imgEl.dataset.fallbackStage = '2';
+          imgEl.src = `https://placehold.co/1200x900/2A2820/C7C1B5?text=${encodeURIComponent(meta.filename)}`;
+        }
+      };
+
+      const targetSrc = resolvePhotoSrc(key);
+      if (imgEl.getAttribute('src') !== targetSrc) {
+        imgEl.src = targetSrc;
+      } else if (imgEl.complete && imgEl.naturalWidth === 0) {
+        imgEl.onerror();
+      }
+    }
+
+    function refreshAllPhotosForKey(key) {
+      const src = resolvePhotoSrc(key);
+      document.querySelectorAll('img[data-photo-key]').forEach((img) => {
+        if (normalizeKey(img.dataset.photoKey) === key) {
+          img.dataset.fallbackStage = '0';
+          img.src = src;
+        }
+      });
+      if (key === '2821') {
+        const vid = document.getElementById('heroVideo');
+        if (vid) vid.poster = src;
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+     * Boot Everything on DOMContentLoaded
+     * ----------------------------------------------------------------------- */
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavigation();
+      initHeroVideo();
+      initHeroCalculator();
+      initShowcaseSliders();
+      initInfiniteMarquee();
+      initLightbox();
+      initBookingModal();
+      initRouteAndFloatingContact();
+      initMediaLoader();
+      initScrollReveal();
+
+      // Ensure all static images have graceful fallback
+      document.querySelectorAll('img[data-photo-key]').forEach(attachImageFallback);
+    });
+
+    /* -----------------------------------------------------------------------
+     * 1. Sticky Header Shadow, Mobile Drawer & Smooth Booking Scroll
+     * ----------------------------------------------------------------------- */
+    function initNavigation() {
+      const header = document.getElementById('siteHeader');
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const closeBtn = document.getElementById('mobileMenuClose');
+      const drawer = document.getElementById('mobileDrawer');
+      const backdrop = document.getElementById('mobileDrawerBackdrop');
+      const panel = document.getElementById('mobileDrawerPanel');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 24) {
+          header.classList.add('shadow-[0_10px_30px_rgba(0,0,0,0.35)]');
+        } else {
+          header.classList.remove('shadow-[0_10px_30px_rgba(0,0,0,0.35)]');
+        }
+      }, { passive: true });
+
+      const openDrawer = () => {
+        drawer.classList.remove('pointer-events-none', 'opacity-0');
+        drawer.classList.add('opacity-100');
+        panel.classList.remove('translate-x-full');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeDrawer = () => {
+        drawer.classList.add('pointer-events-none', 'opacity-0');
+        drawer.classList.remove('opacity-100');
+        panel.classList.add('translate-x-full');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      };
+
+      menuBtn.addEventListener('click', openDrawer);
+      closeBtn.addEventListener('click', closeDrawer);
+      backdrop.addEventListener('click', closeDrawer);
+      document.querySelectorAll('.mobile-nav-link').forEach((a) => a.addEventListener('click', closeDrawer));
+
+      document.querySelectorAll('[data-scroll-booking]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          closeDrawer();
+          const bar = document.getElementById('bookingBar');
+          if (bar) {
+            bar.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            bar.classList.add('ring-2', 'ring-oliveLight');
+            setTimeout(() => bar.classList.remove('ring-2', 'ring-oliveLight'), 1400);
+          }
+        });
+      });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 2. Hero Video (hero-video.mp4) Playback & Controls
+     * ----------------------------------------------------------------------- */
+    function initHeroVideo() {
+      const video = document.getElementById('heroVideo');
+      const controls = document.getElementById('heroVideoControls');
+      const playBtn = document.getElementById('heroTogglePlay');
+      const modeBtn = document.getElementById('heroToggleMode');
+      if (!video) return;
+
+      const onVideoReady = () => {
+        if (mediaStore.videoVisible) {
+          video.classList.remove('opacity-0');
+          video.classList.add('opacity-100');
+        }
+        if (controls) {
+          controls.classList.remove('hidden');
+          controls.classList.add('inline-flex');
+        }
+      };
+
+      video.addEventListener('loadeddata', onVideoReady);
+      video.addEventListener('canplay', onVideoReady);
+
+      if (playBtn) {
+        playBtn.addEventListener('click', () => {
+          if (video.paused) {
+            video.play().catch(() => {});
+            playBtn.textContent = 'Пауза';
+          } else {
+            video.pause();
+            playBtn.textContent = 'Воспроизвести';
+          }
+        });
+      }
+
+      if (modeBtn) {
+        modeBtn.addEventListener('click', () => {
+          mediaStore.videoVisible = !mediaStore.videoVisible;
+          if (mediaStore.videoVisible) {
+            video.classList.remove('opacity-0');
+            video.classList.add('opacity-100');
+            modeBtn.textContent = 'Показать фото';
+          } else {
+            video.classList.remove('opacity-100');
+            video.classList.add('opacity-0');
+            modeBtn.textContent = 'Показать видео';
+          }
+        });
+      }
+    }
+
+    function attachUploadedVideo(file) {
+      const video = document.getElementById('heroVideo');
+      const playBtn = document.getElementById('heroTogglePlay');
+      const modeBtn = document.getElementById('heroToggleMode');
+      if (!video) return;
+
+      if (mediaStore.videoUrl && mediaStore.videoUrl.startsWith('blob:')) {
+        try { URL.revokeObjectURL(mediaStore.videoUrl); } catch (e) {}
+      }
+
+      const url = URL.createObjectURL(file);
+      mediaStore.videoUrl = url;
+      mediaStore.videoVisible = true;
+
+      video.innerHTML = '';
+      video.src = url;
+      video.muted = true;
+      video.loop = true;
+      video.load();
+      video.play().catch(() => {});
+      if (playBtn) playBtn.textContent = 'Пауза';
+      if (modeBtn) modeBtn.textContent = 'Показать фото';
+    }
+
+    /* -----------------------------------------------------------------------
+     * 3. Horizontal Hero Booking & Live Price Calculator
+     * ----------------------------------------------------------------------- */
+    const calcState = {
+      adults: 2,
+      children: 0,
+      dayguests: 0,
+      checkin: '',
+      checkout: '',
+      nights: 2,
+      total: 0,
+      summary: ''
+    };
+
+    function formatRub(n) {
+      return n.toLocaleString('ru-RU') + ' ₽';
+    }
+
+    function toIsoDate(d) {
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    function toRuDate(iso) {
+      if (!iso) return '';
+      const [y, m, d] = iso.split('-');
+      return `${d}.${m}.${y}`;
+    }
+
+    function pluralNights(n) {
+      const mod10 = n % 10, mod100 = n % 100;
+      if (mod10 === 1 && mod100 !== 11) return `${n} сутки`;
+      return `${n} суток`;
+    }
+
+    function initHeroCalculator() {
+      const inEl = document.getElementById('calcCheckin');
+      const outEl = document.getElementById('calcCheckout');
+      const hintEl = document.getElementById('calcMinHint');
+      const breakEl = document.getElementById('heroCalcBreakdown');
+      const totalEl = document.getElementById('heroCalcTotal');
+      const badgeEl = document.getElementById('heroCalcBadge');
+      const submitBtn = document.getElementById('heroCalcSubmitBtn');
+
+      const dropWrap = document.getElementById('guestsDropdownWrap');
+      const dropBtn = document.getElementById('guestsDropdownBtn');
+      const dropPop = document.getElementById('guestsPopover');
+      const dropDone = document.getElementById('guestsDoneBtn');
+      const chevron = document.getElementById('guestsChevron');
+      const guestsLabel = document.getElementById('guestsSummaryLabel');
+
+      // Guests popover toggle
+      const togglePop = (force) => {
+        const shouldOpen = typeof force === 'boolean' ? force : dropPop.classList.contains('hidden');
+        dropPop.classList.toggle('hidden', !shouldOpen);
+        dropBtn.setAttribute('aria-expanded', String(shouldOpen));
+        chevron.classList.toggle('rotate-180', shouldOpen);
+      };
+
+      dropBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePop();
+      });
+      dropDone.addEventListener('click', () => togglePop(false));
+      document.addEventListener('click', (e) => {
+        if (!dropWrap.contains(e.target)) togglePop(false);
+      });
+
+      // Default upcoming Friday -> Sunday (2 nights)
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      inEl.min = toIsoDate(today);
+
+      const defIn = new Date(today);
+      const offsetFri = (5 - today.getDay() + 7) % 7 || 7;
+      defIn.setDate(today.getDate() + offsetFri);
+      const defOut = new Date(defIn);
+      defOut.setDate(defIn.getDate() + 2);
+
+      inEl.value = toIsoDate(defIn);
+      outEl.value = toIsoDate(defOut);
+
+      const updateGuestLabel = () => {
+        const parts = [`${calcState.adults} взр.`];
+        if (calcState.children > 0) parts.push(`${calcState.children} дет.`);
+        if (calcState.dayguests > 0) parts.push(`+${calcState.dayguests} днём`);
+        guestsLabel.textContent = parts.join(', ');
+      };
+
+      const calculate = (showHint = false) => {
+        const dIn = new Date(inEl.value + 'T12:00:00');
+        let dOut = new Date(outEl.value + 'T12:00:00');
+        if (isNaN(dIn.getTime())) return;
+
+        const minOut = new Date(dIn);
+        minOut.setDate(dIn.getDate() + 2);
+        outEl.min = toIsoDate(minOut);
+
+        let adjusted = false;
+        if (isNaN(dOut.getTime()) || dOut < minOut) {
+          dOut = minOut;
+          outEl.value = toIsoDate(dOut);
+          adjusted = true;
+        }
+        hintEl.classList.toggle('hidden', !(adjusted && showHint));
+
+        const nights = Math.round((dOut - dIn) / 86400000);
+        calcState.checkin = inEl.value;
+        calcState.checkout = outEl.value;
+        calcState.nights = nights;
+
+        const isExactNY =
+          dIn.getMonth() === 11 && dIn.getDate() === 31 &&
+          dOut.getMonth() === 0 && dOut.getDate() === 3 &&
+          nights === 3;
+
+        let overlapsNY = false;
+        let wd = 0, we = 0, sun = 0, baseCost = 0;
+
+        for (let i = 0; i < nights; i++) {
+          const cur = new Date(dIn);
+          cur.setDate(dIn.getDate() + i);
+          const m = cur.getMonth(), dt = cur.getDate();
+          if ((m === 11 && dt === 31) || (m === 0 && (dt === 1 || dt === 2))) {
+            overlapsNY = true;
+          }
+          const dow = cur.getDay();
+          if (dow === 5 || dow === 6) {
+            baseCost += 9900;
+            we++;
+          } else if (dow === 0) {
+            baseCost += 6900;
+            sun++;
+          } else {
+            baseCost += 5900;
+            wd++;
+          }
+        }
+
+        const extraAdults = Math.max(0, calcState.adults - 2);
+        let extraCost = extraAdults * 1000 * nights;
+        const dayGuestsCost = calcState.dayguests * 500;
+
+        const parts = [];
+        if (isExactNY) {
+          baseCost = 55000;
+          extraCost = 0;
+          parts.push('Новогодний пакет 31.12–03.01 (до 4 гостей)');
+        } else {
+          if (wd > 0) parts.push(`Пн–Чт: ${wd} × 5 900 ₽`);
+          if (we > 0) parts.push(`Пт–Сб: ${we} × 9 900 ₽`);
+          if (sun > 0) parts.push(`Вс: ${sun} × 6 900 ₽`);
+          if (extraCost > 0) parts.push(`доп. гости: +${formatRub(extraCost)}`);
+        }
+
+        if (calcState.children > 0) parts.push(`дети до 12 лет (${calcState.children}): бесплатно`);
+        if (calcState.dayguests > 0) parts.push(`без ночёвки (${calcState.dayguests}): +${formatRub(dayGuestsCost)}`);
+
+        const total = baseCost + extraCost + dayGuestsCost;
+        calcState.total = total;
+
+        breakEl.textContent = `${pluralNights(nights)} · ${parts.join(' · ')}`;
+        totalEl.textContent = formatRub(total);
+
+        if (isExactNY || overlapsNY) {
+          badgeEl.textContent = 'Новогодний тариф 55 000 ₽';
+          badgeEl.classList.remove('hidden');
+        } else if (nights >= 5) {
+          badgeEl.textContent = 'Скидка от 5 суток!';
+          badgeEl.classList.remove('hidden');
+        } else {
+          badgeEl.classList.add('hidden');
+        }
+
+        const gParts = [`${calcState.adults} взр.`];
+        if (calcState.children > 0) gParts.push(`${calcState.children} дет. до 12 лет`);
+        if (calcState.dayguests > 0) gParts.push(`${calcState.dayguests} без ночёвки`);
+
+        calcState.summary =
+          `Даты: ${toRuDate(calcState.checkin)} — ${toRuDate(calcState.checkout)} (${pluralNights(nights)}) · ` +
+          `Гости: ${gParts.join(', ')} · Расчёт: ${formatRub(total)}` +
+          (nights >= 5 && !isExactNY ? ' (действует доп. скидка от 5 суток!)' : '');
+      };
+
+      inEl.addEventListener('change', () => calculate(true));
+      outEl.addEventListener('change', () => calculate(true));
+
+      document.querySelectorAll('[data-calc-step]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const field = btn.dataset.calcStep;
+          const delta = Number(btn.dataset.delta);
+          const bounds = { adults: [1, 4], children: [0, 3], dayguests: [0, 6] };
+          const [min, max] = bounds[field];
+          calcState[field] = Math.min(max, Math.max(min, calcState[field] + delta));
+          const map = { adults: 'calcAdultsVal', children: 'calcChildrenVal', dayguests: 'calcDayguestsVal' };
+          document.getElementById(map[field]).textContent = calcState[field];
+          updateGuestLabel();
+          calculate(false);
+        });
+      });
+
+      submitBtn.addEventListener('click', () => {
+        togglePop(false);
+        openBookingModal({
+          dates: `${toRuDate(calcState.checkin)} — ${toRuDate(calcState.checkout)}`,
+          guests: guestsLabel.textContent,
+          summary: calcState.summary
+        });
+      });
+
+      updateGuestLabel();
+      calculate(false);
+    }
+
+    /* -----------------------------------------------------------------------
+     * 4. Interactive Photo Sliders for the 3 House Showcase Blocks
+     * ----------------------------------------------------------------------- */
+    function initShowcaseSliders() {
+      document.querySelectorAll('[data-slider]').forEach((root) => {
+        const groupId = root.dataset.slider;
+        const keys = SLIDER_GROUPS[groupId] || [];
+        if (!keys.length) return;
+
+        const mainImg = root.querySelector('[data-slider-img]');
+        const counterEl = root.querySelector('[data-slider-counter]');
+        const captionEl = root.querySelector('[data-slider-caption]');
+        const dotsWrap = root.querySelector('[data-slider-dots]');
+        const thumbsWrap = root.querySelector('[data-slider-thumbs]');
+        const prevBtn = root.querySelector('[data-slider-prev]');
+        const nextBtn = root.querySelector('[data-slider-next]');
+        const zoomBtn = root.querySelector('[data-slider-zoom]');
+
+        let idx = 0;
+
+        // Build dots
+        dotsWrap.innerHTML = keys
+          .map((_, i) => `<button type="button" data-dot="${i}" aria-label="Слайд ${i + 1}" class="h-1.5 rounded-full transition-all ${i === 0 ? 'w-6 bg-cream' : 'w-2 bg-cream/45 hover:bg-cream/75'}"></button>`)
+          .join('');
+
+        // Build clickable thumbnails
+        thumbsWrap.innerHTML = keys
+          .map((k, i) => {
+            const meta = PHOTO_BY_KEY[k];
+            return `
+              <button type="button" data-thumb="${i}" aria-label="${meta.caption}" class="overflow-hidden rounded-lg aspect-[4/3] bg-espressoCard border-2 transition-all ${i === 0 ? 'border-oliveLight opacity-100' : 'border-transparent opacity-60 hover:opacity-95'}">
+                <img src="${resolvePhotoSrc(k)}" data-photo-key="8P1A${k}" alt="${meta.caption}" loading="lazy" class="w-full h-full object-cover" />
+              </button>
+            `;
+          })
+          .join('');
+
+        thumbsWrap.querySelectorAll('img[data-photo-key]').forEach(attachImageFallback);
+
+        const renderSlide = (newIndex) => {
+          idx = (newIndex + keys.length) % keys.length;
+          const k = keys[idx];
+          const meta = PHOTO_BY_KEY[k];
+
+          mainImg.style.opacity = '0.35';
+          setTimeout(() => {
+            mainImg.dataset.photoKey = '8P1A' + k;
+            mainImg.alt = meta.caption;
+            attachImageFallback(mainImg);
+            mainImg.style.opacity = '1';
+          }, 110);
+
+          counterEl.textContent = `${idx + 1} / ${keys.length}`;
+          captionEl.textContent = meta.caption;
+
+          dotsWrap.querySelectorAll('[data-dot]').forEach((dot, i) => {
+            dot.className = `h-1.5 rounded-full transition-all ${i === idx ? 'w-6 bg-cream' : 'w-2 bg-cream/45 hover:bg-cream/75'}`;
+          });
+
+          thumbsWrap.querySelectorAll('[data-thumb]').forEach((tb, i) => {
+            tb.className = `overflow-hidden rounded-lg aspect-[4/3] bg-espressoCard border-2 transition-all ${i === idx ? 'border-oliveLight opacity-100' : 'border-transparent opacity-60 hover:opacity-95'}`;
+          });
+        };
+
+        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); renderSlide(idx - 1); });
+        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); renderSlide(idx + 1); });
+        dotsWrap.querySelectorAll('[data-dot]').forEach((dot) => {
+          dot.addEventListener('click', (e) => { e.stopPropagation(); renderSlide(Number(dot.dataset.dot)); });
+        });
+        thumbsWrap.querySelectorAll('[data-thumb]').forEach((tb) => {
+          tb.addEventListener('click', () => renderSlide(Number(tb.dataset.thumb)));
+        });
+
+        const openCurrentInLightbox = () => openLightboxByKey(keys[idx], keys);
+        mainImg.addEventListener('click', openCurrentInLightbox);
+        if (zoomBtn) zoomBtn.addEventListener('click', (e) => { e.stopPropagation(); openCurrentInLightbox(); });
+
+        // Touch swipe support on slider
+        let sx = 0;
+        mainImg.addEventListener('touchstart', (e) => { sx = e.changedTouches[0].screenX; }, { passive: true });
+        mainImg.addEventListener('touchend', (e) => {
+          const dx = e.changedTouches[0].screenX - sx;
+          if (Math.abs(dx) > 40) renderSlide(dx > 0 ? idx - 1 : idx + 1);
+        }, { passive: true });
+      });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 5. Seamless Non-Stopping Infinite Marquee Ribbon (Screenshot 3)
+     * ----------------------------------------------------------------------- */
+    function initInfiniteMarquee() {
+      const track = document.getElementById('marqueeTrack');
+      if (!track) return;
+
+      const buildSet = () => {
+        const setEl = document.createElement('div');
+        setEl.className = 'marquee-set';
+        MARQUEE_KEYS.forEach((k) => {
+          const meta = PHOTO_BY_KEY[k];
+          if (!meta) return;
+          const card = document.createElement('div');
+          card.className = 'marquee-card';
+          card.innerHTML = `
+            <img src="${resolvePhotoSrc(k)}" data-photo-key="8P1A${k}" alt="${meta.caption}" loading="lazy" />
+            <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 text-xs text-cream">
+              ${meta.caption}
+            </div>
+          `;
+          attachImageFallback(card.querySelector('img'));
+          card.addEventListener('click', () => openLightboxByKey(k));
+          setEl.appendChild(card);
+        });
+        return setEl;
+      };
+
+      track.innerHTML = '';
+      track.appendChild(buildSet());
+      track.appendChild(buildSet()); // Exact duplicate for 0% -> -50% zero-gap loop
+    }
+
+    /* -----------------------------------------------------------------------
+     * 6. Fullscreen Lightbox (All 16 Photos, Keyboard + Touch Swipe)
+     * ----------------------------------------------------------------------- */
+    let lbKeys = PHOTO_CATALOG.map((p) => p.key);
+    let lbIndex = 0;
+
+    function openLightboxByKey(rawKey, customList = null) {
+      const key = normalizeKey(rawKey);
+      lbKeys = customList && customList.length ? customList.map(normalizeKey) : PHOTO_CATALOG.map((p) => p.key);
+      const pos = lbKeys.indexOf(key);
+      lbIndex = pos >= 0 ? pos : 0;
+      renderLightbox();
+    }
+
+    function renderLightbox() {
+      const box = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      const cnt = document.getElementById('lightboxCounter');
+      const k = lbKeys[lbIndex];
+      const meta = PHOTO_BY_KEY[k];
+      if (!meta) return;
+
+      img.dataset.photoKey = '8P1A' + k;
+      img.alt = meta.caption;
+      attachImageFallback(img);
+      cap.textContent = meta.caption;
+      cnt.textContent = `${lbIndex + 1} / ${lbKeys.length}`;
+
+      box.classList.remove('hidden');
+      box.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function initLightbox() {
+      const box = document.getElementById('lightbox');
+      const closeBtn = document.getElementById('lightboxClose');
+      const prevBtn = document.getElementById('lightboxPrev');
+      const nextBtn = document.getElementById('lightboxNext');
+
+      const close = () => {
+        box.classList.add('hidden');
+        box.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      const step = (delta) => {
+        lbIndex = (lbIndex + delta + lbKeys.length) % lbKeys.length;
+        renderLightbox();
+      };
+
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', () => step(-1));
+      nextBtn.addEventListener('click', () => step(1));
+      box.addEventListener('click', (e) => { if (e.target === box) close(); });
+
+      document.addEventListener('keydown', (e) => {
+        if (box.classList.contains('hidden')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') step(-1);
+        if (e.key === 'ArrowRight') step(1);
+      });
+
+      let startX = 0;
+      box.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].screenX; }, { passive: true });
+      box.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].screenX - startX;
+        if (Math.abs(dx) > 45) step(dx > 0 ? -1 : 1);
+      }, { passive: true });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 7. Booking Modal (Pre-filled, Copy, WhatsApp, Telegram, Email)
+     * ----------------------------------------------------------------------- */
+    let preparedBookingText = '';
+
+    function openBookingModal(prefill = null) {
+      const modal = document.getElementById('bookingModal');
+      const form = document.getElementById('bookingForm');
+      const success = document.getElementById('bookingSuccess');
+      const err = document.getElementById('bookingError');
+      const summaryEl = document.getElementById('bookingSummary');
+
+      // Close floating menu or mobile drawer if open
+      const fMenu = document.getElementById('floatingContactMenu');
+      if (fMenu) fMenu.classList.add('hidden');
+      const drawer = document.getElementById('mobileDrawer');
+      if (drawer && !drawer.classList.contains('pointer-events-none')) {
+        document.getElementById('mobileMenuClose').click();
+      }
+
+      form.classList.remove('hidden');
+      success.classList.add('hidden');
+      err.classList.add('hidden');
+
+      const data = prefill || {
+        dates: `${toRuDate(calcState.checkin)} — ${toRuDate(calcState.checkout)}`,
+        guests: document.getElementById('guestsSummaryLabel')?.textContent || '2 взр.',
+        summary: calcState.summary
+      };
+
+      document.getElementById('bookDates').value = data.dates || '';
+      document.getElementById('bookGuests').value = data.guests || '';
+      summaryEl.textContent = data.summary || 'Базовая стоимость от 5 900 ₽ / сутки (за 2 гостей).';
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function initBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      const closeBtn = document.getElementById('bookingModalClose');
+      const backdrop = document.getElementById('bookingModalBackdrop');
+      const form = document.getElementById('bookingForm');
+      const success = document.getElementById('bookingSuccess');
+      const err = document.getElementById('bookingError');
+      const preparedEl = document.getElementById('bookingPreparedMsg');
+      const waLink = document.getElementById('bookingWhatsappLink');
+      const tgLink = document.getElementById('bookingTelegramLink');
+      const mailLink = document.getElementById('bookingMailLink');
+      const copyBtn = document.getElementById('bookingCopyBtn');
+      const editBtn = document.getElementById('bookingEditAgain');
+
+      const close = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      document.querySelectorAll('[data-open-booking]').forEach((btn) => {
+        btn.addEventListener('click', () => openBookingModal());
+      });
+
+      const nyBtn = document.getElementById('btnBookNewYear');
+      if (nyBtn) {
+        nyBtn.addEventListener('click', () => {
+          openBookingModal({
+            dates: '31.12 — 03.01 (Новый год)',
+            guests: '4 гостя',
+            summary: 'Новогоднее предложение: с 31 декабря по 3 января — 55 000 ₽ для 4 гостей.'
+          });
+        });
+      }
+
+      closeBtn.addEventListener('click', close);
+      backdrop.addEventListener('click', close);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) close();
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('bookName').value.trim();
+        const phone = document.getElementById('bookPhone').value.trim();
+        const dates = document.getElementById('bookDates').value.trim() || 'Уточнить';
+        const guests = document.getElementById('bookGuests').value.trim() || 'Не указано';
+        const comment = document.getElementById('bookComment').value.trim();
+        const summary = document.getElementById('bookingSummary').textContent.trim();
+
+        if (!name || !phone) {
+          err.classList.remove('hidden');
+          return;
+        }
+        err.classList.add('hidden');
+
+        preparedBookingText =
+          `Здравствуйте! Хочу забронировать «Дом у реки».\n` +
+          `Имя: ${name}\n` +
+          `Телефон: ${phone}\n` +
+          `Даты: ${dates}\n` +
+          `Гости: ${guests}\n` +
+          `Расчёт: ${summary}` +
+          (comment ? `\nКомментарий: ${comment}` : '');
+
+        preparedEl.textContent = preparedBookingText;
+        waLink.href = `https://wa.me/79154575972?text=${encodeURIComponent(preparedBookingText)}`;
+        tgLink.href = `https://t.me/+79154575972`;
+        mailLink.href = `mailto:domyreki@inbox.ru?subject=${encodeURIComponent('Заявка на бронирование — Дом у реки')}&body=${encodeURIComponent(preparedBookingText)}`;
+
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      });
+
+      copyBtn.addEventListener('click', () => {
+        if (preparedBookingText && copyText(preparedBookingText)) {
+          showToast('Текст заявки скопирован в буфер обмена');
+        }
+      });
+
+      editBtn.addEventListener('click', () => {
+        success.classList.add('hidden');
+        form.classList.remove('hidden');
+      });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 8. Route Map Scroll, Copy Address & Floating «свяжитесь с нами» Menu
+     * ----------------------------------------------------------------------- */
+    function initRouteAndFloatingContact() {
+      const copyAddr = document.getElementById('copyAddressBtn');
+      if (copyAddr) {
+        copyAddr.addEventListener('click', () => {
+          const addr = 'Московская область, Павлово-Посадский городской округ, деревня Дмитрово, улица Снежная, 20';
+          if (copyText(addr)) showToast('Адрес скопирован в буфер обмена');
+        });
+      }
+
+      const mapBtn = document.getElementById('toggleMapBtn');
+      const mapWrap = document.getElementById('mapSectionWrap');
+      if (mapBtn && mapWrap) {
+        mapBtn.addEventListener('click', () => {
+          mapWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          mapWrap.classList.add('ring-2', 'ring-oliveLight');
+          setTimeout(() => mapWrap.classList.remove('ring-2', 'ring-oliveLight'), 1400);
+        });
+      }
+
+      const fWrap = document.getElementById('floatingContactWrap');
+      const fMenu = document.getElementById('floatingContactMenu');
+      const fPill = document.getElementById('floatingContactPill');
+      const fCircle = document.getElementById('floatingContactCircle');
+
+      const toggleContactMenu = (e) => {
+        e.stopPropagation();
+        fMenu.classList.toggle('hidden');
+      };
+
+      if (fPill) fPill.addEventListener('click', toggleContactMenu);
+      if (fCircle) fCircle.addEventListener('click', toggleContactMenu);
+      document.addEventListener('click', (e) => {
+        if (fWrap && !fWrap.contains(e.target)) fMenu.classList.add('hidden');
+      });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 9. Local Media Connector (Photos + hero-video.mp4) & 2 HTML Exports
+     * ----------------------------------------------------------------------- */
+    function renderMediaChecklist() {
+      const listEl = document.getElementById('mediaChecklist');
+      const statusEl = document.getElementById('mediaModalStatus');
+      const dotEl = document.getElementById('mediaPillDot');
+      if (!listEl) return;
+
+      const loadedCount = PHOTO_CATALOG.filter((p) => Boolean(mediaStore.customUrls[p.key])).length;
+      const vidOk = Boolean(mediaStore.videoUrl);
+
+      if (statusEl) {
+        statusEl.textContent = `Загружено фото: ${loadedCount} / 16 · Видео: ${vidOk ? 'подключено' : 'не загружено'}`;
+      }
+      if (dotEl) {
+        dotEl.className = loadedCount > 0 || vidOk
+          ? 'w-2 h-2 rounded-full bg-[#B4C08E] shrink-0'
+          : 'w-2 h-2 rounded-full bg-oliveLight shrink-0';
+      }
+
+      const items = [
+        `<div class="flex items-center gap-1.5 px-2 py-1 rounded-md ${vidOk ? 'bg-olive/50 text-cream' : 'text-creamSoft'}">
+          <span>${vidOk ? '✓' : '○'}</span><span class="truncate">hero-video.mp4</span>
+        </div>`
+      ];
+
+      PHOTO_CATALOG.forEach((p) => {
+        const has = Boolean(mediaStore.customUrls[p.key]);
+        items.push(
+          `<div class="flex items-center gap-1.5 px-2 py-1 rounded-md ${has ? 'bg-olive/50 text-cream' : 'text-creamSoft'}">
+            <span>${has ? '✓' : '○'}</span><span class="truncate">${p.filename}</span>
+          </div>`
+        );
+      });
+
+      listEl.innerHTML = items.join('');
+    }
+
+    function bindUploadedPhoto(key, file) {
+      const prev = mediaStore.customUrls[key];
+      if (prev && prev.startsWith('blob:')) {
+        try { URL.revokeObjectURL(prev); } catch (e) {}
+      }
+      mediaStore.customUrls[key] = URL.createObjectURL(file);
+      mediaStore.rawFiles[key] = file;
+      refreshAllPhotosForKey(key);
+    }
+
+    function processMediaFiles(fileList) {
+      const files = Array.from(fileList || []);
+      if (!files.length) return;
+
+      let matchedPhotos = 0;
+      let loadedVideo = false;
+      let skipped = 0;
+      const unmatched = [];
+
+      files.forEach((file) => {
+        const lower = file.name.toLowerCase();
+
+        // Any mp4/mov/webm becomes the Hero video
+        if (file.type.startsWith('video/') || /\.(mp4|mov|webm)$/i.test(lower)) {
+          attachUploadedVideo(file);
+          loadedVideo = true;
+          return;
+        }
+
+        if (!file.type.startsWith('image/') && !/\.(jpe?g|png|webp|avif)$/i.test(lower)) {
+          return;
+        }
+
+        // Explicitly skip duplicate bedroom photos (2867, 2882) and screenshots
+        if (lower.includes('2867') || lower.includes('2882') || lower.includes('4094a8') || lower.includes('4265') || lower.includes('4266')) {
+          skipped++;
+          return;
+        }
+
+        const matched = PHOTO_CATALOG.find((p) => lower.includes(p.key));
+        if (matched) {
+          bindUploadedPhoto(matched.key, file);
+          matchedPhotos++;
+        } else {
+          unmatched.push(file);
+        }
+      });
+
+      // Map any renamed images into empty slots
+      unmatched.forEach((file) => {
+        const free = PHOTO_CATALOG.find((p) => !mediaStore.customUrls[p.key]);
+        if (free) {
+          bindUploadedPhoto(free.key, file);
+          matchedPhotos++;
+        }
+      });
+
+      renderMediaChecklist();
+
+      const parts = [];
+      if (matchedPhotos > 0) parts.push(`загружено фото: ${matchedPhotos}`);
+      if (loadedVideo) parts.push('видео в Hero запущено');
+      if (skipped > 0) parts.push(`пропущено дублей: ${skipped}`);
+      showToast(parts.length ? parts.join(' · ') : 'Подходящих фото или видео не найдено');
+    }
+
+    function compressToJpegDataUrl(file, maxDim = 1500, quality = 0.84) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const img = new Image();
+          img.onload = () => {
+            try {
+              let { width, height } = img;
+              if (width > maxDim || height > maxDim) {
+                const ratio = Math.min(maxDim / width, maxDim / height);
+                width = Math.round(width * ratio);
+                height = Math.round(height * ratio);
+              }
+              const canvas = document.createElement('canvas');
+              canvas.width = width;
+              canvas.height = height;
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0, width, height);
+              resolve(canvas.toDataURL('image/jpeg', quality));
+            } catch (e) {
+              resolve(reader.result);
+            }
+          };
+          img.onerror = () => resolve(null);
+          img.src = reader.result;
+        };
+        reader.onerror = () => resolve(null);
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function triggerHtmlDownload(html, filename) {
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    function stripLoaderFromClone(clone) {
+      ['#mediaLoaderPillWrap', '#mediaModal', '#pageDropOverlay', '#embeddedBootScript'].forEach((sel) => {
+        const el = clone.querySelector(sel);
+        if (el) el.remove();
+      });
+      const toast = clone.querySelector('#toastContainer');
+      if (toast) toast.innerHTML = '';
+      clone.querySelectorAll('.reveal').forEach((el) => el.classList.remove('is-visible'));
+    }
+
+    function initMediaLoader() {
+      const pillWrap = document.getElementById('mediaLoaderPillWrap');
+      const openBtn = document.getElementById('openMediaModalBtn');
+      const closePillBtn = document.getElementById('closeMediaPillBtn');
+      const modal = document.getElementById('mediaModal');
+      const backdrop = document.getElementById('mediaModalBackdrop');
+      const closeBtn = document.getElementById('mediaModalClose');
+      const selectBtn = document.getElementById('selectMediaFilesBtn');
+      const fileInput = document.getElementById('mediaFilesInput');
+      const pageOverlay = document.getElementById('pageDropOverlay');
+      const exportHostBtn = document.getElementById('exportHostingBtn');
+      const exportAutoBtn = document.getElementById('exportAutonomousBtn');
+
+      if (!modal) return;
+      renderMediaChecklist();
+
+      const openModal = () => {
+        renderMediaChecklist();
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      openBtn.addEventListener('click', openModal);
+      closePillBtn.addEventListener('click', () => pillWrap.classList.add('hidden'));
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      });
+
+      selectBtn.addEventListener('click', () => {
+        fileInput.value = '';
+        fileInput.click();
+      });
+      fileInput.addEventListener('change', (e) => processMediaFiles(e.target.files));
+
+      // Drag & drop anywhere on window
+      let dragDepth = 0;
+      window.addEventListener('dragenter', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.types.includes('Files')) return;
+        e.preventDefault();
+        dragDepth++;
+        pageOverlay.classList.add('is-open');
+      });
+      window.addEventListener('dragover', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.types.includes('Files')) return;
+        e.preventDefault();
+      });
+      window.addEventListener('dragleave', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.types.includes('Files')) return;
+        dragDepth = Math.max(0, dragDepth - 1);
+        if (dragDepth === 0) pageOverlay.classList.remove('is-open');
+      });
+      window.addEventListener('drop', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.files || !e.dataTransfer.files.length) return;
+        e.preventDefault();
+        dragDepth = 0;
+        pageOverlay.classList.remove('is-open');
+        processMediaFiles(e.dataTransfer.files);
+      });
+
+      // Export 1: Clean production index.html for hosting
+      exportHostBtn.addEventListener('click', () => {
+        const clone = document.documentElement.cloneNode(true);
+        stripLoaderFromClone(clone);
+
+        clone.querySelectorAll('img[data-photo-key]').forEach((img) => {
+          const k = normalizeKey(img.dataset.photoKey);
+          if (k && PHOTO_BY_KEY[k]) img.setAttribute('src', PHOTO_BY_KEY[k].filename);
+        });
+
+        const cloneVid = clone.querySelector('#heroVideo');
+        if (cloneVid) {
+          cloneVid.removeAttribute('src');
+          cloneVid.setAttribute('poster', '8P1A2821.jpg');
+          cloneVid.classList.remove('opacity-100');
+          cloneVid.classList.add('opacity-0');
+          cloneVid.innerHTML = '<source src="hero-video.mp4" type="video/mp4" />';
+        }
+
+        triggerHtmlDownload('<!DOCTYPE html>\n' + clone.outerHTML, 'index.html');
+        showToast('Скачан чистый index.html для загрузки на хостинг');
+      });
+
+      // Export 2: Autonomous HTML with embedded Base64 photos
+      exportAutoBtn.addEventListener('click', async () => {
+        showToast('Сжимаем и вшиваем ваши фото в автономный HTML…');
+        const embeddedMap = {};
+        for (const item of PHOTO_CATALOG) {
+          if (mediaStore.rawFiles[item.key]) {
+            const dataUrl = await compressToJpegDataUrl(mediaStore.rawFiles[item.key], 1500, 0.84);
+            if (dataUrl) embeddedMap[item.key] = dataUrl;
+          } else if (mediaStore.customUrls[item.key] && mediaStore.customUrls[item.key].startsWith('data:')) {
+            embeddedMap[item.key] = mediaStore.customUrls[item.key];
+          }
+        }
+
+        const clone = document.documentElement.cloneNode(true);
+        stripLoaderFromClone(clone);
+
+        clone.querySelectorAll('img[data-photo-key]').forEach((img) => {
+          const k = normalizeKey(img.dataset.photoKey);
+          if (embeddedMap[k]) img.setAttribute('src', embeddedMap[k]);
+        });
+
+        const cloneVid = clone.querySelector('#heroVideo');
+        if (cloneVid) {
+          cloneVid.removeAttribute('src');
+          cloneVid.innerHTML = '<source src="hero-video.mp4" type="video/mp4" />';
+          cloneVid.classList.remove('opacity-100');
+          cloneVid.classList.add('opacity-0');
+          if (embeddedMap['2821']) cloneVid.setAttribute('poster', embeddedMap['2821']);
+        }
+
+        const boot = document.createElement('script');
+        boot.id = 'embeddedBootScript';
+        boot.textContent = `window.__EMBEDDED_PHOTOS__ = ${JSON.stringify(embeddedMap)};`;
+        clone.querySelector('head').appendChild(boot);
+
+        triggerHtmlDownload('<!DOCTYPE html>\n' + clone.outerHTML, 'dom-u-reki-autonomous.html');
+        const count = Object.keys(embeddedMap).length;
+        showToast(count > 0 ? `Скачан автономный HTML (вшито фото: ${count})` : 'Файл скачан. Сначала выберите фото, чтобы вшить их внутрь.');
+      });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 10. Scroll Reveal Observer
+     * ----------------------------------------------------------------------- */
+    function initScrollReveal() {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach((el) => el.classList.add('is-visible'));
+        return;
+      }
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -24px 0px' }
+      );
+      items.forEach((el) => observer.observe(el));
+    }
+  </script>
+</body>
+</html>

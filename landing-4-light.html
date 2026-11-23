@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дом у реки — Барнхаус на берегу реки Слогавка</title>
+  <meta name="description" content="Сдаётся современный дом у реки общей площадью 65,9 м² на участке 15 соток в стиле барнхаус. 60 км от Москвы по Носовихинскому шоссе, живописный берег реки Слогавка." />
+
+  <!-- Google Fonts: Unbounded для выразительных заголовков и Manrope для чистого текста -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Светлая весёлая лимонно-голубо-розовая палитра (без чёрного, бежевого, коричневого и зелёного) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            skybg: {
+              50: '#EFF8FF',
+              100: '#E0F2FE',
+              200: '#BAE6FD',
+              400: '#38BDF8',
+              600: '#0284C7',
+            },
+            lemon: {
+              50: '#FEFCE8',
+              100: '#FEF9C3',
+              200: '#FEF08A',
+              400: '#FACC15',
+              500: '#EAB308',
+            },
+            berry: {
+              50: '#FFF1F6',
+              100: '#FCE7F3',
+              200: '#FBCFE8',
+              400: '#F472B6',
+              500: '#EC4899',
+              600: '#DB2777',
+            },
+            ink: {
+              900: '#1E2952',
+              700: '#314073',
+              500: '#4B5B82',
+              400: '#6B7CA6',
+            }
+          },
+          fontFamily: {
+            display: ['"Unbounded"', '"Manrope"', 'sans-serif'],
+            sans: ['"Manrope"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Пружинистые интерактивные переходы при наведении */
+    .hover-pop {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.3s ease, background-color 0.3s ease;
+    }
+    .hover-pop:hover {
+      transform: translateY(-6px) scale(1.035);
+    }
+
+    .hover-glow-sky:hover {
+      box-shadow: 0 18px 40px -10px rgba(56, 189, 248, 0.42);
+      border-color: #38BDF8;
+    }
+    .hover-glow-pink:hover {
+      box-shadow: 0 18px 40px -10px rgba(244, 114, 182, 0.42);
+      border-color: #F472B6;
+    }
+    .hover-glow-lemon:hover {
+      box-shadow: 0 18px 40px -10px rgba(250, 204, 21, 0.52);
+      border-color: #FACC15;
+    }
+
+    /* Увеличение кнопок и перелив градиента */
+    .btn-bounce {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, filter 0.3s ease;
+    }
+    .btn-bounce:hover {
+      transform: scale(1.08);
+      filter: brightness(1.04);
+    }
+    .btn-bounce:active {
+      transform: scale(0.98);
+    }
+
+    /* Увеличение фото внутри контейнера при наведении */
+    .photo-zoom-box img {
+      transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .photo-zoom-box:hover img {
+      transform: scale(1.08);
+    }
+    .photo-zoom-box .zoom-badge {
+      opacity: 0;
+      transform: translateY(8px) scale(0.92);
+      transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .photo-zoom-box:hover .zoom-badge {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Игривый бейдж «4 ГОСТЯ» */
+    .guest-orb {
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+      animation: gentleFloat 4.5s ease-in-out infinite;
+    }
+    .guest-orb:hover {
+      animation-play-state: paused;
+      transform: scale(1.09) rotate(-4deg);
+      box-shadow: 0 24px 55px -10px rgba(244, 114, 182, 0.48), 0 0 0 10px rgba(254, 240, 138, 0.65);
+    }
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(2deg); }
+    }
+
+    /* Плавное появление секций при прокрутке */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Скрытый системный скроллбар для каруселей и filmstrip */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Привязка слайдов в каруселях */
+    .snap-track {
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    .snap-slide {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
+
+    /* Падающие пастельные конфетти и снежинки в новогоднем блоке */
+    .confetti-piece {
+      position: absolute;
+      top: -16px;
+      pointer-events: none;
+      animation: confettiFall linear infinite;
+      opacity: 0.85;
+    }
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(-10px) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      12% {
+        opacity: 0.9;
+      }
+      88% {
+        opacity: 0.85;
+      }
+      100% {
+        transform: translateY(440px) translateX(28px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Строки тарифов с пружинистым подъёмом */
+    .tariff-row {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, background-color 0.25s ease;
+    }
+    .tariff-row:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 14px 32px -12px rgba(2, 132, 199, 0.28);
+      z-index: 10;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body class="bg-skybg-50 text-ink-900 font-sans antialiased overflow-x-hidden selection:bg-lemon-200 selection:text-ink-900">
+
+  <!-- ===================================================================== -->
+  <!-- 1. ШАПКА САЙТА (STICKY HEADER)                                        -->
+  <!-- ===================================================================== -->
+  <header id="siteHeader" class="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-skybg-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 sm:h-20 gap-3">
+        <!-- Логотип -->
+        <a href="#top" class="group flex items-center gap-3 focus:outline-none">
+          <span class="w-11 h-11 rounded-2xl bg-gradient-to-br from-skybg-400 via-berry-400 to-lemon-400 p-[2px] shadow-md group-hover:scale-110 transition-transform duration-300">
+            <span class="w-full h-full rounded-[14px] bg-white flex items-center justify-center text-skybg-600">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11.5L12 4l9 7.5" />
+                <path d="M5.5 9.5V20h13V9.5" />
+                <path d="M9.5 20v-5.5h5V20" />
+              </svg>
+            </span>
+          </span>
+          <div class="flex flex-col leading-tight">
+            <span class="font-display font-bold text-sm sm:text-base tracking-tight text-ink-900">
+              Дом у реки
+            </span>
+            <span class="text-[11px] font-semibold text-berry-500 hidden sm:inline">
+              Барнхаус · река Слогавка
+            </span>
+          </div>
+        </a>
+
+        <!-- Навигация -->
+        <nav class="hidden lg:flex items-center gap-2 text-sm font-semibold text-ink-500" aria-label="Навигация">
+          <a href="#about" class="px-3.5 py-2 rounded-full hover:bg-skybg-100 hover:text-skybg-600 transition-all hover:scale-105">О доме</a>
+          <a href="#plan-section" class="px-3.5 py-2 rounded-full hover:bg-lemon-100 hover:text-ink-900 transition-all hover:scale-105">Планировка</a>
+          <a href="#territory" class="px-3.5 py-2 rounded-full hover:bg-berry-100 hover:text-berry-600 transition-all hover:scale-105">Участок</a>
+          <a href="#amenities" class="px-3.5 py-2 rounded-full hover:bg-skybg-100 hover:text-skybg-600 transition-all hover:scale-105">Удобства</a>
+          <a href="#gallery" class="px-3.5 py-2 rounded-full hover:bg-berry-100 hover:text-berry-600 transition-all hover:scale-105">Галерея</a>
+          <a href="#pricing" class="px-3.5 py-2 rounded-full hover:bg-lemon-100 hover:text-ink-900 transition-all hover:scale-105">Цены</a>
+          <a href="#contacts" class="px-3.5 py-2 rounded-full hover:bg-skybg-100 hover:text-skybg-600 transition-all hover:scale-105">Контакты</a>
+        </nav>
+
+        <!-- Справа: телефон + кнопка «Забронировать» + мобильное меню -->
+        <div class="flex items-center gap-2.5">
+          <a href="tel:+79154575972" class="hidden xl:inline-flex items-center gap-1.5 text-sm font-bold text-ink-900 hover:text-berry-500 transition-colors mr-1">
+            +7 (915) 457-59-72
+          </a>
+          <button
+            type="button"
+            onclick="openBookingModal()"
+            class="btn-bounce px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-berry-400 via-berry-500 to-skybg-400 text-white font-bold text-xs sm:text-sm shadow-lg shadow-berry-400/35"
+          >
+            Забронировать
+          </button>
+
+          <button
+            type="button"
+            id="mobileMenuBtn"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            class="lg:hidden p-2.5 rounded-full bg-skybg-100 text-ink-900 hover:bg-lemon-200 transition-colors"
+          >
+            <svg id="burgerIcon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg id="closeIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-skybg-200">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1.5">
+        <a href="#about" class="mobile-nav-link py-2.5 px-4 rounded-2xl hover:bg-skybg-100 text-ink-900 font-semibold">О доме</a>
+        <a href="#plan-section" class="mobile-nav-link py-2.5 px-4 rounded-2xl hover:bg-lemon-100 text-ink-900 font-semibold">Планировка</a>
+        <a href="#territory" class="mobile-nav-link py-2.5 px-4 rounded-2xl hover:bg-berry-100 text-ink-900 font-semibold">Участок и мангал</a>
+        <a href="#amenities" class="mobile-nav-link py-2.5 px-4 rounded-2xl hover:bg-skybg-100 text-ink-900 font-semibold">Продумано для отдыха</a>
+        <a href="#gallery" class="mobile-nav-link py-2.5 px-4 rounded-2xl hover:bg-berry-100 text-ink-900 font-semibold">Галерея (18 фото)</a>
+        <a href="#pricing" class="mobile-nav-link py-2.5 px-4 rounded-2xl hover:bg-lemon-100 text-ink-900 font-semibold">Цены и калькулятор</a>
+        <a href="#contacts" class="mobile-nav-link py-2.5 px-4 rounded-2xl hover:bg-skybg-100 text-ink-900 font-semibold">Контакты и карта</a>
+        <div class="pt-3 mt-2 border-t border-skybg-200 flex items-center justify-between px-4">
+          <a href="tel:+79154575972" class="text-sm font-bold text-skybg-600">+7 (915) 457-59-72</a>
+          <a href="mailto:domyreki@inbox.ru" class="text-xs font-semibold text-berry-500">domyreki@inbox.ru</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 2. HERO-СЕКЦИЯ («НЕСКОЛЬКО ДНЕЙ ДЛЯ СВОИХ»)                           -->
+  <!-- ===================================================================== -->
+  <section id="top" class="relative overflow-hidden bg-gradient-to-br from-skybg-50 via-white to-berry-50 pt-10 sm:pt-14 pb-16 sm:pb-24 border-b border-skybg-200/70">
+    <!-- Декоративные пастельные пузырьки и блики -->
+    <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-lemon-200/55 blur-3xl"></div>
+    <div class="pointer-events-none absolute top-40 -left-24 w-80 h-80 rounded-full bg-skybg-200/50 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 right-1/3 w-72 h-72 rounded-full bg-berry-200/45 blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Яркие теги сверху -->
+      <div class="flex flex-wrap items-center gap-2.5 mb-5">
+        <span class="hover-pop hover-glow-sky inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-skybg-100 border border-skybg-200 text-skybg-600 text-xs font-bold uppercase tracking-wider cursor-default">
+          ✦ Современный барнхаус 2023 года
+        </span>
+        <span class="hover-pop hover-glow-pink inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-berry-100 border border-berry-200 text-berry-600 text-xs font-bold uppercase tracking-wider cursor-default">
+          🌊 Берег реки Слогавка
+        </span>
+        <span class="hover-pop hover-glow-lemon inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-lemon-100 border border-lemon-400/50 text-ink-900 text-xs font-bold uppercase tracking-wider cursor-default">
+          ✨ 60 км от Москвы · Носовихинское шоссе
+        </span>
+      </div>
+
+      <!-- Главный заголовок БЕЗ точки -->
+      <h1 class="font-display font-bold text-3xl sm:text-5xl md:text-6xl lg:text-[64px] leading-[1.06] tracking-[-0.02em] text-ink-900 uppercase max-w-5xl mb-8 sm:mb-12">
+        НЕСКОЛЬКО ДНЕЙ<br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-skybg-600 via-berry-500 to-lemon-500 bg-clip-text text-transparent">
+          ДЛЯ СВОИХ
+        </span>
+      </h1>
+
+      <!-- Сетка: видео слева + круглый лимонный бейдж «4 ГОСТЯ» и кнопки справа -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <!-- Левая колонка (8/12): видео hero-video.mp4 -->
+        <div class="lg:col-span-8">
+          <div class="relative aspect-video w-full rounded-[2rem] overflow-hidden bg-skybg-100 border-4 border-white shadow-2xl shadow-skybg-400/20 group">
+            <!-- Фолбэк-постер -->
+            <img
+              src="8P1A2821.jpg"
+              alt="Барнхаус Дом у реки зимой с гирляндами"
+              class="absolute inset-0 w-full h-full object-cover"
+              onerror="this.src='https://placehold.co/1280x720/E0F2FE/1E2952?text=%D0%94%D0%BE%D0%BC+%D1%83+%D1%80%D0%B5%D0%BA%D0%B8'"
+            />
+
+            <!-- Основное видео -->
+            <video
+              id="heroVideo"
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="8P1A2821.jpg"
+              class="relative z-10 w-full h-full object-cover transition-opacity duration-500"
+            >
+              <source src="hero-video.mp4" type="video/mp4" />
+            </video>
+
+            <!-- Верхняя подпись поверх видео -->
+            <div class="absolute top-4 left-4 z-20">
+              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-skybg-200 text-ink-900 text-xs sm:text-sm font-bold shadow-md">
+                <span class="w-2.5 h-2.5 rounded-full bg-berry-500 animate-pulse"></span>
+                Дом у реки • 65,9 м² • 15 соток
+              </span>
+            </div>
+
+            <!-- Нижняя панель интерактивного управления видео (Пауза/Пуск, Звук вкл/выкл, Полный экран) -->
+            <div class="absolute inset-x-0 bottom-0 z-20 p-4 sm:p-5 bg-gradient-to-t from-ink-900/65 via-ink-900/20 to-transparent flex items-center justify-between gap-3">
+              <span class="hidden sm:inline-block px-3.5 py-1.5 rounded-full bg-lemon-100/95 text-ink-900 text-xs font-bold shadow-sm">
+                Видеотур по дому и участку
+              </span>
+
+              <div class="flex items-center gap-2.5 ml-auto">
+                <!-- Пауза / Пуск -->
+                <button
+                  type="button"
+                  id="videoPlayPauseBtn"
+                  onclick="toggleHeroVideo()"
+                  aria-label="Пауза или воспроизведение видео"
+                  class="btn-bounce flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white/95 hover:bg-lemon-200 text-ink-900 text-xs font-bold shadow-md"
+                >
+                  <svg id="pauseSvg" class="w-4 h-4 text-berry-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+                  </svg>
+                  <svg id="playSvg" class="w-4 h-4 text-skybg-600 hidden" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  <span id="playPauseLabel" class="hidden sm:inline">Пауза</span>
+                </button>
+
+                <!-- Звук вкл / выкл -->
+                <button
+                  type="button"
+                  id="videoMuteBtn"
+                  onclick="toggleHeroMute()"
+                  aria-label="Включить или выключить звук"
+                  class="btn-bounce flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white/95 hover:bg-skybg-100 text-ink-900 text-xs font-bold shadow-md"
+                >
+                  <svg id="mutedSvg" class="w-4 h-4 text-berry-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6" />
+                  </svg>
+                  <svg id="unmutedSvg" class="w-4 h-4 text-skybg-600 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14" />
+                  </svg>
+                  <span id="muteLabel" class="hidden sm:inline">Звук выкл</span>
+                </button>
+
+                <!-- Развернуть на весь экран -->
+                <button
+                  type="button"
+                  onclick="fullscreenHeroVideo()"
+                  aria-label="Развернуть видео на весь экран"
+                  class="btn-bounce p-2.5 rounded-full bg-white/95 hover:bg-berry-100 text-ink-900 shadow-md"
+                >
+                  <svg class="w-4 h-4 text-skybg-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Правая колонка (4/12): круглый лимонно-розовый бейдж «4 ГОСТЯ» и кнопки -->
+        <div class="lg:col-span-4 flex flex-col items-center lg:items-start justify-center gap-6 sm:gap-8">
+          <button
+            type="button"
+            onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })"
+            class="guest-orb w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-lemon-200 via-lemon-400 to-berry-400 p-2 shadow-xl shadow-lemon-400/45 focus:outline-none cursor-pointer"
+          >
+            <div class="w-full h-full rounded-full bg-gradient-to-br from-lemon-100 via-lemon-200 to-lemon-400 border-4 border-white flex flex-col items-center justify-center text-center p-5">
+              <span class="font-display font-bold text-5xl sm:text-6xl leading-none text-ink-900">4</span>
+              <span class="font-display font-bold text-xs sm:text-sm uppercase tracking-[0.2em] text-berry-600 mt-1.5">
+                ГОСТЯ
+              </span>
+              <span class="w-12 h-1 rounded-full bg-gradient-to-r from-skybg-400 to-berry-400 my-2.5"></span>
+              <span class="text-xs font-bold text-ink-900 leading-snug">
+                65,9 м² дом · 15 соток
+              </span>
+              <span class="text-[11px] font-semibold text-ink-500 mt-0.5">
+                Дети до 12 лет бесплатно
+              </span>
+            </div>
+          </button>
+
+          <div class="w-full max-w-xs flex flex-col gap-3">
+            <a
+              href="#pricing"
+              class="btn-bounce w-full inline-flex items-center justify-between px-6 py-4 rounded-full bg-gradient-to-r from-berry-500 to-skybg-400 text-white font-bold text-sm sm:text-base shadow-xl shadow-berry-400/35 group"
+            >
+              <span>Выбрать даты</span>
+              <span class="text-lg group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+
+            <a
+              href="#new-year"
+              class="btn-bounce w-full inline-flex items-center justify-between px-6 py-3.5 rounded-full bg-lemon-100 hover:bg-lemon-200 border-2 border-lemon-400 text-ink-900 font-bold text-xs sm:text-sm shadow-md"
+            >
+              <span>✨ Новый год 31.12 — 03.01</span>
+              <span class="text-berry-600">55 000 ₽</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Полное описание дома под Hero -->
+      <div id="about" class="mt-12 sm:mt-16 p-6 sm:p-9 rounded-[2rem] bg-white/90 backdrop-blur-md border-2 border-skybg-200 shadow-lg shadow-skybg-400/10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 reveal hover-pop hover-glow-sky">
+        <div class="lg:col-span-4 flex flex-col justify-between gap-4">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-berry-100 text-berry-600 text-xs font-bold uppercase tracking-wider mb-3">
+              🏡 Аренда посуточно
+            </span>
+            <h2 class="font-display font-bold text-lg sm:text-xl text-ink-900 leading-snug">
+              Сдаётся дом у реки общей площадью 65,9 м² на участке 15 сот
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2.5">
+            <div class="p-3 rounded-2xl bg-skybg-50 border border-skybg-200 text-center">
+              <div class="font-display font-bold text-lg text-skybg-600">65,9 м²</div>
+              <div class="text-[11px] font-semibold text-ink-500">площадь дома</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-lemon-100 border border-lemon-400/60 text-center">
+              <div class="font-display font-bold text-lg text-ink-900">15 соток</div>
+              <div class="text-[11px] font-semibold text-ink-500">свой участок</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 space-y-3.5 text-ink-500 text-base sm:text-[17px] leading-relaxed">
+          <p>
+            Современный дом с панорамными окнами в популярном стиле <strong class="text-ink-900 font-bold">барнхаус</strong> находится в <strong class="text-skybg-600 font-bold">60 км от Москвы по Носовихинскому шоссе</strong>. Продуманная планировка позволит комфортно разместиться в доме <strong class="text-berry-600 font-bold">4 гостям</strong>.
+          </p>
+          <p>
+            Дом <strong class="text-ink-900 font-bold">2023 года постройки</strong> с новой мебелью и техникой. Расположен в уединённом месте, на живописном берегу <strong class="text-skybg-600 font-bold">реки Слогавка</strong>. Красота этого незабываемого места позволит отдохнуть от городской суеты и получить истинное наслаждение от единения с природой. Мы позаботились и наполнили дом всем необходимым для идеального отдыха.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. НОВОГОДНИЙ СПЕЦБЛОК («НОВЫЙ ГОД ВАШИМ КРУГОМ»)                     -->
+  <!-- ===================================================================== -->
+  <section id="new-year" class="relative overflow-hidden bg-gradient-to-br from-berry-50 via-lemon-50 to-skybg-100 py-16 sm:py-24 border-b border-berry-200/70">
+    <!-- Контейнер для анимированных пастельных конфетти и снежинок -->
+    <div id="confettiLayer" class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="rounded-[2.2rem] bg-white/92 backdrop-blur-lg border-2 border-berry-200 p-7 sm:p-11 lg:p-14 shadow-2xl shadow-berry-400/15 relative overflow-hidden">
+        <!-- Мягкие цветные блики -->
+        <div class="pointer-events-none absolute -top-20 -right-20 w-72 h-72 rounded-full bg-lemon-200/60 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-skybg-200/60 blur-3xl"></div>
+
+        <div class="relative z-10">
+          <!-- Бейдж -->
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <span class="hover-pop hover-glow-pink inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-berry-100 to-lemon-100 border border-berry-200 text-berry-600 text-xs font-bold uppercase tracking-[0.16em]">
+              ❄️ Праздничный заезд на Новый год
+            </span>
+            <button
+              type="button"
+              onclick="burstConfetti()"
+              class="btn-bounce px-3.5 py-1.5 rounded-full bg-skybg-100 hover:bg-lemon-200 text-skybg-600 text-xs font-bold"
+            >
+              ✨ Больше снежинок
+            </button>
+          </div>
+
+          <!-- Заголовок БЕЗ точки -->
+          <h2 class="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-ink-900 uppercase tracking-tight mb-8 sm:mb-10">
+            НОВЫЙ ГОД ВАШИМ КРУГОМ
+          </h2>
+
+          <!-- Крупная строка дат 31.12 — ❄️ — 03.01 -->
+          <div class="flex items-center justify-between gap-4 sm:gap-8 pb-8 sm:pb-10 border-b-2 border-dashed border-skybg-200">
+            <span class="hover-pop inline-block font-display font-bold text-4xl sm:text-6xl lg:text-7xl bg-gradient-to-r from-skybg-600 to-skybg-400 bg-clip-text text-transparent tracking-tight cursor-default">
+              31.12
+            </span>
+
+            <div class="flex-1 flex items-center gap-3">
+              <span class="h-1 flex-1 rounded-full bg-gradient-to-r from-skybg-200 via-lemon-400 to-berry-200"></span>
+              <span class="hover-pop w-11 h-11 rounded-full bg-lemon-200 border-2 border-white text-berry-600 flex items-center justify-center text-lg shadow-md">
+                ❄️
+              </span>
+              <span class="h-1 flex-1 rounded-full bg-gradient-to-r from-berry-200 via-lemon-400 to-skybg-200"></span>
+            </div>
+
+            <span class="hover-pop inline-block font-display font-bold text-4xl sm:text-6xl lg:text-7xl bg-gradient-to-r from-berry-500 to-berry-400 bg-clip-text text-transparent tracking-tight cursor-default">
+              03.01
+            </span>
+          </div>
+
+          <!-- Нижний ряд: цена 55 000 ₽ и кнопка -->
+          <div class="pt-8 sm:pt-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div>
+              <div class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-ink-900">
+                55 000 ₽
+              </div>
+              <span class="inline-block mt-2 px-3 py-1 rounded-full bg-lemon-200 text-ink-900 text-xs font-bold uppercase tracking-wider">
+                Для 4 гостей · 3 праздничных суток
+              </span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center gap-5 lg:max-w-2xl">
+              <p class="text-ink-500 text-sm sm:text-base leading-relaxed">
+                Стоимость аренды с <strong class="text-ink-900 font-bold">31 декабря по 3 января — 55 000 ₽ для 4 гостей</strong>. Барнхаус сияет тёплыми гирляндами, а вокруг — заснеженный лес и берег реки Слогавка.
+              </p>
+              <button
+                type="button"
+                onclick="openNewYearBooking()"
+                class="btn-bounce shrink-0 inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-gradient-to-r from-berry-500 via-berry-400 to-lemon-400 text-white font-bold text-sm shadow-xl shadow-berry-400/35 whitespace-nowrap"
+              >
+                <span>Забронировать Новый год</span>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. ПЛАНИРОВКА И ДВОЙНОЕ ФОТО-ОКОШКО С ПРОМОТКОЙ                       -->
+  <!--    («У КАЖДОГО ДНЯ СВОЙ ПРИЯТНЫЙ ПЛАН»)                                -->
+  <!-- ===================================================================== -->
+  <section id="plan-section" class="bg-white py-16 sm:py-24 border-b border-skybg-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+        <div>
+          <span class="inline-block px-4 py-1.5 rounded-full bg-skybg-100 text-skybg-600 text-xs font-bold uppercase tracking-[0.16em] mb-3">
+            В вашем распоряжении
+          </span>
+          <!-- Заголовок БЕЗ точки -->
+          <h2 class="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-ink-900 uppercase tracking-tight leading-[1.1]">
+            У КАЖДОГО ДНЯ<br class="hidden sm:inline" /> СВОЙ ПРИЯТНЫЙ ПЛАН
+          </h2>
+        </div>
+
+        <!-- Внешние стрелки переключения зон -->
+        <div class="flex items-center gap-3 self-start lg:self-end">
+          <span class="text-xs font-bold text-ink-500 hidden sm:inline">Переключить зону:</span>
+          <button
+            type="button"
+            onclick="stepZoneCategory(-1)"
+            aria-label="Предыдущая зона дома"
+            class="btn-bounce w-11 h-11 rounded-full bg-skybg-100 hover:bg-skybg-400 hover:text-white text-skybg-600 font-bold text-lg flex items-center justify-center shadow-sm"
+          >
+            ←
+          </button>
+          <button
+            type="button"
+            onclick="stepZoneCategory(1)"
+            aria-label="Следующая зона дома"
+            class="btn-bounce w-11 h-11 rounded-full bg-berry-100 hover:bg-berry-400 hover:text-white text-berry-600 font-bold text-lg flex items-center justify-center shadow-sm"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Вкладки 4 зон дома (внешняя карусель) -->
+      <div id="zoneTabs" class="flex flex-wrap gap-2.5 mb-6" role="tablist" aria-label="Зоны дома"></div>
+
+      <!-- ГЛАВНОЕ ОКОШКО С ВНУТРЕННЕЙ ПРОМОТКОЙ КАРТИНОК -->
+      <div class="relative rounded-[2.2rem] overflow-hidden bg-gradient-to-br from-skybg-50 via-white to-berry-50 border-2 border-skybg-200 shadow-2xl shadow-skybg-400/15">
+        <!-- Верхняя панель поверх окошка: счётчик кадров + название зоны + кнопка Лайтбокса -->
+        <div class="absolute top-4 inset-x-4 z-20 flex items-center justify-between gap-2 pointer-events-none">
+          <div class="flex items-center gap-2 pointer-events-auto">
+            <span id="zoneWindowCounter" class="px-4 py-1.5 rounded-full bg-lemon-200 border-2 border-white text-ink-900 text-xs font-extrabold shadow-md">
+              1 / 6
+            </span>
+            <span id="zoneWindowBadge" class="hidden sm:inline-block px-4 py-1.5 rounded-full bg-white/92 backdrop-blur-md border border-skybg-200 text-skybg-600 text-xs font-bold shadow-md">
+              Кухня-гостиная 26,5 м²
+            </span>
+          </div>
+
+          <button
+            type="button"
+            onclick="openCurrentZonePhotoInLightbox()"
+            aria-label="Открыть фото на весь экран"
+            class="btn-bounce pointer-events-auto flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/92 hover:bg-berry-400 hover:text-white text-ink-900 border border-berry-200 text-xs font-bold shadow-md"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10.5 7.5v6m-3-3h6" />
+            </svg>
+            <span class="hidden sm:inline">На весь экран</span>
+          </button>
+        </div>
+
+        <!-- Большие внутренние стрелки промотки внутри окошка ‹ › -->
+        <button
+          type="button"
+          onclick="stepZoneWindow(-1)"
+          aria-label="Предыдущий кадр внутри окошка"
+          class="btn-bounce absolute left-3 sm:left-5 top-[42%] sm:top-[44%] -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-lemon-400 text-ink-900 border-2 border-skybg-200 flex items-center justify-center text-2xl font-bold shadow-xl"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          onclick="stepZoneWindow(1)"
+          aria-label="Следующий кадр внутри окошка"
+          class="btn-bounce absolute right-3 sm:right-5 top-[42%] sm:top-[44%] -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-berry-400 hover:text-white text-ink-900 border-2 border-berry-200 flex items-center justify-center text-2xl font-bold shadow-xl"
+        >
+          ›
+        </button>
+
+        <!-- Прокручиваемая лента слайдов внутри окошка (свайп + drag-to-scroll + scroll-snap) -->
+        <div
+          id="zoneWindowTrack"
+          class="flex overflow-x-auto snap-track no-scrollbar cursor-grab active:cursor-grabbing select-none"
+        ></div>
+
+        <!-- Нижняя интерактивная панель внутри окошка: подпись, точки-индикаторы и filmstrip миниатюр -->
+        <div class="bg-white/95 border-t-2 border-skybg-100 px-4 sm:px-6 py-4 flex flex-col gap-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <p id="zoneWindowCaption" class="text-sm sm:text-base font-bold text-ink-900">
+              Просторная кухня-гостиная 26,5 м² с двумя удобными диванами
+            </p>
+            <div id="zoneWindowDots" class="flex items-center gap-1.5 shrink-0"></div>
+          </div>
+
+          <!-- Filmstrip-лента миниатюр прямо внутри окошка -->
+          <div class="flex items-center gap-2.5">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-ink-400 hidden sm:inline shrink-0">
+              Промотка в окошке:
+            </span>
+            <div id="zoneWindowThumbs" class="flex items-center gap-2.5 overflow-x-auto no-scrollbar py-1"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 карточки планировки «В вашем распоряжении» -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
+        <div onclick="selectZone(0)" class="hover-pop hover-glow-sky p-6 rounded-3xl bg-skybg-50 border-2 border-skybg-200 cursor-pointer">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-white text-skybg-600 text-xs font-extrabold mb-3 shadow-sm">
+            26,5 м²
+          </span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">Кухня-гостиная</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Просторная кухня-гостиная 26,5 м² с двумя удобными диванами и обеденной зоной.
+          </p>
+        </div>
+
+        <div onclick="selectZone(1)" class="hover-pop hover-glow-pink p-6 rounded-3xl bg-berry-50 border-2 border-berry-200 cursor-pointer">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-white text-berry-600 text-xs font-extrabold mb-3 shadow-sm">
+            2 × 6,1 м²
+          </span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">Две уютные спальни</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Две уютные спальни по 6,1 м², кровати с ортопедическими матрасами 140×200 см.
+          </p>
+        </div>
+
+        <div onclick="selectZone(3)" class="hover-pop hover-glow-lemon p-6 rounded-3xl bg-lemon-100 border-2 border-lemon-400/60 cursor-pointer">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-white text-ink-900 text-xs font-extrabold mb-3 shadow-sm">
+            4,1 м²
+          </span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">Современный санузел</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Санузел 4,1 м² оснащён душевой зоной и туалетом с гигиеническим душем.
+          </p>
+        </div>
+
+        <div onclick="selectZone(2)" class="hover-pop hover-glow-sky p-6 rounded-3xl bg-gradient-to-br from-skybg-100 to-berry-50 border-2 border-skybg-200 cursor-pointer">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-white text-skybg-600 text-xs font-extrabold mb-3 shadow-sm">
+            23,5 м²
+          </span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">Открытая терраса</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            На открытой террасе 23,5 м² установлен комплект уличной мебели.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. УЧАСТОК И МАНГАЛЬНАЯ ЗОНА («УЖИН НА СВЕЖЕМ ВОЗДУХЕ»)               -->
+  <!-- ===================================================================== -->
+  <section id="territory" class="bg-gradient-to-br from-lemon-50 via-white to-skybg-50 py-16 sm:py-24 border-b border-lemon-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Слева (6/12): интерактивная карусель участка и мангала со стрелками, точками и миниатюрами -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-[2rem] overflow-hidden bg-white border-2 border-lemon-400/60 shadow-2xl shadow-lemon-400/20">
+            <div
+              id="territoryTrack"
+              class="flex overflow-x-auto snap-track no-scrollbar cursor-grab active:cursor-grabbing select-none"
+            ></div>
+
+            <!-- Стрелки -->
+            <button
+              type="button"
+              onclick="stepTerritorySlider(-1)"
+              aria-label="Предыдущее фото участка"
+              class="btn-bounce absolute left-3 top-[40%] -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 hover:bg-lemon-400 text-ink-900 border border-lemon-200 flex items-center justify-center text-xl font-bold shadow-lg"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              onclick="stepTerritorySlider(1)"
+              aria-label="Следующее фото участка"
+              class="btn-bounce absolute right-3 top-[40%] -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 hover:bg-berry-400 hover:text-white text-ink-900 border border-berry-200 flex items-center justify-center text-xl font-bold shadow-lg"
+            >
+              ›
+            </button>
+
+            <!-- Нижняя панель с подписью, точками и миниатюрами -->
+            <div class="bg-white border-t border-lemon-200 p-4 space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <span id="territoryCaption" class="text-xs sm:text-sm font-bold text-ink-900 truncate">
+                  Мангальная зона с шампурами и видом на лес
+                </span>
+                <div id="territoryDots" class="flex items-center gap-1.5 shrink-0"></div>
+              </div>
+              <div id="territoryThumbs" class="flex items-center gap-2 overflow-x-auto no-scrollbar"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Справа (6/12): вся информация об участке 15 соток -->
+        <div class="lg:col-span-6 space-y-5">
+          <div>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-lemon-200 text-ink-900 text-xs font-bold uppercase tracking-[0.16em] mb-3">
+              На участке 15 соток
+            </span>
+            <!-- Заголовок БЕЗ точки -->
+            <h2 class="font-display font-bold text-2xl sm:text-4xl lg:text-[42px] text-ink-900 uppercase tracking-tight leading-[1.08]">
+              УЖИН НА СВЕЖЕМ ВОЗДУХЕ
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Мангальная зона -->
+            <div class="hover-pop hover-glow-pink p-5 rounded-3xl bg-white border-2 border-berry-200 shadow-sm">
+              <div class="flex items-start gap-4">
+                <span class="w-11 h-11 rounded-2xl bg-berry-100 text-berry-600 text-xl flex items-center justify-center shrink-0">
+                  🔥
+                </span>
+                <div class="space-y-2.5 text-sm sm:text-[15px] text-ink-500 leading-relaxed">
+                  <h3 class="font-display font-bold text-base text-ink-900">Мангальная зона</h3>
+                  <p>
+                    Шампуры, упаковка угля и жидкость для розжига <strong class="text-ink-900 font-bold">входят в стоимость</strong>.
+                  </p>
+                  <p class="px-4 py-2.5 rounded-2xl bg-lemon-100 border border-lemon-400/70 text-ink-900 font-semibold text-xs sm:text-sm">
+                    Дорогие гости, решётку для гриля предлагаем привезти с собой 😊
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Парковка на 3 авто -->
+            <div class="hover-pop hover-glow-sky p-4 sm:p-5 rounded-3xl bg-white border-2 border-skybg-200 flex items-start gap-4 shadow-sm">
+              <span class="w-11 h-11 rounded-2xl bg-skybg-100 text-skybg-600 text-xl flex items-center justify-center shrink-0">
+                🚗
+              </span>
+              <div>
+                <h3 class="font-display font-bold text-base text-ink-900">Парковка на 3 авто</h3>
+                <p class="text-sm text-ink-500 mt-0.5">Свободная и удобная парковка на 3 автомобиля прямо на территории участка.</p>
+              </div>
+            </div>
+
+            <!-- Отдельный выход в лес и к реке -->
+            <div class="hover-pop hover-glow-lemon p-4 sm:p-5 rounded-3xl bg-white border-2 border-lemon-200 flex items-start gap-4 shadow-sm">
+              <span class="w-11 h-11 rounded-2xl bg-lemon-100 text-ink-900 text-xl flex items-center justify-center shrink-0">
+                🌊
+              </span>
+              <div>
+                <h3 class="font-display font-bold text-base text-ink-900">Отдельный выход в лес и к реке</h3>
+                <p class="text-sm text-ink-500 mt-0.5">Свой прямой выход к живописному берегу реки Слогавка и в тихий лес.</p>
+              </div>
+            </div>
+
+            <!-- Открытая терраса -->
+            <div class="hover-pop hover-glow-pink p-4 sm:p-5 rounded-3xl bg-white border-2 border-berry-100 flex items-start gap-4 shadow-sm">
+              <span class="w-11 h-11 rounded-2xl bg-berry-50 text-berry-600 text-xl flex items-center justify-center shrink-0">
+                ☀️
+              </span>
+              <div>
+                <h3 class="font-display font-bold text-base text-ink-900">Открытая терраса 23,5 м²</h3>
+                <p class="text-sm text-ink-500 mt-0.5">На просторной террасе установлен комплект уличной мебели для завтраков и душевных вечеров.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. СПАЛЬНИ И САНУЗЕЛ С МИНИ-КАРУСЕЛЯМИ                                -->
+  <!--    («ДВЕ СПАЛЬНИ И ЧЕТЫРЕ СЧАСТЛИВЫХ ГОСТЯ»)                          -->
+  <!-- ===================================================================== -->
+  <section id="bedrooms" class="bg-berry-50 py-16 sm:py-24 border-b border-berry-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="inline-block px-4 py-1.5 rounded-full bg-white border border-berry-200 text-berry-600 text-xs font-bold uppercase tracking-[0.16em] mb-3">
+            Уют и крепкий сон
+          </span>
+          <!-- Заголовок БЕЗ точки -->
+          <h2 class="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-ink-900 uppercase tracking-tight leading-[1.08]">
+            ДВЕ СПАЛЬНИ И ЧЕТЫРЕ<br class="hidden sm:inline" /> СЧАСТЛИВЫХ ГОСТЯ
+          </h2>
+        </div>
+
+        <p class="text-xs sm:text-sm font-semibold text-ink-500 max-w-xs">
+          Листайте ракурсы стрелками прямо внутри каждой карточки или кликайте на фото для увеличения
+        </p>
+      </div>
+
+      <!-- Три интерактивные карточки-карусели -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Карточка 1: Спальня с голубыми акцентами -->
+        <article class="hover-pop hover-glow-sky rounded-[2rem] bg-white border-2 border-skybg-200 overflow-hidden shadow-lg shadow-skybg-400/10 flex flex-col">
+          <div class="photo-zoom-box relative h-64 sm:h-72 bg-skybg-100 overflow-hidden">
+            <img
+              id="room-card-img-0"
+              src="8P1A2867.jpg"
+              data-src="8P1A2867.jpg"
+              alt="Спальня с голубыми акцентами 6,1 м²"
+              onclick="openLightboxBySrc(this.dataset.src)"
+              class="w-full h-full object-cover cursor-pointer"
+              onerror="this.src='https://placehold.co/700x520/E0F2FE/1E2952?text=8P1A2867.jpg'"
+            />
+            <span class="zoom-badge pointer-events-none absolute top-3 right-3 px-3 py-1 rounded-full bg-white/95 text-skybg-600 text-[11px] font-bold shadow-md">
+              🔍 Открыть фото
+            </span>
+            <button type="button" onclick="stepRoomCardPhoto(0, -1)" aria-label="Предыдущий ракурс спальни 1" class="btn-bounce absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-skybg-400 hover:text-white text-ink-900 flex items-center justify-center text-lg font-bold shadow-md">‹</button>
+            <button type="button" onclick="stepRoomCardPhoto(0, 1)" aria-label="Следующий ракурс спальни 1" class="btn-bounce absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-skybg-400 hover:text-white text-ink-900 flex items-center justify-center text-lg font-bold shadow-md">›</button>
+            <div id="room-card-dots-0" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm shadow-sm"></div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full bg-skybg-100 text-skybg-600 text-[11px] font-extrabold uppercase tracking-wider mb-2">
+                Спальня 1 · 6,1 м²
+              </span>
+              <h3 class="font-display font-bold text-lg text-ink-900 mb-2">
+                Спальня с голубыми акцентами
+              </h3>
+              <p class="text-sm text-ink-500 leading-relaxed">
+                Уютная отдельная спальня 6,1 м², кровать с ортопедическим матрасом 140×200 см, торшер и затемняющая рулонная штора.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-skybg-100 flex items-center justify-between text-xs font-bold">
+              <span class="text-ink-400">2 ракурса</span>
+              <button type="button" onclick="openLightboxBySrc(document.getElementById('room-card-img-0').dataset.src)" class="text-skybg-600 hover:text-berry-500 transition-colors">
+                Смотреть крупно →
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 2: Спальня в тёплых оттенках -->
+        <article class="hover-pop hover-glow-pink rounded-[2rem] bg-white border-2 border-berry-200 overflow-hidden shadow-lg shadow-berry-400/10 flex flex-col">
+          <div class="photo-zoom-box relative h-64 sm:h-72 bg-berry-100 overflow-hidden">
+            <img
+              id="room-card-img-1"
+              src="8P1A2943.jpg"
+              data-src="8P1A2943.jpg"
+              alt="Спальня в тёплых оттенках 6,1 м²"
+              onclick="openLightboxBySrc(this.dataset.src)"
+              class="w-full h-full object-cover cursor-pointer"
+              onerror="this.src='https://placehold.co/700x520/FCE7F3/1E2952?text=8P1A2943.jpg'"
+            />
+            <span class="zoom-badge pointer-events-none absolute top-3 right-3 px-3 py-1 rounded-full bg-white/95 text-berry-600 text-[11px] font-bold shadow-md">
+              🔍 Открыть фото
+            </span>
+            <button type="button" onclick="stepRoomCardPhoto(1, -1)" aria-label="Предыдущий ракурс спальни 2" class="btn-bounce absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-berry-400 hover:text-white text-ink-900 flex items-center justify-center text-lg font-bold shadow-md">‹</button>
+            <button type="button" onclick="stepRoomCardPhoto(1, 1)" aria-label="Следующий ракурс спальни 2" class="btn-bounce absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-berry-400 hover:text-white text-ink-900 flex items-center justify-center text-lg font-bold shadow-md">›</button>
+            <div id="room-card-dots-1" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm shadow-sm"></div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full bg-berry-100 text-berry-600 text-[11px] font-extrabold uppercase tracking-wider mb-2">
+                Спальня 2 · 6,1 м²
+              </span>
+              <h3 class="font-display font-bold text-lg text-ink-900 mb-2">
+                Спальня в тёплых оттенках
+              </h3>
+              <p class="text-sm text-ink-500 leading-relaxed">
+                Вторая светлая спальня 6,1 м² с ортопедическим матрасом 140×200 см, свежим постельным бельём и мягким освещением.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-berry-100 flex items-center justify-between text-xs font-bold">
+              <span class="text-ink-400">2 ракурса</span>
+              <button type="button" onclick="openLightboxBySrc(document.getElementById('room-card-img-1').dataset.src)" class="text-berry-600 hover:text-skybg-600 transition-colors">
+                Смотреть крупно →
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 3: Продуманный санузел 4,1 м² -->
+        <article class="hover-pop hover-glow-lemon rounded-[2rem] bg-white border-2 border-lemon-400/60 overflow-hidden shadow-lg shadow-lemon-400/15 flex flex-col">
+          <div class="photo-zoom-box relative h-64 sm:h-72 bg-lemon-100 overflow-hidden">
+            <img
+              id="room-card-img-2"
+              src="8P1A2837.jpg"
+              data-src="8P1A2837.jpg"
+              alt="Продуманный санузел 4,1 м²"
+              onclick="openLightboxBySrc(this.dataset.src)"
+              class="w-full h-full object-cover cursor-pointer"
+              onerror="this.src='https://placehold.co/700x520/FEF9C3/1E2952?text=8P1A2837.jpg'"
+            />
+            <span class="zoom-badge pointer-events-none absolute top-3 right-3 px-3 py-1 rounded-full bg-white/95 text-ink-900 text-[11px] font-bold shadow-md">
+              🔍 Открыть фото
+            </span>
+            <button type="button" onclick="stepRoomCardPhoto(2, -1)" aria-label="Предыдущий ракурс санузла" class="btn-bounce absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-lemon-400 text-ink-900 flex items-center justify-center text-lg font-bold shadow-md">‹</button>
+            <button type="button" onclick="stepRoomCardPhoto(2, 1)" aria-label="Следующий ракурс санузла" class="btn-bounce absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-lemon-400 text-ink-900 flex items-center justify-center text-lg font-bold shadow-md">›</button>
+            <div id="room-card-dots-2" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm shadow-sm"></div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full bg-lemon-100 text-ink-900 text-[11px] font-extrabold uppercase tracking-wider mb-2">
+                Санузел · 4,1 м²
+              </span>
+              <h3 class="font-display font-bold text-lg text-ink-900 mb-2">
+                Продуманный санузел 4,1 м²
+              </h3>
+              <p class="text-sm text-ink-500 leading-relaxed">
+                Оснащён душевой зоной, туалетом с гигиеническим душем, гостиничным феном и полным комплектом уходовых средств.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-lemon-200 flex items-center justify-between text-xs font-bold">
+              <span class="text-ink-400">3 ракурса</span>
+              <button type="button" onclick="openLightboxBySrc(document.getElementById('room-card-img-2').dataset.src)" class="text-ink-900 hover:text-berry-600 transition-colors">
+                Смотреть крупно →
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. ВСЁ ДЛЯ ОТДЫХА («ПРОДУМАНО ДЛЯ ОТДЫХА» — 10 ПЛИТОК + ДОПОЛНИТЕЛЬНО)-->
+  <!-- ===================================================================== -->
+  <section id="amenities" class="bg-skybg-50 py-16 sm:py-24 border-b border-skybg-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="mb-10 sm:mb-12">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-white border border-skybg-200 text-skybg-600 text-xs font-bold uppercase tracking-[0.16em] mb-3">
+          Также в доме имеются
+        </span>
+        <!-- Заголовок БЕЗ точки -->
+        <h2 class="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-ink-900 uppercase tracking-tight">
+          ПРОДУМАНО ДЛЯ ОТДЫХА
+        </h2>
+      </div>
+
+      <!-- 10 интерактивных мини-плиток техники и текстиля (01–10) с увеличением при наведении -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-10">
+        <div class="hover-pop hover-glow-sky p-5 rounded-3xl bg-white border-2 border-skybg-200 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-skybg-100 text-skybg-600 font-display font-bold text-xs flex items-center justify-center">01</span>
+            <span class="text-2xl">📺</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Яндекс телевизор 55"</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-pink p-5 rounded-3xl bg-white border-2 border-berry-200 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-berry-100 text-berry-600 font-display font-bold text-xs flex items-center justify-center">02</span>
+            <span class="text-2xl">🔊</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Яндекс колонка с Алисой</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-lemon p-5 rounded-3xl bg-white border-2 border-lemon-400/60 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-lemon-100 text-ink-900 font-display font-bold text-xs flex items-center justify-center">03</span>
+            <span class="text-2xl">❄️</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Холодильник с морозильной камерой</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-sky p-5 rounded-3xl bg-white border-2 border-skybg-200 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-skybg-100 text-skybg-600 font-display font-bold text-xs flex items-center justify-center">04</span>
+            <span class="text-2xl">♨️</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Микроволновая печь</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-pink p-5 rounded-3xl bg-white border-2 border-berry-200 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-berry-100 text-berry-600 font-display font-bold text-xs flex items-center justify-center">05</span>
+            <span class="text-2xl">🍳</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Варочная панель индукционная стеклокерамика на 2 конфорки</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-lemon p-5 rounded-3xl bg-white border-2 border-lemon-400/60 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-lemon-100 text-ink-900 font-display font-bold text-xs flex items-center justify-center">06</span>
+            <span class="text-2xl">🫧</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Посудомоечная машина</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-sky p-5 rounded-3xl bg-white border-2 border-skybg-200 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-skybg-100 text-skybg-600 font-display font-bold text-xs flex items-center justify-center">07</span>
+            <span class="text-2xl">🍽️</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Вся необходимая кухонная посуда на 6 персон</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-pink p-5 rounded-3xl bg-white border-2 border-berry-200 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-berry-100 text-berry-600 font-display font-bold text-xs flex items-center justify-center">08</span>
+            <span class="text-2xl">💨</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Гостиничный фен</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-lemon p-5 rounded-3xl bg-white border-2 border-lemon-400/60 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-lemon-100 text-ink-900 font-display font-bold text-xs flex items-center justify-center">09</span>
+            <span class="text-2xl">🧺</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Набор полотенец</h3>
+        </div>
+
+        <div class="hover-pop hover-glow-sky p-5 rounded-3xl bg-white border-2 border-skybg-200 flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-2xl bg-skybg-100 text-skybg-600 font-display font-bold text-xs flex items-center justify-center">10</span>
+            <span class="text-2xl">🩴</span>
+          </div>
+          <h3 class="font-bold text-sm text-ink-900 leading-snug">Халаты, резиновые тапочки</h3>
+        </div>
+      </div>
+
+      <!-- Блок «Дополнительно» — 4 карточки заботы о гостях -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="hover-pop hover-glow-lemon p-6 rounded-3xl bg-lemon-100 border-2 border-lemon-400/60">
+          <span class="text-2xl block mb-2.5">☕</span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">На кухне уже есть</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Чай, кофе, соль, сахар, специи, уксус, мука, масло — можно готовить сразу по приезде.
+          </p>
+        </div>
+
+        <div class="hover-pop hover-glow-pink p-6 rounded-3xl bg-berry-100/75 border-2 border-berry-200">
+          <span class="text-2xl block mb-2.5">🧴</span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">Ванные принадлежности</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Гель, шампунь, кондиционер, мицеллярная вода, диски, палочки, детский крем.
+          </p>
+        </div>
+
+        <div class="hover-pop hover-glow-sky p-6 rounded-3xl bg-skybg-100/80 border-2 border-skybg-200">
+          <span class="text-2xl block mb-2.5">🎲</span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">Настольные игры</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Подборка настольных игр для весёлых и тёплых вечеров всей компанией.
+          </p>
+        </div>
+
+        <div class="hover-pop hover-glow-pink p-6 rounded-3xl bg-white border-2 border-berry-200">
+          <span class="text-2xl block mb-2.5">🛍️</span>
+          <h3 class="font-display font-bold text-base text-ink-900 mb-2">Доставка еды</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Есть доставка еды из <strong class="text-ink-900 font-bold">ВкусВилл</strong> и <strong class="text-ink-900 font-bold">Пятёрочки</strong> прямо к дому.
+          </p>
+        </div>
+      </div>
+
+      <!-- Подпись про застройщика -->
+      <p class="mt-6 text-xs sm:text-sm font-semibold text-ink-400">
+        Дом построен зимой 2023 года компанией FL-Haus, проект FL 43.2-1
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 8. ПОЛНАЯ ГАЛЕРЕЯ-КАРУСЕЛЬ ВСЕХ 18 ФОТО («ГАЛЕРЕЯ ДОМА У РЕКИ»)       -->
+  <!-- ===================================================================== -->
+  <section id="gallery" class="bg-white py-16 sm:py-24 border-b border-skybg-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-7">
+        <div>
+          <span class="inline-block px-4 py-1.5 rounded-full bg-berry-100 text-berry-600 text-xs font-bold uppercase tracking-[0.16em] mb-3">
+            Полная коллекция кадров
+          </span>
+          <!-- Заголовок БЕЗ точки -->
+          <h2 class="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-ink-900 uppercase tracking-tight">
+            ГАЛЕРЕЯ ДОМА У РЕКИ
+          </h2>
+        </div>
+
+        <!-- Кнопки прокрутки ленты влево/вправо -->
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            onclick="scrollGalleryRibbon(-1)"
+            class="btn-bounce px-5 py-2.5 rounded-full bg-skybg-100 hover:bg-skybg-400 hover:text-white text-skybg-600 font-bold text-xs sm:text-sm shadow-sm"
+          >
+            ← Влево
+          </button>
+          <button
+            type="button"
+            onclick="scrollGalleryRibbon(1)"
+            class="btn-bounce px-5 py-2.5 rounded-full bg-berry-100 hover:bg-berry-400 hover:text-white text-berry-600 font-bold text-xs sm:text-sm shadow-sm"
+          >
+            Вправо →
+          </button>
+        </div>
+      </div>
+
+      <!-- Фильтры по категориям -->
+      <div id="galleryFilters" class="flex flex-wrap gap-2.5 mb-7" role="tablist" aria-label="Фильтр фотографий"></div>
+
+      <!-- Горизонтальная прокручиваемая карусель (drag-to-scroll + scroll-snap) -->
+      <div
+        id="galleryRibbon"
+        class="flex gap-5 overflow-x-auto snap-track no-scrollbar pb-4 cursor-grab active:cursor-grabbing select-none"
+      ></div>
+
+      <!-- Интерактивный прогресс-бар прокрутки -->
+      <div class="mt-4 flex items-center gap-4">
+        <div class="flex-1 h-2.5 rounded-full bg-skybg-100 overflow-hidden">
+          <div id="galleryProgressBar" class="h-full rounded-full bg-gradient-to-r from-skybg-400 via-berry-400 to-lemon-400 transition-all duration-200" style="width: 20%;"></div>
+        </div>
+        <span id="galleryCountHint" class="text-xs font-bold text-ink-500 whitespace-nowrap">
+          18 фото · листайте или тяните мышкой
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 9. ЦЕНЫ И ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР («ВЫБИРАЙТЕ СВОИ ДНИ»)            -->
+  <!-- ===================================================================== -->
+  <section id="pricing" class="bg-gradient-to-br from-skybg-100/75 via-lemon-50 to-berry-50 py-16 sm:py-24 border-b border-skybg-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="mb-10">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-white border border-lemon-400 text-ink-900 text-xs font-bold uppercase tracking-[0.16em] mb-3">
+          Прозрачные тарифы
+        </span>
+        <!-- Заголовок БЕЗ точки -->
+        <h2 class="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-ink-900 uppercase tracking-tight mb-3">
+          ВЫБИРАЙТЕ СВОИ ДНИ
+        </h2>
+        <p class="text-sm sm:text-base font-medium text-ink-500">
+          Базовая стоимость указана за 2 гостей. Минимальный срок бронирования — от 2-х суток.
+        </p>
+      </div>
+
+      <!-- Интерактивные строки тарифов (увеличиваются и приподнимаются при наведении) -->
+      <div class="space-y-3.5 mb-8">
+        <div class="tariff-row px-6 sm:px-8 py-5 rounded-3xl bg-white border-2 border-skybg-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-base sm:text-lg font-bold text-ink-900">Пн–Чт</span>
+            <span class="block text-xs font-semibold text-ink-400">Будние дни · базовая стоимость за 2 гостей</span>
+          </div>
+          <span class="font-display font-bold text-2xl sm:text-3xl text-skybg-600 whitespace-nowrap">
+            5 900 ₽ <span class="font-sans text-xs font-semibold text-ink-400">/ сутки</span>
+          </span>
+        </div>
+
+        <div class="tariff-row px-6 sm:px-8 py-5 rounded-3xl bg-white border-2 border-berry-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-base sm:text-lg font-bold text-ink-900">Пт–Сб и праздничные дни</span>
+            <span class="block text-xs font-semibold text-ink-400">Выходные и праздники · базовая стоимость за 2 гостей</span>
+          </div>
+          <span class="font-display font-bold text-2xl sm:text-3xl text-berry-600 whitespace-nowrap">
+            9 900 ₽ <span class="font-sans text-xs font-semibold text-ink-400">/ сутки</span>
+          </span>
+        </div>
+
+        <div class="tariff-row px-6 sm:px-8 py-5 rounded-3xl bg-white border-2 border-lemon-400/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-base sm:text-lg font-bold text-ink-900">Воскресенье</span>
+            <span class="block text-xs font-semibold text-ink-400">Спокойное завершение недели · за 2 гостей</span>
+          </div>
+          <span class="font-display font-bold text-2xl sm:text-3xl text-ink-900 whitespace-nowrap">
+            6 900 ₽ <span class="font-sans text-xs font-semibold text-ink-400">/ сутки</span>
+          </span>
+        </div>
+
+        <div class="tariff-row px-6 sm:px-8 py-5 rounded-3xl bg-gradient-to-r from-berry-100 via-lemon-100 to-skybg-100 border-2 border-berry-400/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-base sm:text-lg font-extrabold text-berry-600">❄️ Новый год: с 31 декабря по 3 января (для 4 гостей)</span>
+            <span class="block text-xs font-semibold text-ink-500">Праздничный пакет на 3 суток</span>
+          </div>
+          <span class="font-display font-bold text-2xl sm:text-3xl text-berry-600 whitespace-nowrap">
+            55 000 ₽
+          </span>
+        </div>
+      </div>
+
+      <!-- Плитки дополнительных условий (все без пропусков, с hover-zoom) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm mb-12">
+        <div class="hover-pop hover-glow-sky p-4 rounded-2xl bg-white border-2 border-skybg-200 text-ink-500 font-medium">
+          Базовая стоимость указана за <strong class="text-ink-900 font-bold">2 гостей</strong>
+        </div>
+        <div class="hover-pop hover-glow-pink p-4 rounded-2xl bg-white border-2 border-berry-200 text-ink-500 font-medium">
+          Доплата за каждого дополнительного гостя — <strong class="text-berry-600 font-bold">1 000 ₽</strong>
+        </div>
+        <div class="hover-pop hover-glow-sky p-4 rounded-2xl bg-white border-2 border-skybg-200 text-ink-500 font-medium">
+          Гости без ночёвки — <strong class="text-skybg-600 font-bold">500 ₽ / человек</strong>
+        </div>
+        <div class="hover-pop hover-glow-lemon p-4 rounded-2xl bg-lemon-100 border-2 border-lemon-400/70 text-ink-900 font-bold">
+          👶 Дети до 12 лет бесплатно
+        </div>
+        <div class="hover-pop hover-glow-pink p-4 rounded-2xl bg-berry-100 border-2 border-berry-400/60 text-berry-600 font-bold">
+          🎉 Дополнительная скидка при заказе на 5 и более суток!
+        </div>
+        <div class="hover-pop hover-glow-sky p-4 rounded-2xl bg-skybg-100 border-2 border-skybg-400/60 text-ink-900 font-bold">
+          📌 Бронирование от 2-х суток
+        </div>
+      </div>
+
+      <!-- ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР ПРОЖИВАНИЯ -->
+      <div id="calculator" class="rounded-[2.2rem] bg-white border-2 border-skybg-200 p-6 sm:p-9 lg:p-10 shadow-2xl shadow-skybg-400/15">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b-2 border-skybg-100 mb-6">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-[0.16em] text-berry-500">
+              Онлайн-расчёт
+            </span>
+            <!-- Заголовок БЕЗ точки -->
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-ink-900 mt-1">
+              Калькулятор стоимости проживания
+            </h3>
+          </div>
+
+          <!-- Быстрые пресеты -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              onclick="applyNewYearPreset()"
+              class="btn-bounce px-4 py-2 rounded-full bg-gradient-to-r from-berry-400 to-lemon-400 text-white text-xs font-bold shadow-md"
+            >
+              ❄️ Новый год 31.12 – 03.01
+            </button>
+            <button
+              type="button"
+              onclick="applyWeekendPreset()"
+              class="btn-bounce px-4 py-2 rounded-full bg-skybg-100 hover:bg-skybg-200 text-skybg-600 text-xs font-bold"
+            >
+              ☀️ Ближайшие выходные
+            </button>
+            <button
+              type="button"
+              onclick="applyFiveDaysPreset()"
+              class="btn-bounce px-4 py-2 rounded-full bg-lemon-100 hover:bg-lemon-200 text-ink-900 text-xs font-bold"
+            >
+              🎉 5 суток со скидкой
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <!-- Поля ввода -->
+          <div class="lg:col-span-7 space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="calcCheckin" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">
+                  Дата заезда (с 16:00)
+                </label>
+                <input
+                  type="date"
+                  id="calcCheckin"
+                  class="w-full px-4 py-3.5 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-bold focus:outline-none focus:border-berry-400 transition-colors"
+                />
+              </div>
+              <div>
+                <label for="calcCheckout" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">
+                  Дата выезда (до 12:00)
+                </label>
+                <input
+                  type="date"
+                  id="calcCheckout"
+                  class="w-full px-4 py-3.5 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-bold focus:outline-none focus:border-berry-400 transition-colors"
+                />
+              </div>
+            </div>
+
+            <!-- Счётчики гостей -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+              <div class="hover-pop hover-glow-sky p-4 rounded-2xl bg-skybg-50 border-2 border-skybg-200 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-extrabold text-ink-900">Взрослые</div>
+                  <div class="text-[11px] font-semibold text-ink-400">от 1 до 4</div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="adjustGuest('adults', -1)" class="btn-bounce w-8 h-8 rounded-full bg-white border border-skybg-200 hover:bg-skybg-400 hover:text-white font-bold text-sm">−</button>
+                  <span id="adultsCount" class="w-5 text-center text-sm font-extrabold text-ink-900">2</span>
+                  <button type="button" onclick="adjustGuest('adults', 1)" class="btn-bounce w-8 h-8 rounded-full bg-white border border-skybg-200 hover:bg-skybg-400 hover:text-white font-bold text-sm">+</button>
+                </div>
+              </div>
+
+              <div class="hover-pop hover-glow-lemon p-4 rounded-2xl bg-lemon-100/75 border-2 border-lemon-400/60 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-extrabold text-ink-900">Дети до 12</div>
+                  <div class="text-[11px] font-bold text-berry-600">бесплатно</div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="adjustGuest('children', -1)" class="btn-bounce w-8 h-8 rounded-full bg-white border border-lemon-400 hover:bg-lemon-400 font-bold text-sm">−</button>
+                  <span id="childrenCount" class="w-5 text-center text-sm font-extrabold text-ink-900">0</span>
+                  <button type="button" onclick="adjustGuest('children', 1)" class="btn-bounce w-8 h-8 rounded-full bg-white border border-lemon-400 hover:bg-lemon-400 font-bold text-sm">+</button>
+                </div>
+              </div>
+
+              <div class="hover-pop hover-glow-pink p-4 rounded-2xl bg-berry-50 border-2 border-berry-200 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-extrabold text-ink-900">Без ночёвки</div>
+                  <div class="text-[11px] font-semibold text-ink-400">500 ₽/чел</div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="adjustGuest('dayGuests', -1)" class="btn-bounce w-8 h-8 rounded-full bg-white border border-berry-200 hover:bg-berry-400 hover:text-white font-bold text-sm">−</button>
+                  <span id="dayGuestsCount" class="w-5 text-center text-sm font-extrabold text-ink-900">0</span>
+                  <button type="button" onclick="adjustGuest('dayGuests', 1)" class="btn-bounce w-8 h-8 rounded-full bg-white border border-berry-200 hover:bg-berry-400 hover:text-white font-bold text-sm">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Предупреждение о минимуме 2 суток -->
+            <div id="calcMinWarning" class="hidden p-4 rounded-2xl bg-berry-100 border-2 border-berry-400 text-berry-600 text-xs sm:text-sm font-bold">
+              ❗️ Бронирование от 2-х суток! Пожалуйста, выберите период минимум на 2 ночи.
+            </div>
+
+            <!-- Бейдж о дополнительной скидке от 5 суток -->
+            <div id="calcLongStayBadge" class="hidden p-4 rounded-2xl bg-gradient-to-r from-lemon-200 to-berry-100 border-2 border-lemon-400 text-ink-900 text-xs sm:text-sm font-extrabold">
+              🎉 Ура! Для вашего заезда действует дополнительная скидка при заказе на 5 и более суток!
+            </div>
+          </div>
+
+          <!-- Панель результата -->
+          <div class="lg:col-span-5 p-6 rounded-3xl bg-gradient-to-br from-skybg-100 via-white to-berry-100 border-2 border-skybg-200 flex flex-col justify-between gap-4 shadow-md">
+            <div id="calcBreakdown" class="space-y-2 text-xs sm:text-sm text-ink-500 pb-4 border-b-2 border-dashed border-skybg-200"></div>
+
+            <div class="flex items-baseline justify-between gap-3">
+              <div>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-ink-400 block">Итого</span>
+                <span id="calcNightsLabel" class="text-xs font-bold text-skybg-600">2 суток</span>
+              </div>
+              <div id="calcTotal" class="font-display font-bold text-3xl sm:text-4xl text-ink-900">
+                19 800 ₽
+              </div>
+            </div>
+
+            <button
+              type="button"
+              id="calcSubmitBtn"
+              onclick="openBookingWithCalc()"
+              class="btn-bounce w-full py-4 px-5 rounded-full bg-gradient-to-r from-berry-500 via-berry-400 to-skybg-400 disabled:opacity-45 disabled:cursor-not-allowed text-white font-bold text-sm shadow-xl shadow-berry-400/35"
+            >
+              Забронировать с этим расчётом →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 10. КОНТАКТЫ, КАРТА И ПРАВИЛА («ПРИЕЗЖАЙТЕ ЗА ТИШИНОЙ»)               -->
+  <!-- ===================================================================== -->
+  <section id="contacts" class="bg-white pt-16 sm:pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <!-- Верхняя часть контактов -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pb-12 border-b-2 border-skybg-100">
+        <div class="lg:col-span-7">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-skybg-100 text-skybg-600 text-xs font-bold uppercase tracking-[0.16em] mb-3">
+            Ждём вас в гости
+          </span>
+          <!-- Заголовок БЕЗ точки -->
+          <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl text-ink-900 uppercase tracking-tight leading-[1.06]">
+            ПРИЕЗЖАЙТЕ<br />
+            <span class="bg-gradient-to-r from-skybg-600 to-berry-500 bg-clip-text text-transparent">
+              ЗА ТИШИНОЙ
+            </span>
+          </h2>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col items-start lg:items-end justify-between gap-4">
+          <div class="lg:text-right space-y-2">
+            <div class="flex items-center lg:justify-end gap-2.5 flex-wrap">
+              <a href="tel:+79154575972" class="font-display font-bold text-xl sm:text-2xl text-ink-900 hover:text-berry-500 transition-colors">
+                +7 (915) 457-59-72
+              </a>
+              <button
+                type="button"
+                onclick="copyText('+7 (915) 457-59-72', this)"
+                class="btn-bounce px-3.5 py-1 rounded-full bg-skybg-100 hover:bg-lemon-200 text-skybg-600 text-xs font-bold"
+              >
+                Копировать
+              </button>
+            </div>
+
+            <div class="flex items-center lg:justify-end gap-2.5 flex-wrap">
+              <a href="mailto:domyreki@inbox.ru" class="text-base sm:text-lg font-bold text-ink-500 hover:text-skybg-600 transition-colors">
+                domyreki@inbox.ru
+              </a>
+              <button
+                type="button"
+                onclick="copyText('domyreki@inbox.ru', this)"
+                class="btn-bounce px-3.5 py-1 rounded-full bg-berry-100 hover:bg-lemon-200 text-berry-600 text-xs font-bold"
+              >
+                Копировать
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onclick="openBookingModal()"
+            class="btn-bounce inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-berry-500 via-berry-400 to-skybg-400 text-white font-bold text-sm shadow-xl shadow-berry-400/35"
+          >
+            <span>Оставить заявку</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Адрес + кнопка «Показать на карте» + встроенная карта -->
+      <div class="py-8 border-b-2 border-skybg-100">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-berry-500">Адрес дома</span>
+            <p class="text-base sm:text-lg text-ink-900 font-bold leading-relaxed">
+              📍 Московская область, Павлово-Посадский городской округ, деревня Дмитрово, улица Снежная, 20
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+            <button
+              type="button"
+              id="toggleMapBtn"
+              onclick="toggleMapBox()"
+              class="btn-bounce px-5 py-2.5 rounded-full bg-lemon-200 hover:bg-lemon-400 text-ink-900 font-bold text-xs sm:text-sm shadow-sm"
+            >
+              🗺️ Скрыть карту
+            </button>
+            <a
+              href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE-%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3%2C%20%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%2020"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-bounce px-5 py-2.5 rounded-full bg-skybg-100 hover:bg-skybg-400 hover:text-white text-skybg-600 font-bold text-xs sm:text-sm"
+            >
+              Открыть навигатор ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Интерактивная Яндекс.Карта -->
+        <div id="mapBox" class="mt-6 rounded-[2rem] overflow-hidden border-2 border-skybg-200 bg-skybg-50 shadow-xl shadow-skybg-400/10">
+          <div class="h-72 sm:h-96 w-full">
+            <iframe
+              title="Карта проезда: деревня Дмитрово, улица Снежная, 20"
+              src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE-%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3%2C%20%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%2020&z=13"
+              class="w-full h-full border-0"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 карточки условий заезда -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-8 border-b-2 border-skybg-100">
+        <div class="hover-pop hover-glow-sky p-5 rounded-3xl bg-skybg-50 border-2 border-skybg-200">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-skybg-600 block mb-1">Время заезда</span>
+          <span class="font-display font-bold text-lg sm:text-xl text-ink-900">🕓 Заезд с 16:00</span>
+        </div>
+
+        <div class="hover-pop hover-glow-lemon p-5 rounded-3xl bg-lemon-100 border-2 border-lemon-400/60">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ink-500 block mb-1">Время выезда</span>
+          <span class="font-display font-bold text-lg sm:text-xl text-ink-900">🕛 Выезд до 12:00</span>
+        </div>
+
+        <div class="hover-pop hover-glow-pink p-5 rounded-3xl bg-berry-50 border-2 border-berry-200">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-berry-600 block mb-1">Минимальный срок</span>
+          <span class="font-display font-bold text-lg sm:text-xl text-ink-900">От 2-х суток</span>
+        </div>
+      </div>
+
+      <!-- Важное правило -->
+      <div class="py-6 border-b-2 border-skybg-100">
+        <div class="hover-pop hover-glow-pink p-5 rounded-3xl bg-berry-100/80 border-2 border-berry-400/60 text-berry-600 text-sm sm:text-base font-bold">
+          ❗️ Важное правило: Дом не подходит для вечеринок и шумных компаний! Курение в доме и фейерверки запрещены.
+        </div>
+      </div>
+
+      <!-- Футер -->
+      <footer class="pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs sm:text-sm text-ink-500">
+        <p class="font-semibold">
+          Дом у реки · Дом построен зимой 2023 года компанией FL-Haus, проект FL 43.2-1
+        </p>
+        <p class="font-display font-bold text-ink-900">© 2026</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- ПОЛНОЭКРАННЫЙ ЛАЙТБОКС ДЛЯ ВСЕХ 18 ФОТОГРАФИЙ                         -->
+  <!-- ===================================================================== -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-50 hidden bg-ink-900/92 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-6"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Просмотр фотографии"
+  >
+    <div class="flex items-center justify-between text-white max-w-6xl mx-auto w-full">
+      <div class="flex items-center gap-3">
+        <span id="lightboxCounter" class="px-3.5 py-1.5 rounded-full bg-lemon-400 text-ink-900 text-xs font-extrabold">
+          1 / 18
+        </span>
+        <span id="lightboxCategory" class="text-xs sm:text-sm text-skybg-200 font-bold">
+          Дом у реки
+        </span>
+      </div>
+      <button
+        type="button"
+        onclick="closeLightbox()"
+        aria-label="Закрыть просмотр"
+        class="btn-bounce w-10 h-10 rounded-full bg-white/15 hover:bg-berry-400 text-white flex items-center justify-center font-bold"
+      >
+        ✕
+      </button>
+    </div>
+
+    <div id="lightboxStage" class="relative flex-1 flex items-center justify-center my-4 max-w-6xl mx-auto w-full select-none">
+      <button
+        type="button"
+        onclick="stepLightbox(-1)"
+        aria-label="Предыдущее фото"
+        class="btn-bounce absolute left-0 sm:left-2 z-10 w-12 h-12 rounded-full bg-white/95 hover:bg-lemon-400 text-ink-900 flex items-center justify-center text-2xl font-bold shadow-xl"
+      >
+        ‹
+      </button>
+
+      <img
+        id="lightboxImg"
+        src=""
+        alt=""
+        class="max-h-[74vh] max-w-[86%] object-contain rounded-3xl border-4 border-white/20 shadow-2xl"
+      />
+
+      <button
+        type="button"
+        onclick="stepLightbox(1)"
+        aria-label="Следующее фото"
+        class="btn-bounce absolute right-0 sm:right-2 z-10 w-12 h-12 rounded-full bg-white/95 hover:bg-berry-400 hover:text-white text-ink-900 flex items-center justify-center text-2xl font-bold shadow-xl"
+      >
+        ›
+      </button>
+    </div>
+
+    <div class="max-w-3xl mx-auto text-center text-white">
+      <p id="lightboxCaption" class="text-sm sm:text-base font-bold"></p>
+      <p class="text-[11px] text-skybg-200/80 mt-1">Клавиши ← → или свайп для переключения · Esc — закрыть</p>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- МОДАЛЬНОЕ ОКНО ЗАЯВКИ НА БРОНИРОВАНИЕ                                 -->
+  <!-- ===================================================================== -->
+  <div
+    id="bookingModal"
+    class="fixed inset-0 z-50 hidden bg-ink-900/75 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="bookingModalTitle"
+  >
+    <div class="relative w-full max-w-xl rounded-[2rem] bg-white border-4 border-skybg-200 text-ink-900 p-6 sm:p-9 shadow-2xl my-auto">
+      <button
+        type="button"
+        onclick="closeBookingModal()"
+        aria-label="Закрыть окно"
+        class="btn-bounce absolute top-5 right-5 w-10 h-10 rounded-full bg-berry-100 hover:bg-berry-400 hover:text-white text-berry-600 flex items-center justify-center font-bold"
+      >
+        ✕
+      </button>
+
+      <div id="bookingFormWrap">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-lemon-100 text-ink-900 text-xs font-extrabold uppercase tracking-wider mb-2">
+          Дом у реки · д. Дмитрово
+        </span>
+        <!-- Заголовок БЕЗ точки -->
+        <h3 id="bookingModalTitle" class="font-display font-bold text-2xl sm:text-3xl text-ink-900 mb-2">
+          Заявка на бронирование
+        </h3>
+        <p class="text-xs sm:text-sm text-ink-500 mb-6">
+          Оставьте контакты и даты — мы быстро свяжемся с вами и подтвердим заезд.
+        </p>
+
+        <form id="bookingForm" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="bookName" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">Ваше имя *</label>
+              <input
+                type="text"
+                id="bookName"
+                required
+                placeholder="Анна"
+                class="w-full px-4 py-3 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-semibold focus:outline-none focus:border-berry-400"
+              />
+            </div>
+            <div>
+              <label for="bookPhone" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">Телефон *</label>
+              <input
+                type="tel"
+                id="bookPhone"
+                required
+                placeholder="+7 (___) ___-__-__"
+                class="w-full px-4 py-3 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-semibold focus:outline-none focus:border-berry-400"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="bookCheckin" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">Заезд (с 16:00)</label>
+              <input
+                type="date"
+                id="bookCheckin"
+                class="w-full px-4 py-3 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-semibold focus:outline-none focus:border-berry-400"
+              />
+            </div>
+            <div>
+              <label for="bookCheckout" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">Выезд (до 12:00)</label>
+              <input
+                type="date"
+                id="bookCheckout"
+                class="w-full px-4 py-3 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-semibold focus:outline-none focus:border-berry-400"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="bookGuests" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">Состав гостей</label>
+            <input
+              type="text"
+              id="bookGuests"
+              value="2 взрослых"
+              placeholder="Например: 2 взрослых, 1 ребёнок до 12 лет"
+              class="w-full px-4 py-3 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-semibold focus:outline-none focus:border-berry-400"
+            />
+          </div>
+
+          <div>
+            <label for="bookComment" class="block text-xs font-extrabold uppercase tracking-wider text-ink-500 mb-1.5">Комментарий и расчёт</label>
+            <textarea
+              id="bookComment"
+              rows="3"
+              placeholder="Пожелания или вопрос по заезду"
+              class="w-full px-4 py-3 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-ink-900 text-sm font-semibold focus:outline-none focus:border-berry-400 resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn-bounce w-full py-4 px-6 rounded-full bg-gradient-to-r from-berry-500 via-berry-400 to-skybg-400 text-white font-bold text-sm shadow-xl shadow-berry-400/35"
+          >
+            Отправить заявку →
+          </button>
+
+          <!-- Быстрые кнопки звонка и письма -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+            <a
+              href="tel:+79154575972"
+              class="btn-bounce py-2.5 px-4 rounded-full bg-skybg-100 text-skybg-600 font-bold text-xs text-center"
+            >
+              📞 Позвонить: +7 (915) 457-59-72
+            </a>
+            <a
+              href="mailto:domyreki@inbox.ru"
+              class="btn-bounce py-2.5 px-4 rounded-full bg-lemon-100 text-ink-900 font-bold text-xs text-center"
+            >
+              ✉️ Написать: domyreki@inbox.ru
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Экран успешной отправки -->
+      <div id="bookingSuccessWrap" class="hidden text-center py-4">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-lemon-400 to-berry-400 text-white flex items-center justify-center mx-auto mb-4 text-3xl font-bold shadow-lg">
+          ✓
+        </div>
+        <!-- Заголовок БЕЗ точки -->
+        <h3 class="font-display font-bold text-2xl text-ink-900 mb-2">Заявка принята</h3>
+        <p id="bookingSuccessSummary" class="text-sm text-ink-500 leading-relaxed mb-6"></p>
+        <div class="p-4 rounded-2xl bg-skybg-50 border-2 border-skybg-200 text-xs sm:text-sm text-ink-900 font-semibold mb-6">
+          Срочная связь: <a href="tel:+79154575972" class="text-skybg-600 font-bold hover:text-berry-500">+7 (915) 457-59-72</a> · <a href="mailto:domyreki@inbox.ru" class="text-berry-600 font-bold hover:text-skybg-600">domyreki@inbox.ru</a>
+        </div>
+        <button
+          type="button"
+          onclick="closeBookingModal()"
+          class="btn-bounce px-8 py-3.5 rounded-full bg-ink-900 text-white text-sm font-bold"
+        >
+          Вернуться на сайт
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Всплывающее уведомление (Toast) -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden px-5 py-3 rounded-full bg-ink-900 text-lemon-200 text-xs sm:text-sm font-bold shadow-2xl"></div>
+
+  <!-- ===================================================================== -->
+  <!-- ИНТЕРАКТИВНЫЕ СКРИПТЫ                                                 -->
+  <!-- ===================================================================== -->
+  <script>
+    /* --------------------------------------------------------------------- */
+    /* 1. ВСЕ 18 ФОТОГРАФИЙ С ТОЧНЫМИ ИМЕНАМИ ФАЙЛОВ                         */
+    /* --------------------------------------------------------------------- */
+    const ALL_18_PHOTOS = [
+      { src: '8P1A2821.jpg', cat: 'terrace', catLabel: 'Терраса и участок', caption: 'Вечерний барнхаус зимой с тёплыми гирляндами и панорамными окнами' },
+      { src: '8P1A2900.jpg', cat: 'living', catLabel: 'Гостиная и кухня', caption: 'Просторная гостиная с двумя удобными диванами и акцентной стеной' },
+      { src: '8P1A2921.jpg', cat: 'living', catLabel: 'Гостиная и кухня', caption: 'Светлая кухня-гостиная 26,5 м² с высокими панорамными окнами' },
+      { src: '8P1A2903.jpg', cat: 'living', catLabel: 'Гостиная и кухня', caption: 'Обеденная зона, Яндекс телевизор 55" и кухонный гарнитур' },
+      { src: '8P1A2905.jpg', cat: 'living', catLabel: 'Гостиная и кухня', caption: 'Панорамный вид просторной кухни-гостиной 26,5 м²' },
+      { src: '8P1A2914.jpg', cat: 'living', catLabel: 'Гостиная и кухня', caption: 'Вид от обеденного стола на уютную гостиную с двумя диванами' },
+      { src: '8P1A2928 copy.jpg', cat: 'living', catLabel: 'Гостиная и кухня', caption: 'Уютный камин на экране Яндекс телевизора 55" и современная кухня' },
+      { src: '8P1A2867.jpg', cat: 'bedrooms', catLabel: 'Спальни', caption: 'Спальня с голубыми акцентами (6,1 м²) и матрасом 140×200 см' },
+      { src: '8P1A2872.jpg', cat: 'bedrooms', catLabel: 'Спальни', caption: 'Уютный вечерний свет торшера у кровати в спальне' },
+      { src: '8P1A2943.jpg', cat: 'bedrooms', catLabel: 'Спальни', caption: 'Спальня в тёплых оттенках (6,1 м²) днём' },
+      { src: '8P1A3008.jpg', cat: 'bedrooms', catLabel: 'Спальни', caption: 'Светлая спальня с акцентной деревянной стеной и кроватью 140×200 см' },
+      { src: '8P1A2837.jpg', cat: 'bathroom', catLabel: 'Санузел', caption: 'Санузел 4,1 м² с душевой зоной и гостиничным феном' },
+      { src: '8P1A2841.jpg', cat: 'bathroom', catLabel: 'Санузел', caption: 'Раковина и подготовленные ванные принадлежности' },
+      { src: '8P1A2843.jpg', cat: 'bathroom', catLabel: 'Санузел', caption: 'Туалет с гигиеническим душем и тумба в санузле' },
+      { src: '8P1A2954.jpg', cat: 'terrace', catLabel: 'Терраса и участок', caption: 'Открытая терраса 23,5 м² с комплектом уличной мебели' },
+      { src: '8P1A2963.jpg', cat: 'terrace', catLabel: 'Терраса и участок', caption: 'Мангальная зона: шампуры, уголь и розжиг входят в стоимость' },
+      { src: '8P1A2972.jpg', cat: 'terrace', catLabel: 'Терраса и участок', caption: 'Крытая мангальная зона на участке 15 соток' },
+      { src: '8P1A2981.jpg', cat: 'terrace', catLabel: 'Терраса и участок', caption: 'Барнхаус днём со стороны мангальной зоны и леса' }
+    ];
+
+    /* --------------------------------------------------------------------- */
+    /* 2. УПРАВЛЕНИЕ ВИДЕО В HERO (ПАУЗА/ПУСК, ЗВУК, ПОЛНЫЙ ЭКРАН)           */
+    /* --------------------------------------------------------------------- */
+    const heroVideo = document.getElementById('heroVideo');
+    const pauseSvg = document.getElementById('pauseSvg');
+    const playSvg = document.getElementById('playSvg');
+    const playPauseLabel = document.getElementById('playPauseLabel');
+    const mutedSvg = document.getElementById('mutedSvg');
+    const unmutedSvg = document.getElementById('unmutedSvg');
+    const muteLabel = document.getElementById('muteLabel');
+
+    if (heroVideo) {
+      heroVideo.addEventListener('error', () => {
+        heroVideo.classList.add('opacity-0', 'pointer-events-none');
+      });
+    }
+
+    function toggleHeroVideo() {
+      if (!heroVideo) return;
+      if (heroVideo.paused) {
+        heroVideo.play().catch(() => {});
+        pauseSvg.classList.remove('hidden');
+        playSvg.classList.add('hidden');
+        playPauseLabel.textContent = 'Пауза';
+      } else {
+        heroVideo.pause();
+        pauseSvg.classList.add('hidden');
+        playSvg.classList.remove('hidden');
+        playPauseLabel.textContent = 'Пуск';
+      }
+    }
+
+    function toggleHeroMute() {
+      if (!heroVideo) return;
+      heroVideo.muted = !heroVideo.muted;
+      const isMuted = heroVideo.muted;
+      mutedSvg.classList.toggle('hidden', !isMuted);
+      unmutedSvg.classList.toggle('hidden', isMuted);
+      muteLabel.textContent = isMuted ? 'Звук выкл' : 'Звук вкл';
+      if (!isMuted && heroVideo.paused) {
+        heroVideo.play().catch(() => {});
+      }
+    }
+
+    function fullscreenHeroVideo() {
+      if (!heroVideo) return;
+      if (heroVideo.requestFullscreen) {
+        heroVideo.requestFullscreen();
+      } else if (heroVideo.webkitEnterFullscreen) {
+        heroVideo.webkitEnterFullscreen();
+      }
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 3. ПАСТЕЛЬНЫЕ КОНФЕТТИ / СНЕЖИНКИ В НОВОГОДНЕМ БЛОКЕ                  */
+    /* --------------------------------------------------------------------- */
+    function createConfetti(count = 22) {
+      const layer = document.getElementById('confettiLayer');
+      if (!layer) return;
+      const colors = ['#38BDF8', '#F472B6', '#FACC15', '#FFFFFF', '#BAE6FD', '#FBCFE8'];
+      const symbols = ['❄', '✦', '•', '★'];
+
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('span');
+        el.className = 'confetti-piece select-none font-bold';
+        el.textContent = symbols[i % symbols.length];
+        el.style.left = `${Math.random() * 100}%`;
+        el.style.color = colors[i % colors.length];
+        el.style.fontSize = `${12 + Math.random() * 14}px`;
+        el.style.animationDuration = `${6 + Math.random() * 7}s`;
+        el.style.animationDelay = `${-Math.random() * 8}s`;
+        layer.appendChild(el);
+      }
+    }
+
+    function burstConfetti() {
+      createConfetti(14);
+      showToast('✨ Снежное настроение включено!');
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 4. МОБИЛЬНОЕ МЕНЮ                                                     */
+    /* --------------------------------------------------------------------- */
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const burgerIcon = document.getElementById('burgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function toggleMobileMenu(forceState) {
+      const open = typeof forceState === 'boolean' ? forceState : mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', !open);
+      burgerIcon.classList.toggle('hidden', open);
+      closeIcon.classList.toggle('hidden', !open);
+      mobileMenuBtn.setAttribute('aria-expanded', String(open));
+    }
+
+    mobileMenuBtn.addEventListener('click', () => toggleMobileMenu());
+    document.querySelectorAll('.mobile-nav-link').forEach(a => a.addEventListener('click', () => toggleMobileMenu(false)));
+
+    /* --------------------------------------------------------------------- */
+    /* 5. УНИВЕРСАЛЬНАЯ ПОДДЕРЖКА DRAG-TO-SCROLL МЫШЬЮ                       */
+    /* --------------------------------------------------------------------- */
+    function enableDragScroll(el) {
+      if (!el) return;
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      el.addEventListener('mousedown', (e) => {
+        if (e.target.closest('button')) return;
+        isDown = true;
+        startX = e.pageX - el.offsetLeft;
+        scrollLeft = el.scrollLeft;
+      });
+      el.addEventListener('mouseleave', () => { isDown = false; });
+      el.addEventListener('mouseup', () => { isDown = false; });
+      el.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - el.offsetLeft;
+        const walk = (x - startX) * 1.45;
+        el.scrollLeft = scrollLeft - walk;
+      });
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 6. БЛОК 4: ДВОЙНАЯ ПРОКРУТКА (4 ЗОНЫ + ВНУТРЕННЯЯ ПРОМОТКА В ОКОШКЕ)  */
+    /* --------------------------------------------------------------------- */
+    const ZONE_CAROUSEL_DATA = [
+      {
+        id: 'living',
+        title: 'Кухня-гостиная 26,5 м²',
+        accent: 'sky',
+        photos: [
+          { src: '8P1A2900.jpg', caption: 'Просторная гостиная с двумя удобными диванами и акцентной стеной' },
+          { src: '8P1A2921.jpg', caption: 'Светлая кухня-гостиная 26,5 м² с высокими панорамными окнами' },
+          { src: '8P1A2903.jpg', caption: 'Обеденная зона, Яндекс телевизор 55" и кухонный гарнитур' },
+          { src: '8P1A2905.jpg', caption: 'Панорамный вид просторной кухни-гостиной 26,5 м²' },
+          { src: '8P1A2914.jpg', caption: 'Вид от обеденного стола на два мягких дивана' },
+          { src: '8P1A2928 copy.jpg', caption: 'Тёплый камин на экране Яндекс телевизора 55" и полностью оснащённая кухня' }
+        ]
+      },
+      {
+        id: 'bedrooms',
+        title: 'Две спальни по 6,1 м²',
+        accent: 'pink',
+        photos: [
+          { src: '8P1A2867.jpg', caption: 'Спальня 1 (6,1 м²) · Голубые акценты, ортопедический матрас 140×200 см' },
+          { src: '8P1A2872.jpg', caption: 'Уютный вечерний свет торшера у кровати' },
+          { src: '8P1A2943.jpg', caption: 'Спальня 2 (6,1 м²) · Светлая отделка и кровать 140×200 см' },
+          { src: '8P1A3008.jpg', caption: 'Уютная спальня с акцентной деревянной стеной' }
+        ]
+      },
+      {
+        id: 'terrace',
+        title: 'Открытая терраса 23,5 м² и экстерьер',
+        accent: 'lemon',
+        photos: [
+          { src: '8P1A2954.jpg', caption: 'На открытой террасе 23,5 м² установлен комплект уличной мебели' },
+          { src: '8P1A2821.jpg', caption: 'Вечерний барнхаус зимой с гирляндами и панорамным остеклением' },
+          { src: '8P1A2981.jpg', caption: 'Вид на барнхаус днём со стороны участка и леса' }
+        ]
+      },
+      {
+        id: 'bathroom',
+        title: 'Санузел 4,1 м²',
+        accent: 'sky',
+        photos: [
+          { src: '8P1A2837.jpg', caption: 'Санузел 4,1 м² оснащён душевой зоной и гостиничным феном' },
+          { src: '8P1A2841.jpg', caption: 'Раковина и подготовленные ванные принадлежности' },
+          { src: '8P1A2843.jpg', caption: 'Туалет с гигиеническим душем и аккуратная тумба' }
+        ]
+      }
+    ];
+
+    let activeZoneIdx = 0;
+    let activeSlideInZone = 0;
+    const zoneTabsEl = document.getElementById('zoneTabs');
+    const zoneWindowTrack = document.getElementById('zoneWindowTrack');
+    const zoneWindowThumbs = document.getElementById('zoneWindowThumbs');
+    const zoneWindowDots = document.getElementById('zoneWindowDots');
+    const zoneWindowCounter = document.getElementById('zoneWindowCounter');
+    const zoneWindowBadge = document.getElementById('zoneWindowBadge');
+    const zoneWindowCaption = document.getElementById('zoneWindowCaption');
+
+    function renderZoneTabs() {
+      zoneTabsEl.innerHTML = ZONE_CAROUSEL_DATA.map((zone, idx) => {
+        const active = idx === activeZoneIdx;
+        return `
+          <button
+            type="button"
+            onclick="selectZone(${idx})"
+            class="btn-bounce px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border-2 ${
+              active
+                ? 'bg-gradient-to-r from-skybg-400 via-berry-400 to-lemon-400 text-white border-transparent shadow-lg shadow-berry-400/25'
+                : 'bg-skybg-50 text-ink-900 border-skybg-200 hover:border-berry-400 hover:bg-berry-50'
+            }"
+          >
+            ${zone.title} <span class="${active ? 'opacity-90' : 'text-ink-400'}">(${zone.photos.length})</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function stepZoneCategory(dir) {
+      const next = (activeZoneIdx + dir + ZONE_CAROUSEL_DATA.length) % ZONE_CAROUSEL_DATA.length;
+      selectZone(next);
+    }
+
+    function selectZone(zoneIdx) {
+      activeZoneIdx = zoneIdx;
+      activeSlideInZone = 0;
+      renderZoneTabs();
+
+      const zone = ZONE_CAROUSEL_DATA[activeZoneIdx];
+      zoneWindowBadge.textContent = zone.title;
+
+      // Слайды внутри главного окошка
+      zoneWindowTrack.innerHTML = zone.photos.map((photo) => {
+        const safePh = encodeURIComponent(photo.src);
+        return `
+          <div class="photo-zoom-box snap-slide shrink-0 w-full h-[300px] sm:h-[460px] lg:h-[540px] relative bg-skybg-100 overflow-hidden cursor-pointer" onclick="openLightboxBySrc('${photo.src}')">
+            <img
+              src="${photo.src}"
+              alt="${photo.caption.replace(/"/g, '&quot;')}"
+              class="w-full h-full object-cover"
+              draggable="false"
+              onerror="this.src='https://placehold.co/1200x700/E0F2FE/1E2952?text=${safePh}'"
+            />
+            <span class="zoom-badge pointer-events-none absolute bottom-4 right-4 px-4 py-1.5 rounded-full bg-white/95 text-ink-900 text-xs font-bold shadow-lg">
+              🔍 Открыть фото
+            </span>
+          </div>
+        `;
+      }).join('');
+
+      // Точки-индикаторы
+      zoneWindowDots.innerHTML = zone.photos.map((_, idx) => `
+        <button
+          type="button"
+          onclick="goToZoneSlide(${idx})"
+          aria-label="Кадр ${idx + 1}"
+          class="zone-dot h-2.5 rounded-full transition-all ${idx === 0 ? 'w-7 bg-berry-400' : 'w-2.5 bg-skybg-200 hover:bg-skybg-400'}"
+        ></button>
+      `).join('');
+
+      // Filmstrip-лента миниатюр внизу внутри окошка
+      zoneWindowThumbs.innerHTML = zone.photos.map((photo, idx) => {
+        const safePh = encodeURIComponent(photo.src);
+        return `
+          <button
+            type="button"
+            onclick="goToZoneSlide(${idx})"
+            aria-label="Перейти к кадру ${idx + 1}"
+            class="zone-mini-thumb btn-bounce shrink-0 w-16 h-11 sm:w-20 sm:h-14 rounded-xl overflow-hidden border-2 transition-all ${
+              idx === 0 ? 'border-berry-500 ring-2 ring-lemon-400 opacity-100' : 'border-skybg-200 opacity-65 hover:opacity-100'
+            }"
+          >
+            <img
+              src="${photo.src}"
+              alt=""
+              class="w-full h-full object-cover"
+              onerror="this.src='https://placehold.co/140x100/E0F2FE/1E2952?text=${safePh}'"
+            />
+          </button>
+        `;
+      }).join('');
+
+      zoneWindowTrack.scrollTo({ left: 0, behavior: 'auto' });
+      updateZoneWindowUI(0);
+    }
+
+    function updateZoneWindowUI(slideIdx) {
+      const zone = ZONE_CAROUSEL_DATA[activeZoneIdx];
+      activeSlideInZone = Math.max(0, Math.min(zone.photos.length - 1, slideIdx));
+      const currentPhoto = zone.photos[activeSlideInZone];
+
+      zoneWindowCounter.textContent = `${activeSlideInZone + 1} / ${zone.photos.length}`;
+      zoneWindowCaption.textContent = currentPhoto.caption;
+
+      zoneWindowDots.querySelectorAll('.zone-dot').forEach((d, i) => {
+        d.classList.toggle('w-7', i === activeSlideInZone);
+        d.classList.toggle('bg-berry-400', i === activeSlideInZone);
+        d.classList.toggle('w-2.5', i !== activeSlideInZone);
+        d.classList.toggle('bg-skybg-200', i !== activeSlideInZone);
+      });
+
+      zoneWindowThumbs.querySelectorAll('.zone-mini-thumb').forEach((btn, i) => {
+        btn.classList.toggle('border-berry-500', i === activeSlideInZone);
+        btn.classList.toggle('ring-2', i === activeSlideInZone);
+        btn.classList.toggle('ring-lemon-400', i === activeSlideInZone);
+        btn.classList.toggle('opacity-100', i === activeSlideInZone);
+        btn.classList.toggle('border-skybg-200', i !== activeSlideInZone);
+        btn.classList.toggle('opacity-65', i !== activeSlideInZone);
+      });
+    }
+
+    function goToZoneSlide(slideIdx) {
+      const width = zoneWindowTrack.clientWidth;
+      zoneWindowTrack.scrollTo({ left: width * slideIdx, behavior: 'smooth' });
+      updateZoneWindowUI(slideIdx);
+    }
+
+    function stepZoneWindow(dir) {
+      const total = ZONE_CAROUSEL_DATA[activeZoneIdx].photos.length;
+      const next = (activeSlideInZone + dir + total) % total;
+      goToZoneSlide(next);
+    }
+
+    function openCurrentZonePhotoInLightbox() {
+      const currentPhoto = ZONE_CAROUSEL_DATA[activeZoneIdx].photos[activeSlideInZone];
+      if (currentPhoto) openLightboxBySrc(currentPhoto.src);
+    }
+
+    zoneWindowTrack.addEventListener('scroll', () => {
+      const width = zoneWindowTrack.clientWidth || 1;
+      const idx = Math.round(zoneWindowTrack.scrollLeft / width);
+      if (idx !== activeSlideInZone) updateZoneWindowUI(idx);
+    }, { passive: true });
+
+    enableDragScroll(zoneWindowTrack);
+
+    /* --------------------------------------------------------------------- */
+    /* 7. БЛОК 5: КАРУСЕЛЬ УЧАСТКА И МАНГАЛЬНОЙ ЗОНЫ                         */
+    /* --------------------------------------------------------------------- */
+    const TERRITORY_SLIDES = [
+      { src: '8P1A2963.jpg', caption: 'Мангальная зона: шампуры, уголь и розжиг входят в стоимость' },
+      { src: '8P1A2972.jpg', caption: 'Крытая мангальная зона под навесом на участке 15 соток' },
+      { src: '8P1A2981.jpg', caption: 'Вид на барнхаус со стороны мангальной зоны и леса' },
+      { src: '8P1A2954.jpg', caption: 'Открытая терраса 23,5 м² с комплектом уличной мебели' },
+      { src: '8P1A2821.jpg', caption: 'Вечерний барнхаус с гирляндами зимой' }
+    ];
+
+    const territoryTrack = document.getElementById('territoryTrack');
+    const territoryDots = document.getElementById('territoryDots');
+    const territoryThumbs = document.getElementById('territoryThumbs');
+    const territoryCaption = document.getElementById('territoryCaption');
+    let territoryIdx = 0;
+
+    function initTerritorySlider() {
+      territoryTrack.innerHTML = TERRITORY_SLIDES.map(slide => {
+        const safePh = encodeURIComponent(slide.src);
+        return `
+          <div class="photo-zoom-box snap-slide shrink-0 w-full h-72 sm:h-96 bg-skybg-100 overflow-hidden relative cursor-pointer" onclick="openLightboxBySrc('${slide.src}')">
+            <img
+              src="${slide.src}"
+              alt="${slide.caption.replace(/"/g, '&quot;')}"
+              class="w-full h-full object-cover"
+              draggable="false"
+              onerror="this.src='https://placehold.co/800x600/FEF9C3/1E2952?text=${safePh}'"
+            />
+            <span class="zoom-badge pointer-events-none absolute top-3 right-3 px-3 py-1 rounded-full bg-white/95 text-ink-900 text-xs font-bold shadow-md">
+              🔍 Открыть фото
+            </span>
+          </div>
+        `;
+      }).join('');
+
+      territoryDots.innerHTML = TERRITORY_SLIDES.map((_, i) => `
+        <button
+          type="button"
+          onclick="goToTerritorySlide(${i})"
+          aria-label="Фото участка ${i + 1}"
+          class="terr-dot h-2 rounded-full transition-all ${i === 0 ? 'w-6 bg-berry-400' : 'w-2 bg-skybg-200'}"
+        ></button>
+      `).join('');
+
+      territoryThumbs.innerHTML = TERRITORY_SLIDES.map((slide, i) => {
+        const safePh = encodeURIComponent(slide.src);
+        return `
+          <button
+            type="button"
+            onclick="goToTerritorySlide(${i})"
+            class="terr-thumb btn-bounce shrink-0 w-16 h-11 rounded-xl overflow-hidden border-2 transition-all ${
+              i === 0 ? 'border-berry-500 opacity-100' : 'border-lemon-200 opacity-60 hover:opacity-100'
+            }"
+          >
+            <img src="${slide.src}" alt="" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/120x90/FEF9C3/1E2952?text=${safePh}'" />
+          </button>
+        `;
+      }).join('');
+
+      enableDragScroll(territoryTrack);
+    }
+
+    function updateTerritoryUI(idx) {
+      territoryIdx = Math.max(0, Math.min(TERRITORY_SLIDES.length - 1, idx));
+      territoryCaption.textContent = TERRITORY_SLIDES[territoryIdx].caption;
+
+      territoryDots.querySelectorAll('.terr-dot').forEach((d, i) => {
+        d.classList.toggle('w-6', i === territoryIdx);
+        d.classList.toggle('bg-berry-400', i === territoryIdx);
+        d.classList.toggle('w-2', i !== territoryIdx);
+        d.classList.toggle('bg-skybg-200', i !== territoryIdx);
+      });
+
+      territoryThumbs.querySelectorAll('.terr-thumb').forEach((t, i) => {
+        t.classList.toggle('border-berry-500', i === territoryIdx);
+        t.classList.toggle('opacity-100', i === territoryIdx);
+        t.classList.toggle('border-lemon-200', i !== territoryIdx);
+        t.classList.toggle('opacity-60', i !== territoryIdx);
+      });
+    }
+
+    function goToTerritorySlide(idx) {
+      territoryTrack.scrollTo({ left: territoryTrack.clientWidth * idx, behavior: 'smooth' });
+      updateTerritoryUI(idx);
+    }
+
+    function stepTerritorySlider(dir) {
+      const next = (territoryIdx + dir + TERRITORY_SLIDES.length) % TERRITORY_SLIDES.length;
+      goToTerritorySlide(next);
+    }
+
+    territoryTrack.addEventListener('scroll', () => {
+      const w = territoryTrack.clientWidth || 1;
+      const idx = Math.round(territoryTrack.scrollLeft / w);
+      if (idx !== territoryIdx) updateTerritoryUI(idx);
+    }, { passive: true });
+
+    /* --------------------------------------------------------------------- */
+    /* 8. БЛОК 6: МИНИ-КАРУСЕЛИ В КАРТОЧКАХ СПАЛЕН И САНУЗЛА                 */
+    /* --------------------------------------------------------------------- */
+    const ROOM_CARDS_PHOTOS = [
+      ['8P1A2867.jpg', '8P1A2872.jpg'],
+      ['8P1A2943.jpg', '8P1A3008.jpg'],
+      ['8P1A2837.jpg', '8P1A2841.jpg', '8P1A2843.jpg']
+    ];
+    const roomCardIndices = [0, 0, 0];
+
+    function initRoomCards() {
+      ROOM_CARDS_PHOTOS.forEach((photos, cardIdx) => {
+        const dotsContainer = document.getElementById(`room-card-dots-${cardIdx}`);
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = photos.map((_, pIdx) => `
+          <button
+            type="button"
+            onclick="setRoomCardPhoto(${cardIdx}, ${pIdx})"
+            aria-label="Ракурс ${pIdx + 1}"
+            class="rc-dot-${cardIdx} h-2 rounded-full transition-all ${pIdx === 0 ? 'w-5 bg-berry-400' : 'w-2 bg-skybg-200'}"
+          ></button>
+        `).join('');
+      });
+    }
+
+    function setRoomCardPhoto(cardIdx, photoIdx) {
+      const photos = ROOM_CARDS_PHOTOS[cardIdx];
+      roomCardIndices[cardIdx] = (photoIdx + photos.length) % photos.length;
+      const src = photos[roomCardIndices[cardIdx]];
+      const img = document.getElementById(`room-card-img-${cardIdx}`);
+      if (img) {
+        img.src = src;
+        img.dataset.src = src;
+      }
+      document.querySelectorAll(`.rc-dot-${cardIdx}`).forEach((d, i) => {
+        d.classList.toggle('w-5', i === roomCardIndices[cardIdx]);
+        d.classList.toggle('bg-berry-400', i === roomCardIndices[cardIdx]);
+        d.classList.toggle('w-2', i !== roomCardIndices[cardIdx]);
+        d.classList.toggle('bg-skybg-200', i !== roomCardIndices[cardIdx]);
+      });
+    }
+
+    function stepRoomCardPhoto(cardIdx, dir) {
+      setRoomCardPhoto(cardIdx, roomCardIndices[cardIdx] + dir);
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 9. БЛОК 8: ГАЛЕРЕЯ ВСЕХ 18 ФОТОГРАФИЙ С ФИЛЬТРАМИ И ПРОГРЕСС-БАРОМ    */
+    /* --------------------------------------------------------------------- */
+    const GALLERY_FILTERS = [
+      { id: 'all', label: 'Все 18 фото' },
+      { id: 'living', label: 'Гостиная и кухня' },
+      { id: 'bedrooms', label: 'Спальни' },
+      { id: 'bathroom', label: 'Санузел' },
+      { id: 'terrace', label: 'Терраса и участок' }
+    ];
+
+    let activeGalleryFilter = 'all';
+    const galleryFiltersEl = document.getElementById('galleryFilters');
+    const galleryRibbonEl = document.getElementById('galleryRibbon');
+    const galleryProgressBar = document.getElementById('galleryProgressBar');
+    const galleryCountHint = document.getElementById('galleryCountHint');
+
+    function renderGalleryFilters() {
+      galleryFiltersEl.innerHTML = GALLERY_FILTERS.map(f => {
+        const active = f.id === activeGalleryFilter;
+        return `
+          <button
+            type="button"
+            onclick="setGalleryFilter('${f.id}')"
+            class="btn-bounce px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border-2 ${
+              active
+                ? 'bg-gradient-to-r from-berry-500 to-skybg-400 text-white border-transparent shadow-md'
+                : 'bg-skybg-50 text-ink-900 border-skybg-200 hover:bg-lemon-100 hover:border-lemon-400'
+            }"
+          >
+            ${f.label}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function setGalleryFilter(filterId) {
+      activeGalleryFilter = filterId;
+      renderGalleryFilters();
+      renderGalleryRibbon();
+    }
+
+    function renderGalleryRibbon() {
+      const list = activeGalleryFilter === 'all'
+        ? ALL_18_PHOTOS
+        : ALL_18_PHOTOS.filter(p => p.cat === activeGalleryFilter);
+
+      galleryRibbonEl.innerHTML = list.map((item) => {
+        const globalIdx = ALL_18_PHOTOS.findIndex(p => p.src === item.src);
+        const safePh = encodeURIComponent(item.src);
+        return `
+          <figure
+            onclick="openLightboxByIndex(${globalIdx})"
+            class="hover-pop hover-glow-sky photo-zoom-box snap-slide shrink-0 w-72 sm:w-80 rounded-3xl bg-skybg-50 border-2 border-skybg-200 overflow-hidden cursor-pointer flex flex-col"
+          >
+            <div class="relative h-52 sm:h-56 overflow-hidden bg-skybg-100">
+              <img
+                src="${item.src}"
+                alt="${item.caption.replace(/"/g, '&quot;')}"
+                loading="lazy"
+                draggable="false"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/640x460/E0F2FE/1E2952?text=${safePh}'"
+              />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 text-ink-900 text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
+                ${globalIdx + 1}/18 · ${item.catLabel}
+              </span>
+              <span class="zoom-badge pointer-events-none absolute bottom-3 right-3 px-3 py-1 rounded-full bg-lemon-200 text-ink-900 text-[11px] font-bold shadow-md">
+                🔍 Открыть фото
+              </span>
+            </div>
+            <figcaption class="p-4 text-xs sm:text-sm font-semibold text-ink-700 leading-snug flex-1">
+              ${item.caption}
+            </figcaption>
+          </figure>
+        `;
+      }).join('');
+
+      galleryRibbonEl.scrollTo({ left: 0, behavior: 'auto' });
+      galleryCountHint.textContent = `${list.length} фото · листайте или тяните мышкой`;
+      updateGalleryProgress();
+    }
+
+    function updateGalleryProgress() {
+      const maxScroll = galleryRibbonEl.scrollWidth - galleryRibbonEl.clientWidth;
+      if (maxScroll <= 0) {
+        galleryProgressBar.style.width = '100%';
+        return;
+      }
+      const pct = Math.min(100, Math.max(12, Math.round((galleryRibbonEl.scrollLeft / maxScroll) * 100)));
+      galleryProgressBar.style.width = `${pct}%`;
+    }
+
+    function scrollGalleryRibbon(dir) {
+      galleryRibbonEl.scrollBy({ left: dir * 640, behavior: 'smooth' });
+    }
+
+    galleryRibbonEl.addEventListener('scroll', updateGalleryProgress, { passive: true });
+    enableDragScroll(galleryRibbonEl);
+
+    /* --------------------------------------------------------------------- */
+    /* 10. ПОЛНОЭКРАННЫЙ ЛАЙТБОКС                                            */
+    /* --------------------------------------------------------------------- */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightboxCategory = document.getElementById('lightboxCategory');
+    let lightboxIdx = 0;
+    let touchStartX = 0;
+
+    function openLightboxByIndex(idx) {
+      lightboxIdx = (idx + ALL_18_PHOTOS.length) % ALL_18_PHOTOS.length;
+      updateLightboxView();
+      lightbox.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function openLightboxBySrc(src) {
+      const cleanSrc = src.split('/').pop();
+      const found = ALL_18_PHOTOS.findIndex(p => p.src === src || encodeURIComponent(p.src) === cleanSrc);
+      openLightboxByIndex(found >= 0 ? found : 0);
+    }
+
+    function updateLightboxView() {
+      const item = ALL_18_PHOTOS[lightboxIdx];
+      const safePh = encodeURIComponent(item.src);
+      lightboxImg.onerror = () => {
+        lightboxImg.src = `https://placehold.co/1200x800/E0F2FE/1E2952?text=${safePh}`;
+      };
+      lightboxImg.src = item.src;
+      lightboxImg.alt = item.caption;
+      lightboxCaption.textContent = item.caption;
+      lightboxCounter.textContent = `${lightboxIdx + 1} / ${ALL_18_PHOTOS.length}`;
+      lightboxCategory.textContent = item.catLabel;
+    }
+
+    function stepLightbox(dir) {
+      openLightboxByIndex(lightboxIdx + dir);
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      if (bookingModal.classList.contains('hidden')) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target.id === 'lightboxStage') closeLightbox();
+    });
+
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 45) stepLightbox(diff < 0 ? 1 : -1);
+    }, { passive: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') stepLightbox(1);
+        if (e.key === 'ArrowLeft') stepLightbox(-1);
+      } else if (!bookingModal.classList.contains('hidden') && e.key === 'Escape') {
+        closeBookingModal();
+      }
+    });
+
+    /* --------------------------------------------------------------------- */
+    /* 11. КАЛЬКУЛЯТОР СТОИМОСТИ ПРОЖИВАНИЯ + ПРЕСЕТЫ                        */
+    /* --------------------------------------------------------------------- */
+    const calcState = {
+      adults: 2,
+      children: 0,
+      dayGuests: 0,
+      nights: 2,
+      total: 0,
+      summary: '',
+      valid: true
+    };
+
+    const calcCheckin = document.getElementById('calcCheckin');
+    const calcCheckout = document.getElementById('calcCheckout');
+    const calcBreakdown = document.getElementById('calcBreakdown');
+    const calcTotalEl = document.getElementById('calcTotal');
+    const calcNightsLabel = document.getElementById('calcNightsLabel');
+    const calcMinWarning = document.getElementById('calcMinWarning');
+    const calcLongStayBadge = document.getElementById('calcLongStayBadge');
+    const calcSubmitBtn = document.getElementById('calcSubmitBtn');
+
+    function fmtDate(d) {
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    function fmtRub(n) {
+      return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+    }
+
+    function pluralDays(n) {
+      if (n % 10 === 1 && n % 100 !== 11) return `${n} сутки`;
+      return `${n} суток`;
+    }
+
+    function applyWeekendPreset() {
+      const now = new Date();
+      const dow = now.getDay();
+      let toFri = (5 - dow + 7) % 7;
+      if (toFri === 0) toFri = 7;
+      const start = new Date(now.getFullYear(), now.getMonth(), now.getDate() + toFri);
+      const end = new Date(start.getFullYear(), start.getMonth(), start.getDate() + 2);
+      calcCheckin.value = fmtDate(start);
+      calcCheckout.value = fmtDate(end);
+      recalcStay();
+    }
+
+    function applyNewYearPreset() {
+      const y = new Date().getFullYear();
+      calcCheckin.value = `${y}-12-31`;
+      calcCheckout.value = `${y + 1}-01-03`;
+      calcState.adults = 4;
+      document.getElementById('adultsCount').textContent = '4';
+      recalcStay();
+      showToast('❄️ Выбран новогодний пакет 31.12 – 03.01 (55 000 ₽)');
+    }
+
+    function applyFiveDaysPreset() {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 3);
+      const end = new Date(start.getFullYear(), start.getMonth(), start.getDate() + 5);
+      calcCheckin.value = fmtDate(start);
+      calcCheckout.value = fmtDate(end);
+      recalcStay();
+    }
+
+    function initCalculator() {
+      const now = new Date();
+      calcCheckin.min = fmtDate(now);
+      applyWeekendPreset();
+    }
+
+    function adjustGuest(key, delta) {
+      if (key === 'adults') {
+        calcState.adults = Math.min(4, Math.max(1, calcState.adults + delta));
+        document.getElementById('adultsCount').textContent = calcState.adults;
+      } else if (key === 'children') {
+        calcState.children = Math.min(4, Math.max(0, calcState.children + delta));
+        document.getElementById('childrenCount').textContent = calcState.children;
+      } else if (key === 'dayGuests') {
+        calcState.dayGuests = Math.min(6, Math.max(0, calcState.dayGuests + delta));
+        document.getElementById('dayGuestsCount').textContent = calcState.dayGuests;
+      }
+      recalcStay();
+    }
+
+    function recalcStay() {
+      if (!calcCheckin.value || !calcCheckout.value) return;
+      const start = new Date(calcCheckin.value + 'T12:00:00');
+      const end = new Date(calcCheckout.value + 'T12:00:00');
+      const nights = Math.round((end - start) / 86400000);
+      calcState.nights = nights;
+
+      if (nights < 2) {
+        calcState.valid = false;
+        calcMinWarning.classList.remove('hidden');
+        calcLongStayBadge.classList.add('hidden');
+        calcSubmitBtn.disabled = true;
+        calcBreakdown.innerHTML = '<div class="font-bold text-berry-600">Минимальный срок аренды — от 2-х суток</div>';
+        calcNightsLabel.textContent = nights > 0 ? pluralDays(nights) : 'проверьте даты';
+        calcTotalEl.textContent = '—';
+        return;
+      }
+
+      calcState.valid = true;
+      calcMinWarning.classList.add('hidden');
+      calcSubmitBtn.disabled = false;
+      calcLongStayBadge.classList.toggle('hidden', nights < 5);
+
+      const isNY =
+        start.getMonth() === 11 && start.getDate() === 31 &&
+        end.getMonth() === 0 && end.getDate() === 3 &&
+        nights === 3;
+
+      const lines = [];
+      let sum = 0;
+
+      if (isNY) {
+        sum = 55000;
+        lines.push({ label: '❄️ Новогодний заезд (31.12 — 03.01, для 4 гостей)', val: fmtRub(55000) });
+      } else {
+        let wd = 0, we = 0, su = 0;
+        for (let i = 0; i < nights; i++) {
+          const cur = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i);
+          const d = cur.getDay();
+          if (d === 5 || d === 6) we++;
+          else if (d === 0) su++;
+          else wd++;
+        }
+        if (wd > 0) {
+          sum += wd * 5900;
+          lines.push({ label: `Пн–Чт (${wd} × 5 900 ₽)`, val: fmtRub(wd * 5900) });
+        }
+        if (we > 0) {
+          sum += we * 9900;
+          lines.push({ label: `Пт–Сб (${we} × 9 900 ₽)`, val: fmtRub(we * 9900) });
+        }
+        if (su > 0) {
+          sum += su * 6900;
+          lines.push({ label: `Воскресенье (${su} × 6 900 ₽)`, val: fmtRub(su * 6900) });
+        }
+
+        const extra = Math.max(0, calcState.adults - 2);
+        if (extra > 0) {
+          const extraCost = extra * 1000 * nights;
+          sum += extraCost;
+          lines.push({ label: `Доп. гости: ${extra} чел. × ${nights} сут × 1 000 ₽`, val: fmtRub(extraCost) });
+        }
+      }
+
+      if (calcState.children > 0) {
+        lines.push({ label: `Дети до 12 лет (${calcState.children} чел.)`, val: 'Бесплатно' });
+      }
+      if (calcState.dayGuests > 0) {
+        const dayCost = calcState.dayGuests * 500;
+        sum += dayCost;
+        lines.push({ label: `Гости без ночёвки (${calcState.dayGuests} × 500 ₽)`, val: fmtRub(dayCost) });
+      }
+
+      calcState.total = sum;
+      calcNightsLabel.textContent = pluralDays(nights);
+      calcTotalEl.textContent = fmtRub(sum);
+      calcBreakdown.innerHTML = lines.map(l => `
+        <div class="flex justify-between gap-2">
+          <span>${l.label}</span>
+          <span class="font-extrabold text-ink-900 whitespace-nowrap">${l.val}</span>
+        </div>
+      `).join('');
+
+      calcState.summary = `Расчёт из калькулятора: ${fmtRub(sum)} (${pluralDays(nights)})${nights >= 5 ? ' + дополнительная скидка при заказе на 5 и более суток' : ''}.`;
+    }
+
+    calcCheckin.addEventListener('change', () => {
+      if (calcCheckin.value) {
+        const s = new Date(calcCheckin.value + 'T12:00:00');
+        const e = calcCheckout.value ? new Date(calcCheckout.value + 'T12:00:00') : null;
+        if (!e || (e - s) / 86400000 < 2) {
+          const next = new Date(s.getFullYear(), s.getMonth(), s.getDate() + 2);
+          calcCheckout.value = fmtDate(next);
+        }
+      }
+      recalcStay();
+    });
+    calcCheckout.addEventListener('change', recalcStay);
+
+    /* --------------------------------------------------------------------- */
+    /* 12. МОДАЛЬНОЕ ОКНО ЗАЯВКИ И ПЕРЕКЛЮЧАТЕЛЬ КАРТЫ                       */
+    /* --------------------------------------------------------------------- */
+    const bookingModal = document.getElementById('bookingModal');
+    const bookingFormWrap = document.getElementById('bookingFormWrap');
+    const bookingSuccessWrap = document.getElementById('bookingSuccessWrap');
+    const bookingForm = document.getElementById('bookingForm');
+
+    function openBookingModal(prefill = {}) {
+      bookingFormWrap.classList.remove('hidden');
+      bookingSuccessWrap.classList.add('hidden');
+      if (prefill.checkin) document.getElementById('bookCheckin').value = prefill.checkin;
+      if (prefill.checkout) document.getElementById('bookCheckout').value = prefill.checkout;
+      if (prefill.guests) document.getElementById('bookGuests').value = prefill.guests;
+      if (prefill.comment !== undefined) document.getElementById('bookComment').value = prefill.comment;
+      bookingModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function openNewYearBooking() {
+      const y = new Date().getFullYear();
+      openBookingModal({
+        checkin: `${y}-12-31`,
+        checkout: `${y + 1}-01-03`,
+        guests: '4 гостя',
+        comment: 'Новогодний заезд с 31 декабря по 3 января — 55 000 ₽ для 4 гостей.'
+      });
+    }
+
+    function openBookingWithCalc() {
+      if (!calcState.valid) return;
+      const g = [`${calcState.adults} взр.`];
+      if (calcState.children > 0) g.push(`${calcState.children} дет. до 12 лет`);
+      if (calcState.dayGuests > 0) g.push(`${calcState.dayGuests} без ночёвки`);
+      openBookingModal({
+        checkin: calcCheckin.value,
+        checkout: calcCheckout.value,
+        guests: g.join(', '),
+        comment: calcState.summary
+      });
+    }
+
+    function closeBookingModal() {
+      bookingModal.classList.add('hidden');
+      if (lightbox.classList.contains('hidden')) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) closeBookingModal();
+    });
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('bookName').value.trim();
+      const phone = document.getElementById('bookPhone').value.trim();
+      const ci = document.getElementById('bookCheckin').value;
+      const co = document.getElementById('bookCheckout').value;
+      const guests = document.getElementById('bookGuests').value.trim();
+      const dates = (ci && co) ? ` на даты ${ci} — ${co}` : '';
+      document.getElementById('bookingSuccessSummary').textContent =
+        `Спасибо, ${name}! Ваша заявка${dates} (${guests || 'гости уточняются'}) отправлена. Мы перезвоним по номеру ${phone}.`;
+      bookingFormWrap.classList.add('hidden');
+      bookingSuccessWrap.classList.remove('hidden');
+    });
+
+    function toggleMapBox() {
+      const mapBox = document.getElementById('mapBox');
+      const btn = document.getElementById('toggleMapBtn');
+      if (!mapBox || !btn) return;
+      const hidden = mapBox.classList.toggle('hidden');
+      btn.textContent = hidden ? '🗺️ Показать на карте' : '🗺️ Скрыть карту';
+      if (!hidden) {
+        mapBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 13. КОПИРОВАНИЕ (EXEC_COMMAND) + TOAST + ПОЯВЛЕНИЕ СЕКЦИЙ             */
+    /* --------------------------------------------------------------------- */
+    let toastTimeout = null;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.remove('hidden');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => t.classList.add('hidden'), 2400);
+    }
+
+    function copyText(text, btn) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast(`Скопировано: ${text}`);
+        if (btn) {
+          const prev = btn.textContent;
+          btn.textContent = 'Готово!';
+          setTimeout(() => { btn.textContent = prev; }, 1500);
+        }
+      } catch (e) {
+        showToast(text);
+      }
+    }
+
+    function initReveal() {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      items.forEach(el => obs.observe(el));
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 14. ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ                                        */
+    /* --------------------------------------------------------------------- */
+    document.addEventListener('DOMContentLoaded', () => {
+      createConfetti(22);
+      selectZone(0);
+      initTerritorySlider();
+      initRoomCards();
+      renderGalleryFilters();
+      renderGalleryRibbon();
+      initCalculator();
+      initReveal();
+    });
+  </script>
+</body>
+</html>

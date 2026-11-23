@@ -1,0 +1,2650 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дом у реки — Панорамный барнхаус посуточно на берегу реки Слогавка</title>
+  <meta name="description" content="Снять Дом у реки посуточно: современный барнхаус 65,9 м² с панорамными окнами на уединённом участке 15 соток в 60 км от Москвы по Носовихинскому шоссе." />
+
+  <!-- Google Fonts: Cormorant Garamond (editorial serif) + Manrope (clean sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pure: '#FFFFFF',
+            alabaster: '#F8F6F1',
+            linen: '#F4F1EC',
+            stone: '#EFECE6',
+            hairline: '#E6E0D6',
+            hairlineLight: '#EAE4DC',
+            ink: '#232220',
+            body: '#54504B',
+            muted: '#8B837A',
+            taupe: '#8C7A6B',
+            taupeHover: '#736255',
+            sandBorder: '#C2B19E',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          borderRadius: {
+            nordic: '2px',
+          },
+          letterSpacing: {
+            micro: '0.2em',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body {
+      background-color: #FFFFFF;
+      color: #232220;
+      font-family: 'Manrope', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Editorial micro-label */
+    .micro-label {
+      font-size: 11px;
+      line-height: 1.4;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Fluid editorial serif headings */
+    .hero-title {
+      font-size: clamp(2.4rem, 5.6vw, 4.9rem);
+      line-height: 1.07;
+      font-weight: 400;
+    }
+
+    .editorial-h2 {
+      font-size: clamp(2rem, 3.8vw, 3.25rem);
+      line-height: 1.14;
+      font-weight: 400;
+    }
+
+    .editorial-h3 {
+      font-size: clamp(1.65rem, 2.7vw, 2.35rem);
+      line-height: 1.18;
+      font-weight: 400;
+    }
+
+    /* Transparent-to-white header transition */
+    #siteHeader {
+      background-color: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      color: #FFFFFF;
+      transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, padding 0.35s ease;
+    }
+
+    #siteHeader.is-scrolled {
+      background-color: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom-color: #EAE4DC;
+      color: #232220;
+    }
+
+    #siteHeader.is-scrolled .header-cta {
+      background-color: #232220;
+      color: #FFFFFF;
+      border-color: #232220;
+    }
+
+    #siteHeader.is-scrolled .header-cta:hover {
+      background-color: #8C7A6B;
+      border-color: #8C7A6B;
+    }
+
+    #siteHeader:not(.is-scrolled) .header-cta {
+      background-color: transparent;
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.72);
+    }
+
+    #siteHeader:not(.is-scrolled) .header-cta:hover {
+      background-color: #FFFFFF;
+      color: #232220;
+      border-color: #FFFFFF;
+    }
+
+    /* Subtle editorial scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+
+    /* Minimalist scroll cue animation */
+    @keyframes scrollLine {
+      0% { transform: translateY(-100%); opacity: 0; }
+      30% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(130%); opacity: 0; }
+    }
+
+    .animate-scroll-cue {
+      animation: scrollLine 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    }
+
+    /* Gentle photo zoom on hover */
+    .editorial-img {
+      transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .group:hover .editorial-img {
+      transform: scale(1.03);
+    }
+
+    /* Active gallery filter underline */
+    .filter-tab {
+      position: relative;
+      padding-bottom: 6px;
+      color: #8B837A;
+      transition: color 0.25s ease;
+    }
+
+    .filter-tab:hover {
+      color: #232220;
+    }
+
+    .filter-tab.is-active {
+      color: #232220;
+    }
+
+    .filter-tab.is-active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #232220;
+    }
+
+    /* Active space thumb border */
+    .space-thumb {
+      border: 1px solid #E6E0D6;
+      opacity: 0.72;
+      transition: opacity 0.25s ease, border-color 0.25s ease;
+    }
+
+    .space-thumb:hover,
+    .space-thumb.is-active {
+      opacity: 1;
+      border-color: #232220;
+    }
+
+    /* Full-window drag & drop highlight (airy light alabaster) */
+    #pageDropOverlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Subtle scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F8F6F1; }
+    ::-webkit-scrollbar-thumb { background: #D7CFC4; }
+    ::-webkit-scrollbar-thumb:hover { background: #8C7A6B; }
+  </style>
+</head>
+
+<body class="bg-pure text-ink overflow-x-hidden selection:bg-stone selection:text-ink">
+
+  <!-- ======================================================================= -->
+  <!-- 1. MINIMALIST HEADER NAVIGATION (Transparent -> Crisp White on Scroll)  -->
+  <!-- ======================================================================= -->
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 py-5 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-[1320px] mx-auto flex items-center justify-between gap-4">
+      <!-- Serif Brand Wordmark -->
+      <a href="#hero" class="font-serif text-xl sm:text-2xl tracking-[0.22em] uppercase leading-none whitespace-nowrap">
+        ДОМ У РЕКИ
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Основная навигация" class="hidden xl:flex items-center gap-7 text-[11px] tracking-[0.18em] uppercase font-normal">
+        <a href="#about" class="hover:opacity-65 transition-opacity py-1">О доме</a>
+        <a href="#spaces" class="hover:opacity-65 transition-opacity py-1">Пространства</a>
+        <a href="#amenities" class="hover:opacity-65 transition-opacity py-1">Удобства</a>
+        <a href="#territory" class="hover:opacity-65 transition-opacity py-1">Участок</a>
+        <a href="#rates" class="hover:opacity-65 transition-opacity py-1">Тарифы</a>
+        <a href="#gallery" class="hover:opacity-65 transition-opacity py-1">Галерея</a>
+        <a href="#contacts" class="hover:opacity-65 transition-opacity py-1">Контакты</a>
+      </nav>
+
+      <!-- Action Button & Mobile Menu Trigger -->
+      <div class="flex items-center gap-3">
+        <button
+          type="button"
+          data-open-booking
+          class="header-cta hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-nordic border text-[11px] tracking-[0.18em] uppercase font-medium transition-colors"
+        >
+          Забронировать
+        </button>
+
+        <button
+          id="mobileMenuBtn"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          class="xl:hidden p-2.5 rounded-nordic border border-current/30 hover:opacity-75 transition-opacity"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 7.5h16.5M3.75 12h16.5M3.75 16.5h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Pure White Drawer -->
+  <div id="mobileDrawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
+    <div id="mobileDrawerBackdrop" class="absolute inset-0 bg-ink/30 backdrop-blur-[2px]"></div>
+    <aside id="mobileDrawerPanel" class="absolute top-0 right-0 h-full w-full max-w-xs bg-pure text-ink border-l border-hairline p-8 flex flex-col justify-between translate-x-full transition-transform duration-300">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-hairline">
+          <span class="font-serif text-xl tracking-[0.2em] uppercase text-ink">ДОМ У РЕКИ</span>
+          <button id="mobileMenuClose" type="button" aria-label="Закрыть меню" class="p-2 text-body hover:text-ink transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mt-6 flex flex-col">
+          <a href="#about" class="mobile-nav-link py-3.5 text-xs tracking-[0.18em] uppercase text-body hover:text-ink border-b border-hairlineLight transition-colors">О доме</a>
+          <a href="#spaces" class="mobile-nav-link py-3.5 text-xs tracking-[0.18em] uppercase text-body hover:text-ink border-b border-hairlineLight transition-colors">Пространства</a>
+          <a href="#amenities" class="mobile-nav-link py-3.5 text-xs tracking-[0.18em] uppercase text-body hover:text-ink border-b border-hairlineLight transition-colors">Удобства</a>
+          <a href="#territory" class="mobile-nav-link py-3.5 text-xs tracking-[0.18em] uppercase text-body hover:text-ink border-b border-hairlineLight transition-colors">Участок</a>
+          <a href="#rates" class="mobile-nav-link py-3.5 text-xs tracking-[0.18em] uppercase text-body hover:text-ink border-b border-hairlineLight transition-colors">Тарифы</a>
+          <a href="#gallery" class="mobile-nav-link py-3.5 text-xs tracking-[0.18em] uppercase text-body hover:text-ink border-b border-hairlineLight transition-colors">Галерея</a>
+          <a href="#contacts" class="mobile-nav-link py-3.5 text-xs tracking-[0.18em] uppercase text-body hover:text-ink transition-colors">Контакты</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-hairline space-y-4">
+        <div class="space-y-1">
+          <a href="tel:+79154575972" class="block text-sm font-medium text-ink hover:text-taupe transition-colors">+7 (915) 457-59-72</a>
+          <a href="mailto:domyreki@inbox.ru" class="block text-xs text-muted hover:text-ink transition-colors">domyreki@inbox.ru</a>
+        </div>
+        <button
+          type="button"
+          data-open-booking
+          class="w-full py-3.5 px-5 rounded-nordic bg-ink text-pure text-[11px] tracking-[0.18em] uppercase font-medium hover:bg-taupe transition-colors"
+        >
+          Забронировать
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- 2. FULL-BLEED VIDEO HERO (100vh)                                        -->
+  <!-- ======================================================================= -->
+  <section id="hero" class="relative min-h-screen h-screen flex flex-col justify-between overflow-hidden bg-stone">
+    <!-- Scenic Background Image (always crisp & bright behind video) -->
+    <img
+      id="heroFallbackImg"
+      src="8P1A2821.jpg"
+      data-photo-key="8P1A2821"
+      alt="Дом у реки — современный барнхаус на берегу реки Слогавка"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+
+    <!-- Full-Bleed HTML5 Background Video (fades in smoothly once hero-video.mp4 loads) -->
+    <video
+      id="heroVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="8P1A2821.jpg"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700"
+    >
+      <source src="hero-video.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Subtle Neutral Scrim (strictly neutral, no black wall, no green tint) -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      style="background: linear-gradient(180deg, rgba(20,20,20,0.28) 0%, rgba(20,20,20,0.18) 50%, rgba(20,20,20,0.38) 100%);"
+    ></div>
+
+    <!-- Top spacer for fixed header -->
+    <div class="h-20 relative z-10"></div>
+
+    <!-- Centered Panorama Glass Lodge Editorial Composition -->
+    <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center text-pure my-auto">
+      <p class="micro-label text-pure/90 mb-5 sm:mb-6">
+        60 КМ ОТ МОСКВЫ &bull; НОСОВИХИНСКОЕ ШОССЕ &bull; РЕКА СЛОГАВКА
+      </p>
+
+      <h1 class="font-serif hero-title text-pure tracking-tight">
+        Дом у реки, где тишина<br class="hidden sm:inline" /> становится <span class="italic">роскошью</span>
+      </h1>
+
+      <p class="mt-6 text-sm sm:text-base md:text-lg text-pure/90 font-light max-w-2xl mx-auto leading-relaxed">
+        Современный панорамный барнхаус 65,9&nbsp;м² на уединённом участке 15&nbsp;соток для 4&nbsp;гостей
+      </p>
+
+      <!-- Dual Action Row -->
+      <div class="mt-9 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+        <button
+          type="button"
+          data-open-booking
+          class="w-full sm:w-auto px-8 py-4 rounded-nordic bg-pure text-ink text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-alabaster transition-colors"
+        >
+          Забронировать даты
+        </button>
+        <a
+          href="#rates"
+          class="w-full sm:w-auto px-8 py-4 rounded-nordic border border-pure/75 text-pure text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-pure hover:text-ink transition-colors"
+        >
+          Рассчитать стоимость
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Hero Bar: Minimalist Scroll Cue + Quiet Video Controls -->
+    <div class="relative z-10 max-w-[1320px] w-full mx-auto px-5 sm:px-8 lg:px-12 pb-7 sm:pb-9 flex items-end justify-between">
+      <div class="w-24 hidden sm:block"></div>
+
+      <!-- Center scroll cue -->
+      <a href="#about" aria-label="Перейти к описанию дома" class="mx-auto flex flex-col items-center gap-2.5 text-pure/85 hover:text-pure transition-colors">
+        <span class="text-[10px] tracking-[0.22em] uppercase">Узнать больше</span>
+        <span class="w-[1px] h-9 bg-pure/35 relative overflow-hidden block">
+          <span class="absolute top-0 left-0 w-full h-1/2 bg-pure animate-scroll-cue"></span>
+        </span>
+      </a>
+
+      <!-- Quiet bottom-right Video controls (visible when video is loaded) -->
+      <div id="heroVideoControls" class="hidden items-center gap-1.5 bg-pure/15 backdrop-blur-md border border-pure/30 px-2.5 py-1.5 rounded-nordic text-pure">
+        <button id="heroTogglePlay" type="button" aria-label="Пауза или воспроизведение видео" class="p-1.5 hover:opacity-75 transition-opacity text-[10px] tracking-[0.16em] uppercase flex items-center gap-1.5">
+          <span id="heroPlayLabel">Пауза</span>
+        </button>
+        <span class="w-[1px] h-3.5 bg-pure/35"></span>
+        <button id="heroToggleMode" type="button" aria-label="Переключить видео или фото" class="p-1.5 hover:opacity-75 transition-opacity text-[10px] tracking-[0.16em] uppercase">
+          Фото
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 3. EDITORIAL INTRO STORY SECTION (Pure White #FFFFFF)                   -->
+  <!-- ======================================================================= -->
+  <section id="about" class="scroll-mt-20 bg-pure py-24 sm:py-28 lg:py-32 px-5 sm:px-8">
+    <div class="max-w-[1140px] mx-auto">
+      <!-- Centered Editorial Manifesto -->
+      <div class="max-w-[780px] mx-auto text-center reveal">
+        <div class="w-[1px] h-12 bg-sandBorder mx-auto mb-8"></div>
+
+        <p class="micro-label text-muted mb-5">
+          УЕДИНЕНИЕ НА БЕРЕГУ РЕКИ СЛОГАВКИ
+        </p>
+
+        <h2 class="font-serif editorial-h2 text-ink">
+          Современный барнхаус 2023 года с&nbsp;панорамными окнами в&nbsp;окружении леса
+        </h2>
+
+        <p class="mt-8 text-sm sm:text-base text-body font-light leading-[1.9]">
+          Сдаётся дом у реки общей площадью 65,9&nbsp;м² на участке 15&nbsp;соток. Современный дом с панорамными окнами в популярном стиле барнхаус находится в 60&nbsp;км от Москвы по Носовихинскому шоссе. Продуманная планировка позволит комфортно разместиться в доме 4&nbsp;гостям. Дом 2023&nbsp;года постройки с новой мебелью и техникой расположен в уединённом месте, на живописном берегу реки Слогавка. Красота этого незабываемого места позволит отдохнуть от городской суеты и получить истинное наслаждение от единения с природой. Мы позаботились и наполнили дом всем необходимым для идеального отдыха.
+        </p>
+      </div>
+
+      <!-- 4-Column Minimalist Key Metrics Bar -->
+      <div class="mt-16 sm:mt-20 pt-10 border-t border-hairline grid grid-cols-2 lg:grid-cols-4 gap-y-8 reveal reveal-delay-1">
+        <div class="text-center px-4 lg:border-r lg:border-hairline">
+          <p class="font-serif text-3xl sm:text-4xl text-ink">65,9 м²</p>
+          <p class="mt-2 micro-label text-muted">Площадь дома</p>
+        </div>
+        <div class="text-center px-4 lg:border-r lg:border-hairline">
+          <p class="font-serif text-3xl sm:text-4xl text-ink">15 соток</p>
+          <p class="mt-2 micro-label text-muted">Приватный участок</p>
+        </div>
+        <div class="text-center px-4 lg:border-r lg:border-hairline">
+          <p class="font-serif text-3xl sm:text-4xl text-ink">До 4 гостей</p>
+          <p class="mt-2 micro-label text-muted">Комфортное размещение</p>
+        </div>
+        <div class="text-center px-4">
+          <p class="font-serif text-3xl sm:text-4xl text-ink">60 км</p>
+          <p class="mt-2 micro-label text-muted">От Москвы по Носовихинскому ш.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 4. EDITORIAL 50/50 SPLIT SHOWCASE — «ПРОСТРАНСТВА ДОМА»                 -->
+  <!-- ======================================================================= -->
+  <section id="spaces" class="scroll-mt-20">
+    <!-- Section Header Strip on Warm Alabaster -->
+    <div class="bg-alabaster pt-24 sm:pt-28 pb-12 px-5 sm:px-8 border-t border-hairlineLight">
+      <div class="max-w-[1260px] mx-auto text-center reveal">
+        <p class="micro-label text-muted mb-4">В ВАШЕМ РАСПОРЯЖЕНИИ</p>
+        <h2 class="font-serif editorial-h2 text-ink">Пространства дома</h2>
+      </div>
+    </div>
+
+    <!-- SPREAD 1: Кухня-гостиная 26,5 м² (#F8F6F1) -->
+    <div class="bg-alabaster pb-24 sm:pb-28 px-5 sm:px-8 lg:px-12">
+      <div class="max-w-[1260px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <!-- Photo Side -->
+        <div class="lg:col-span-7 space-y-3 reveal" data-spread="living">
+          <div class="group relative overflow-hidden rounded-nordic border border-hairline aspect-[16/10] bg-stone cursor-pointer" data-spread-main>
+            <img
+              src="8P1A2921.jpg"
+              data-photo-key="8P1A2921"
+              alt="Панорамные окна, гостиная и обеденная зона"
+              loading="lazy"
+              class="editorial-img w-full h-full object-cover"
+            />
+          </div>
+          <!-- Accent thumbnails (clickable to swap main photo or open lightbox) -->
+          <div class="grid grid-cols-5 gap-2.5">
+            <button type="button" data-thumb-key="8P1A2921" class="space-thumb is-active overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2921.jpg" data-photo-key="8P1A2921" alt="Панорамные окна и обеденная зона" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2900" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2900.jpg" data-photo-key="8P1A2900" alt="Зона отдыха с двумя мягкими диванами" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2905" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2905.jpg" data-photo-key="8P1A2905" alt="Просторная кухня-гостиная 26,5 м²" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2928" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2928 copy.jpg" data-photo-key="8P1A2928" alt="Кухня и Яндекс ТВ 55 дюймов с эффектом камина" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2903" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2903.jpg" data-photo-key="8P1A2903" alt="Обеденный стол и гостиная" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Text Side -->
+        <div class="lg:col-span-5 lg:pl-4 space-y-6 reveal reveal-delay-1">
+          <p class="micro-label text-muted">01 &mdash; 26,5 М²</p>
+          <h3 class="font-serif editorial-h3 text-ink">Просторная кухня-гостиная</h3>
+          <div class="w-10 h-[1px] bg-sandBorder"></div>
+          <p class="text-sm sm:text-base text-body font-light leading-[1.85]">
+            Просторная кухня-гостиная 26,5&nbsp;м² с панорамным остеклением, двумя удобными диванами, обеденной зоной, Яндекс телевизором 55" и колонкой с Алисой. Светлые деревянные стены, высокий потолок и вид на заснеженный участок создают ощущение воздуха и спокойствия.
+          </p>
+          <ul class="pt-2 space-y-2.5 text-sm text-body font-light border-t border-hairline">
+            <li class="pt-3 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Два просторных мягких дивана и журнальный столик</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Круглый обеденный стол и современная кухня</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Яндекс ТВ 55" и умная колонка с Алисой</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPREAD 2: Две уютные спальни по 6,1 м² (#FFFFFF) -->
+    <div class="bg-pure py-24 sm:py-28 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+      <div class="max-w-[1260px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <!-- Text Side (Left on Desktop) -->
+        <div class="lg:col-span-5 lg:pr-4 order-2 lg:order-1 space-y-6 reveal">
+          <p class="micro-label text-muted">02 &mdash; ДВЕ СПАЛЬНИ ПО 6,1 М²</p>
+          <h3 class="font-serif editorial-h3 text-ink">Две уютные спальни</h3>
+          <div class="w-10 h-[1px] bg-sandBorder"></div>
+          <p class="text-sm sm:text-base text-body font-light leading-[1.85]">
+            Две изолированные уютные спальни по 6,1&nbsp;м² с кроватями и ортопедическими матрасами 140×200&nbsp;см — тишина, светлое дерево, рулонные шторы для спокойного утреннего сна и глубокий загородный отдых для четырёх гостей.
+          </p>
+          <ul class="pt-2 space-y-2.5 text-sm text-body font-light border-t border-hairline">
+            <li class="pt-3 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Две отдельные спальни по 6,1&nbsp;м²</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Ортопедические матрасы 140×200&nbsp;см</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Свежий хвойный воздух и мягкое вечернее освещение</li>
+          </ul>
+        </div>
+
+        <!-- Photo Side (Right on Desktop) -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-3 reveal reveal-delay-1" data-spread="bedrooms">
+          <div class="group relative overflow-hidden rounded-nordic border border-hairline aspect-[16/10] bg-stone cursor-pointer" data-spread-main>
+            <img
+              src="8P1A2943.jpg"
+              data-photo-key="8P1A2943"
+              alt="Первая спальня 6,1 м² при дневном свете"
+              loading="lazy"
+              class="editorial-img w-full h-full object-cover"
+            />
+          </div>
+          <div class="grid grid-cols-3 gap-2.5">
+            <button type="button" data-thumb-key="8P1A2943" class="space-thumb is-active overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2943.jpg" data-photo-key="8P1A2943" alt="Первая спальня 6,1 м²" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A3008" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A3008.jpg" data-photo-key="8P1A3008" alt="Вторая спальня 6,1 м² с ортопедическим матрасом 140×200" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2872" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2872.jpg" data-photo-key="8P1A2872" alt="Уютные детали интерьера спальни" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPREAD 3: Санузел 4,1 м² (#F8F6F1) -->
+    <div class="bg-alabaster py-24 sm:py-28 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+      <div class="max-w-[1260px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <!-- Photo Side -->
+        <div class="lg:col-span-7 space-y-3 reveal" data-spread="bath">
+          <div class="group relative overflow-hidden rounded-nordic border border-hairline aspect-[16/10] bg-stone cursor-pointer" data-spread-main>
+            <img
+              src="8P1A2837.jpg"
+              data-photo-key="8P1A2837"
+              alt="Санузел 4,1 м² с душевой зоной и феном"
+              loading="lazy"
+              class="editorial-img w-full h-full object-cover"
+            />
+          </div>
+          <div class="grid grid-cols-3 gap-2.5">
+            <button type="button" data-thumb-key="8P1A2837" class="space-thumb is-active overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2837.jpg" data-photo-key="8P1A2837" alt="Санузел 4,1 м²" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2841" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2841.jpg" data-photo-key="8P1A2841" alt="Умывальник и ванные принадлежности" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2843" class="space-thumb overflow-hidden rounded-nordic aspect-[4/3] bg-stone">
+              <img src="8P1A2843.jpg" data-photo-key="8P1A2843" alt="Подвесной туалет с гигиеническим душем" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Text Side -->
+        <div class="lg:col-span-5 lg:pl-4 space-y-6 reveal reveal-delay-1">
+          <p class="micro-label text-muted">03 &mdash; 4,1 М²</p>
+          <h3 class="font-serif editorial-h3 text-ink">Современный санузел</h3>
+          <div class="w-10 h-[1px] bg-sandBorder"></div>
+          <p class="text-sm sm:text-base text-body font-light leading-[1.85]">
+            Санузел 4,1&nbsp;м² оснащён просторной душевой зоной и туалетом с гигиеническим душем, гостиничным феном, набором полотенец, халатами и резиновыми тапочками. Все необходимые средства ухода уже ждут вас.
+          </p>
+          <ul class="pt-2 space-y-2.5 text-sm text-body font-light border-t border-hairline">
+            <li class="pt-3 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Душевая зона со стеклянной перегородкой</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Туалет с гигиеническим душем и гостиничный фен</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-taupe shrink-0"></span>Халаты, полотенца, тапочки и уходовая косметика</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPREAD 4: Открытая терраса 23,5 м² (#FFFFFF) -->
+    <div class="bg-pure py-24 sm:py-28 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+      <div class="max-w-[1260px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <!-- Text Side -->
+        <div class="lg:col-span-5 lg:pr-4 order-2 lg:order-1 space-y-6 reveal">
+          <p class="micro-label text-muted">04 &mdash; 23,5 М²</p>
+          <h3 class="font-serif editorial-h3 text-ink">Открытая терраса</h3>
+          <div class="w-10 h-[1px] bg-sandBorder"></div>
+          <p class="text-sm sm:text-base text-body font-light leading-[1.85]">
+            Просторная открытая терраса 23,5&nbsp;м² под навесом барнхауса с комплектом уличной мебели — для неспешного утреннего кофе на свежем воздухе, разговоров после прогулки у реки и тихих вечеров в тёплом свете гирлянд.
+          </p>
+          <div class="pt-2">
+            <button
+              type="button"
+              data-open-booking
+              class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-nordic border border-ink text-ink text-[11px] tracking-[0.18em] uppercase font-medium hover:bg-ink hover:text-pure transition-colors"
+            >
+              <span>Выбрать даты отдыха</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Photo Side -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-3 reveal reveal-delay-1" data-spread="terrace">
+          <div class="group relative overflow-hidden rounded-nordic border border-hairline aspect-[16/10] bg-stone cursor-pointer" data-spread-main>
+            <img
+              src="8P1A2954.jpg"
+              data-photo-key="8P1A2954"
+              alt="Открытая терраса 23,5 м² с уличной мебелью"
+              loading="lazy"
+              class="editorial-img w-full h-full object-cover"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <button type="button" data-thumb-key="8P1A2954" class="space-thumb is-active overflow-hidden rounded-nordic aspect-[16/9] bg-stone">
+              <img src="8P1A2954.jpg" data-photo-key="8P1A2954" alt="Открытая терраса 23,5 м² с уличной мебелью" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+            <button type="button" data-thumb-key="8P1A2821" class="space-thumb overflow-hidden rounded-nordic aspect-[16/9] bg-stone">
+              <img src="8P1A2821.jpg" data-photo-key="8P1A2821" alt="Вечерний фасад дома и терраса в огнях гирлянд" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 5. COMPLETE AMENITIES & HOSPITALITY DETAILS (#F8F6F1)                   -->
+  <!-- ======================================================================= -->
+  <section id="amenities" class="scroll-mt-20 bg-alabaster py-24 sm:py-28 lg:py-32 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+    <div class="max-w-[1260px] mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-16 reveal">
+        <p class="micro-label text-muted mb-4">ПРОДУМАНО ДО МЕЛОЧЕЙ</p>
+        <h2 class="font-serif editorial-h2 text-ink">Всё для идеального отдыха</h2>
+        <p class="mt-4 text-sm sm:text-base text-body font-light leading-relaxed">
+          Дом полностью укомплектован новой техникой, посудой, текстилем и приятными мелочами — приезжайте налегке.
+        </p>
+      </div>
+
+      <!-- 3 Ultra-Clean White Editorial Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <!-- Card 1: Все 10 пунктов оснащения дома -->
+        <div class="lg:col-span-6 bg-pure border border-hairlineLight rounded-nordic p-8 sm:p-10 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between pb-5 mb-6 border-b border-hairlineLight">
+              <div>
+                <p class="micro-label text-muted mb-1.5">В ДОМЕ ИМЕЮТСЯ</p>
+                <h3 class="font-serif text-2xl sm:text-3xl text-ink">Техника и оснащение дома</h3>
+              </div>
+              <span class="font-serif text-3xl text-taupe">10</span>
+            </div>
+
+            <ol class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5 text-sm text-body font-light">
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">01</span>
+                <span>Яндекс телевизор 55"</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">02</span>
+                <span>Яндекс колонка с Алисой</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">03</span>
+                <span>Холодильник с морозильной камерой</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">04</span>
+                <span>Микроволновая печь</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">05</span>
+                <span>Варочная панель индукционная стеклокерамика на 2&nbsp;конфорки</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">06</span>
+                <span>Посудомоечная машина</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">07</span>
+                <span>Вся необходимая кухонная посуда на 6&nbsp;персон</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">08</span>
+                <span>Гостиничный фен</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">09</span>
+                <span>Набор полотенец</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-serif text-base text-taupe shrink-0">10</span>
+                <span>Халаты и резиновые тапочки</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Card 2: Дополнительно (забота в мелочах) -->
+        <div class="lg:col-span-3 bg-pure border border-hairlineLight rounded-nordic p-8 sm:p-9 flex flex-col justify-between reveal reveal-delay-1">
+          <div>
+            <p class="micro-label text-muted mb-1.5">ДОПОЛНИТЕЛЬНО</p>
+            <h3 class="font-serif text-2xl sm:text-3xl text-ink pb-5 mb-6 border-b border-hairlineLight">
+              Забота в мелочах
+            </h3>
+
+            <div class="space-y-6 text-sm text-body font-light leading-relaxed">
+              <div>
+                <p class="text-xs uppercase tracking-[0.14em] text-ink font-medium mb-1.5">На кухне</p>
+                <p>Чай, кофе, соль, сахар, специи, уксус, мука, масло.</p>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-[0.14em] text-ink font-medium mb-1.5">Ванные принадлежности</p>
+                <p>Гель для душа, шампунь, кондиционер, мицеллярная вода, ватные диски, ватные палочки, детский крем.</p>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-[0.14em] text-ink font-medium mb-1.5">Для уютных вечеров</p>
+                <p>Настольные игры для компании и спокойного семейного досуга.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Доставка продуктов -->
+        <div class="lg:col-span-3 bg-pure border border-hairlineLight rounded-nordic p-8 sm:p-9 flex flex-col justify-between reveal reveal-delay-2">
+          <div>
+            <p class="micro-label text-muted mb-1.5">СЕРВИС К ПОРОГУ</p>
+            <h3 class="font-serif text-2xl sm:text-3xl text-ink pb-5 mb-6 border-b border-hairlineLight">
+              Удобная доставка
+            </h3>
+
+            <p class="text-sm text-body font-light leading-[1.85]">
+              К дому работает доставка еды и свежих продуктов из <strong class="text-ink font-medium">«ВкусВилл»</strong> и <strong class="text-ink font-medium">«Пятёрочки»</strong> — можно ехать налегке и не тратить время отдыха на походы по магазинам.
+            </p>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-hairlineLight flex items-center gap-3">
+            <span class="px-3 py-1.5 bg-alabaster border border-hairline text-xs text-ink rounded-nordic">ВкусВилл</span>
+            <span class="px-3 py-1.5 bg-alabaster border border-hairline text-xs text-ink rounded-nordic">Пятёрочка</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 6. TERRITORY & OUTDOOR LIVING — «НА УЧАСТКЕ 15 СОТОК» (#FFFFFF)         -->
+  <!-- ======================================================================= -->
+  <section id="territory" class="scroll-mt-20 bg-pure py-24 sm:py-28 lg:py-32 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+    <div class="max-w-[1260px] mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <!-- Left Column: Copy & 3 Territory Features -->
+        <div class="lg:col-span-5 space-y-8 reveal">
+          <div>
+            <p class="micro-label text-muted mb-4">ПРИВАТНАЯ ТЕРРИТОРИЯ</p>
+            <h2 class="font-serif editorial-h2 text-ink">На участке 15&nbsp;соток</h2>
+            <p class="mt-4 text-sm sm:text-base text-body font-light leading-relaxed">
+              Собственная просторная территория, окружённая деревьями, — ничего лишнего между вами, лесом и рекой Слогавкой.
+            </p>
+          </div>
+
+          <div class="space-y-6 pt-2">
+            <!-- Feature 1 -->
+            <div class="pb-6 border-b border-hairlineLight flex items-start gap-4">
+              <div class="w-9 h-9 rounded-nordic bg-alabaster border border-hairline flex items-center justify-center text-taupe shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl text-ink">Парковка на 3&nbsp;автомобиля</h3>
+                <p class="mt-1.5 text-sm text-body font-light leading-relaxed">
+                  Удобный въезд и просторная парковка на закрытой территории участка.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="pb-6 border-b border-hairlineLight flex items-start gap-4">
+              <div class="w-9 h-9 rounded-nordic bg-alabaster border border-hairline flex items-center justify-center text-taupe shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl text-ink">Крытая мангальная зона</h3>
+                <p class="mt-1.5 text-sm text-body font-light leading-relaxed">
+                  <strong class="text-ink font-medium">Шампуры, упаковка угля и жидкость для розжига уже входят в стоимость.</strong>
+                </p>
+                <p class="mt-3 text-xs text-body bg-alabaster border-l-2 border-sandBorder px-3.5 py-2.5 leading-relaxed">
+                  Дорогие гости, решётку для гриля предлагаем привезти с собой.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-nordic bg-alabaster border border-hairline flex items-center justify-center text-taupe shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18l-5 6h3.5L6 15h12l-4.5-6H17l-5-6z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl text-ink">Отдельный выход в лес и к реке Слогавка</h3>
+                <p class="mt-1.5 text-sm text-body font-light leading-relaxed">
+                  Прямой выход с участка к живописному берегу реки и лесным тропам — для тихих прогулок в любое время года.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Editorial 3-Photo Composition (8P1A2981, 8P1A2972, 8P1A2963) -->
+        <div class="lg:col-span-7 space-y-4 reveal reveal-delay-1">
+          <figure class="group relative overflow-hidden rounded-nordic border border-hairline aspect-[16/10] bg-stone cursor-pointer" data-lightbox-key="8P1A2981">
+            <img
+              src="8P1A2981.jpg"
+              data-photo-key="8P1A2981"
+              alt="Дневной вид на барнхаус со стороны мангальной зоны"
+              loading="lazy"
+              class="editorial-img w-full h-full object-cover"
+            />
+          </figure>
+
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-4">
+            <figure class="sm:col-span-7 group relative overflow-hidden rounded-nordic border border-hairline aspect-[4/3] bg-stone cursor-pointer" data-lightbox-key="8P1A2963">
+              <img
+                src="8P1A2963.jpg"
+                data-photo-key="8P1A2963"
+                alt="Шампуры, уголь и розжиг включены в стоимость"
+                loading="lazy"
+                class="editorial-img w-full h-full object-cover"
+              />
+            </figure>
+            <figure class="sm:col-span-5 group relative overflow-hidden rounded-nordic border border-hairline aspect-[4/3] sm:aspect-auto bg-stone cursor-pointer" data-lightbox-key="8P1A2972">
+              <img
+                src="8P1A2972.jpg"
+                data-photo-key="8P1A2972"
+                alt="Крытая мангальная зона среди сосен и берёз"
+                loading="lazy"
+                class="editorial-img w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 7. RATES, NEW YEAR SPECIAL & INTERACTIVE CALCULATOR (#F4F1EC)           -->
+  <!-- ======================================================================= -->
+  <section id="rates" class="scroll-mt-20 bg-linen py-24 sm:py-28 lg:py-32 px-5 sm:px-8 lg:px-12 border-t border-hairline">
+    <div class="max-w-[1260px] mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-14 reveal">
+        <p class="micro-label text-muted mb-4">ПРОЗРАЧНЫЕ УСЛОВИЯ</p>
+        <h2 class="font-serif editorial-h2 text-ink">Стоимость и бронирование</h2>
+      </div>
+
+      <!-- Editorial New Year Special Banner Card (Crisp White + Warm Sand Accent Border) -->
+      <div class="mb-8 bg-pure border border-sandBorder rounded-nordic p-7 sm:p-9 flex flex-col md:flex-row md:items-center justify-between gap-6 reveal">
+        <div class="space-y-1.5">
+          <p class="micro-label text-taupe">НОВОГОДНЕЕ ПРЕДЛОЖЕНИЕ</p>
+          <h3 class="font-serif text-2xl sm:text-3xl text-ink">
+            С 31&nbsp;декабря по 3&nbsp;января &mdash; <span class="italic">55&nbsp;000&nbsp;₽</span> для 4&nbsp;гостей
+          </h3>
+          <p class="text-sm text-body font-light">
+            Встречайте зимние каникулы в тишине заснеженного леса, на берегу реки Слогавки.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          id="btnBookNewYear"
+          class="shrink-0 px-7 py-4 rounded-nordic bg-taupe text-pure text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-taupeHover transition-colors"
+        >
+          Забронировать Новый год
+        </button>
+      </div>
+
+      <!-- Two-Column Pricing Sheet & Interactive Calculator -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left Column: Crisp White Pricing & Conditions Sheet -->
+        <div class="lg:col-span-6 bg-pure border border-hairlineLight rounded-nordic p-7 sm:p-10 space-y-7 reveal">
+          <div>
+            <p class="micro-label text-muted mb-5">БАЗОВАЯ СТОИМОСТЬ УКАЗАНА ЗА 2 ГОСТЕЙ</p>
+
+            <div class="divide-y divide-hairlineLight border-y border-hairlineLight">
+              <div class="py-4 flex items-baseline justify-between gap-4">
+                <span class="text-sm sm:text-base text-body font-light">Понедельник &ndash; Четверг</span>
+                <span class="font-serif text-2xl sm:text-3xl text-ink whitespace-nowrap">5 900 ₽ <span class="font-sans text-xs text-muted font-normal">/ сутки</span></span>
+              </div>
+              <div class="py-4 flex items-baseline justify-between gap-4">
+                <span class="text-sm sm:text-base text-ink font-normal">Пятница &ndash; Суббота и праздничные дни</span>
+                <span class="font-serif text-2xl sm:text-3xl text-ink whitespace-nowrap">9 900 ₽ <span class="font-sans text-xs text-muted font-normal">/ сутки</span></span>
+              </div>
+              <div class="py-4 flex items-baseline justify-between gap-4">
+                <span class="text-sm sm:text-base text-body font-light">Воскресенье</span>
+                <span class="font-serif text-2xl sm:text-3xl text-ink whitespace-nowrap">6 900 ₽ <span class="font-sans text-xs text-muted font-normal">/ сутки</span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extra Guests & Discounts -->
+          <div class="space-y-3.5 text-sm">
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-body font-light">Доплата за каждого дополнительного гостя</span>
+              <span class="text-ink font-medium whitespace-nowrap">1 000 ₽</span>
+            </div>
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-body font-light">Гости без ночёвки</span>
+              <span class="text-ink font-medium whitespace-nowrap">500 ₽ / человек</span>
+            </div>
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-body font-light">Дети до 12 лет</span>
+              <span class="text-taupe font-medium whitespace-nowrap">Бесплатно</span>
+            </div>
+          </div>
+
+          <!-- 5+ Nights Discount Note -->
+          <div class="p-4 bg-alabaster border border-hairline rounded-nordic text-sm text-ink font-normal">
+            Дополнительная скидка при заказе на <strong class="font-semibold">5 и более суток</strong>!
+          </div>
+
+          <!-- Check-in / Check-out Strip -->
+          <div class="pt-5 border-t border-hairlineLight grid grid-cols-3 gap-3 text-center">
+            <div class="p-3 bg-alabaster rounded-nordic">
+              <p class="micro-label text-muted text-[10px]">Минимум</p>
+              <p class="mt-1 text-xs sm:text-sm text-ink font-medium">От 2-х суток</p>
+            </div>
+            <div class="p-3 bg-alabaster rounded-nordic">
+              <p class="micro-label text-muted text-[10px]">Заезд</p>
+              <p class="mt-1 text-xs sm:text-sm text-ink font-medium">с 16:00</p>
+            </div>
+            <div class="p-3 bg-alabaster rounded-nordic">
+              <p class="micro-label text-muted text-[10px]">Выезд</p>
+              <p class="mt-1 text-xs sm:text-sm text-ink font-medium">до 12:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Clean Interactive Booking Cost Calculator -->
+        <div class="lg:col-span-6 bg-pure border border-hairlineLight rounded-nordic p-7 sm:p-10 reveal reveal-delay-1">
+          <div class="pb-5 mb-6 border-b border-hairlineLight flex items-baseline justify-between gap-3">
+            <div>
+              <p class="micro-label text-muted mb-1">ОНЛАЙН-РАСЧЁТ</p>
+              <h3 class="font-serif text-2xl sm:text-3xl text-ink">Калькулятор стоимости</h3>
+            </div>
+            <span class="text-xs text-muted">от 2-х суток</span>
+          </div>
+
+          <!-- Date Pickers -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+            <div>
+              <label for="calcCheckin" class="block micro-label text-muted mb-2">Дата заезда</label>
+              <input
+                type="date"
+                id="calcCheckin"
+                class="w-full px-3.5 py-3 rounded-nordic bg-alabaster border border-hairline text-sm text-ink focus:outline-none focus:border-taupe transition-colors"
+              />
+            </div>
+            <div>
+              <label for="calcCheckout" class="block micro-label text-muted mb-2">Дата выезда</label>
+              <input
+                type="date"
+                id="calcCheckout"
+                class="w-full px-3.5 py-3 rounded-nordic bg-alabaster border border-hairline text-sm text-ink focus:outline-none focus:border-taupe transition-colors"
+              />
+            </div>
+          </div>
+
+          <p id="calcMinWarn" class="hidden mb-5 px-3.5 py-2.5 bg-alabaster border-l-2 border-taupe text-xs text-body">
+            Минимальный срок бронирования — от 2-х суток. Дата выезда скорректирована автоматически.
+          </p>
+
+          <!-- Guest Steppers -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-7">
+            <div class="p-4 bg-alabaster border border-hairlineLight rounded-nordic flex flex-col justify-between gap-3">
+              <div>
+                <p class="text-xs font-medium text-ink">Взрослые</p>
+                <p class="text-[11px] text-muted mt-0.5">1–4 чел. (база 2)</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <button type="button" data-calc-step="adults" data-delta="-1" aria-label="Уменьшить число взрослых" class="w-8 h-8 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">&minus;</button>
+                <span id="calcAdultsVal" class="font-serif text-2xl text-ink">2</span>
+                <button type="button" data-calc-step="adults" data-delta="1" aria-label="Увеличить число взрослых" class="w-8 h-8 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">+</button>
+              </div>
+            </div>
+
+            <div class="p-4 bg-alabaster border border-hairlineLight rounded-nordic flex flex-col justify-between gap-3">
+              <div>
+                <p class="text-xs font-medium text-ink">Дети до 12 лет</p>
+                <p class="text-[11px] text-taupe mt-0.5">Бесплатно</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <button type="button" data-calc-step="children" data-delta="-1" aria-label="Уменьшить число детей" class="w-8 h-8 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">&minus;</button>
+                <span id="calcChildrenVal" class="font-serif text-2xl text-ink">0</span>
+                <button type="button" data-calc-step="children" data-delta="1" aria-label="Увеличить число детей" class="w-8 h-8 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">+</button>
+              </div>
+            </div>
+
+            <div class="p-4 bg-alabaster border border-hairlineLight rounded-nordic flex flex-col justify-between gap-3">
+              <div>
+                <p class="text-xs font-medium text-ink">Без ночёвки</p>
+                <p class="text-[11px] text-muted mt-0.5">500 ₽ / чел.</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <button type="button" data-calc-step="dayguests" data-delta="-1" aria-label="Уменьшить число гостей без ночёвки" class="w-8 h-8 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">&minus;</button>
+                <span id="calcDayguestsVal" class="font-serif text-2xl text-ink">0</span>
+                <button type="button" data-calc-step="dayguests" data-delta="1" aria-label="Увеличить число гостей без ночёвки" class="w-8 h-8 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day-by-Day Calculation Breakdown -->
+          <div class="p-6 bg-alabaster border border-hairline rounded-nordic space-y-4">
+            <div id="calcBreakdown" class="space-y-2 text-xs sm:text-sm text-body font-light"></div>
+
+            <div id="calcDiscountNote" class="hidden px-3.5 py-2.5 bg-pure border border-sandBorder rounded-nordic text-xs text-ink">
+              Вы выбрали от 5&nbsp;суток — для вас действует дополнительная скидка! Точную итоговую цену со скидкой подтвердим при бронировании.
+            </div>
+
+            <div id="calcNyNote" class="hidden px-3.5 py-2.5 bg-pure border border-sandBorder rounded-nordic text-xs text-ink">
+              Даты включают новогодний период (31&nbsp;декабря &ndash; 3&nbsp;января): действует специальный тариф 55&nbsp;000&nbsp;₽ для 4&nbsp;гостей.
+            </div>
+
+            <div class="pt-4 border-t border-hairline flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <p class="micro-label text-muted">ИТОГО ОРИЕНТИРОВОЧНО</p>
+                <p id="calcTotalVal" class="font-serif text-4xl text-ink mt-1">19 800 ₽</p>
+              </div>
+
+              <button
+                type="button"
+                id="calcSubmitBtn"
+                class="w-full sm:w-auto px-6 py-4 rounded-nordic bg-ink text-pure text-[11px] tracking-[0.18em] uppercase font-medium hover:bg-taupe transition-colors"
+              >
+                Оставить заявку на эти даты
+              </button>
+            </div>
+
+            <p class="text-[11px] text-muted font-light">
+              * В праздничные дни действует тариф 9&nbsp;900&nbsp;₽/сутки за 2&nbsp;гостей.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 8. FULL PHOTO GALLERY WITH FILTER & LIGHTBOX (Pure White #FFFFFF)       -->
+  <!-- ======================================================================= -->
+  <section id="gallery" class="scroll-mt-20 bg-pure py-24 sm:py-28 lg:py-32 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+    <div class="max-w-[1260px] mx-auto">
+      <div class="text-center mb-12 reveal">
+        <p class="micro-label text-muted mb-4">ФОТОГРАФИИ</p>
+        <h2 class="font-serif editorial-h2 text-ink">Атмосфера дома</h2>
+
+        <!-- Minimalist Underlined Text Filter Tabs -->
+        <div id="galleryFilters" class="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-xs tracking-[0.14em] uppercase" role="tablist" aria-label="Категории галереи">
+          <button type="button" data-gallery-filter="all" class="filter-tab is-active">Все фото (16)</button>
+          <button type="button" data-gallery-filter="exterior" class="filter-tab">Экстерьер и терраса</button>
+          <button type="button" data-gallery-filter="living" class="filter-tab">Кухня-гостиная</button>
+          <button type="button" data-gallery-filter="bedrooms" class="filter-tab">Спальни</button>
+          <button type="button" data-gallery-filter="bath" class="filter-tab">Санузел</button>
+          <button type="button" data-gallery-filter="territory" class="filter-tab">Мангал и участок</button>
+        </div>
+      </div>
+
+      <!-- Responsive Editorial Photo Grid (All 16 Unique Photos) -->
+      <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[240px] sm:auto-rows-[255px]"></div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 9. HOUSE RULES (#F8F6F1) + LOCATION & CONTACTS (#FFFFFF)                -->
+  <!-- ======================================================================= -->
+  <!-- Polite Understated House Rules Block -->
+  <section id="rules" class="bg-alabaster py-20 sm:py-24 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+    <div class="max-w-[1100px] mx-auto reveal">
+      <div class="text-center mb-12">
+        <p class="micro-label text-muted mb-3">УВАЖЕНИЕ К ТИШИНЕ</p>
+        <h2 class="font-serif editorial-h3 text-ink">Правила проживания</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-pure border border-hairlineLight rounded-nordic p-7 text-center">
+          <p class="micro-label text-taupe mb-3">ФОРМАТ ОТДЫХА</p>
+          <p class="font-serif text-2xl text-ink mb-2">Тихий загородный отдых</p>
+          <p class="text-sm text-body font-light leading-relaxed">
+            Дом не подходит для вечеринок и шумных компаний — мы бережём атмосферу покоя на берегу реки.
+          </p>
+        </div>
+
+        <div class="bg-pure border border-hairlineLight rounded-nordic p-7 text-center">
+          <p class="micro-label text-taupe mb-3">БЕЗОПАСНОСТЬ</p>
+          <p class="font-serif text-2xl text-ink mb-2">Чистый воздух и покой</p>
+          <p class="text-sm text-body font-light leading-relaxed">
+            Курение в доме и фейерверки на территории запрещены.
+          </p>
+        </div>
+
+        <div class="bg-pure border border-hairlineLight rounded-nordic p-7 text-center">
+          <p class="micro-label text-taupe mb-3">ВРЕМЯ И СРОК</p>
+          <p class="font-serif text-2xl text-ink mb-2">От 2-х суток</p>
+          <p class="text-sm text-body font-light leading-relaxed">
+            Заезд с 16:00 &bull; Выезд до 12:00 &bull; Бронирование от 2-х суток.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contacts Split Section (Pure White #FFFFFF) -->
+  <section id="contacts" class="scroll-mt-20 bg-pure py-24 sm:py-28 lg:py-32 px-5 sm:px-8 lg:px-12 border-t border-hairlineLight">
+    <div class="max-w-[1260px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+      <!-- Left: Contacts & Address -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-8 reveal">
+        <div class="space-y-6">
+          <p class="micro-label text-muted">КАК ДОБРАТЬСЯ И СВЯЗАТЬСЯ</p>
+          <h2 class="font-serif editorial-h2 text-ink">Контакты и расположение</h2>
+          <div class="w-10 h-[1px] bg-sandBorder"></div>
+
+          <div class="space-y-5 pt-2">
+            <!-- Phone -->
+            <div>
+              <p class="micro-label text-muted mb-1.5">ТЕЛЕФОН</p>
+              <a href="tel:+79154575972" class="font-serif text-3xl text-ink hover:text-taupe transition-colors">
+                +7 (915) 457-59-72
+              </a>
+              <div class="mt-3 flex flex-wrap gap-2.5">
+                <a
+                  href="https://wa.me/79154575972"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-4 py-2 rounded-nordic border border-hairline text-xs text-ink hover:border-ink transition-colors"
+                >
+                  WhatsApp
+                </a>
+                <a
+                  href="https://t.me/+79154575972"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-4 py-2 rounded-nordic border border-hairline text-xs text-ink hover:border-ink transition-colors"
+                >
+                  Telegram
+                </a>
+                <a
+                  href="tel:+79154575972"
+                  class="px-4 py-2 rounded-nordic border border-hairline text-xs text-ink hover:border-ink transition-colors"
+                >
+                  Позвонить
+                </a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="pt-4 border-t border-hairlineLight">
+              <p class="micro-label text-muted mb-1.5">E-MAIL</p>
+              <a href="mailto:domyreki@inbox.ru" class="font-serif text-2xl text-ink hover:text-taupe transition-colors break-all">
+                domyreki@inbox.ru
+              </a>
+            </div>
+
+            <!-- Address -->
+            <div class="pt-4 border-t border-hairlineLight">
+              <p class="micro-label text-muted mb-1.5">АДРЕС</p>
+              <p class="text-sm sm:text-base text-body font-light leading-relaxed">
+                Московская область, Павлово-Посадский городской округ, деревня Дмитрово, улица Снежная,&nbsp;20
+              </p>
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE-%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9+%D0%BE%D0%BA%D1%80%D1%83%D0%B3,+%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F+%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%BE,+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F+20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center px-5 py-3 rounded-nordic bg-ink text-pure text-[11px] tracking-[0.18em] uppercase font-medium hover:bg-taupe transition-colors"
+                >
+                  Открыть на Яндекс.Картах
+                </a>
+                <button
+                  type="button"
+                  id="copyAddressBtn"
+                  class="text-xs text-muted hover:text-ink underline underline-offset-4 transition-colors py-2"
+                >
+                  Скопировать адрес
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Clean Framed Yandex Map -->
+      <div class="lg:col-span-7 border border-hairline rounded-nordic overflow-hidden bg-alabaster min-h-[360px] sm:min-h-[460px] flex flex-col reveal reveal-delay-1">
+        <div class="px-5 py-3.5 bg-alabaster border-b border-hairline flex items-center justify-between gap-3">
+          <span class="text-xs text-body">д. Дмитрово, ул. Снежная, 20</span>
+          <span class="micro-label text-muted text-[10px]">60 КМ ОТ МОСКВЫ</span>
+        </div>
+        <div class="relative flex-1 w-full min-h-[320px]">
+          <iframe
+            title="Яндекс Карта — Московская область, деревня Дмитрово, улица Снежная 20"
+            src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE-%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3%2C%20%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%2020&z=13"
+            class="absolute inset-0 w-full h-full border-0"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================= -->
+  <!-- 10. CLEAN LIGHT FOOTER (#F4F1EC — STRICTLY LIGHT ALABASTER)             -->
+  <!-- ======================================================================= -->
+  <footer class="bg-linen text-body border-t border-[#E5DFD5] py-16 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-[1260px] mx-auto">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-10 border-b border-[#E5DFD5]">
+        <div>
+          <a href="#hero" class="font-serif text-2xl tracking-[0.22em] uppercase text-ink hover:text-taupe transition-colors">
+            ДОМ У РЕКИ
+          </a>
+          <p class="mt-2 text-xs text-muted font-light">
+            Панорамный барнхаус на берегу реки Слогавка &bull; д. Дмитрово, ул. Снежная, 20
+          </p>
+        </div>
+
+        <nav class="flex flex-wrap gap-x-6 gap-y-2.5 text-[11px] tracking-[0.16em] uppercase text-body">
+          <a href="#about" class="hover:text-ink transition-colors">О доме</a>
+          <a href="#spaces" class="hover:text-ink transition-colors">Пространства</a>
+          <a href="#amenities" class="hover:text-ink transition-colors">Удобства</a>
+          <a href="#territory" class="hover:text-ink transition-colors">Участок</a>
+          <a href="#rates" class="hover:text-ink transition-colors">Тарифы</a>
+          <a href="#gallery" class="hover:text-ink transition-colors">Галерея</a>
+          <a href="#contacts" class="hover:text-ink transition-colors">Контакты</a>
+        </nav>
+
+        <div class="flex flex-col lg:items-end gap-1 text-xs">
+          <a href="tel:+79154575972" class="text-ink font-medium hover:text-taupe transition-colors">+7 (915) 457-59-72</a>
+          <a href="mailto:domyreki@inbox.ru" class="text-muted hover:text-ink transition-colors">domyreki@inbox.ru</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-muted font-light">
+        <p>Дом построен зимой 2023 года компанией FL - Haus, проект FL 43.2 -1</p>
+        <p>&copy; 2026 Дом у реки. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- CRISP LIGHT FULLSCREEN LIGHTBOX (NO BLACK BACKGROUND)                   -->
+  <!-- ======================================================================= -->
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-[#FAF9F6]/[0.97] backdrop-blur-md p-5 sm:p-10" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
+    <!-- Top bar -->
+    <div class="absolute top-5 left-5 right-5 sm:top-7 sm:left-10 sm:right-10 flex items-center justify-between">
+      <span id="lightboxCounter" class="micro-label text-muted">1 / 16</span>
+      <button id="lightboxClose" type="button" aria-label="Закрыть просмотр" class="p-2.5 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Prev button -->
+    <button id="lightboxPrev" type="button" aria-label="Предыдущее фото" class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-10 p-3 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </button>
+
+    <!-- Image & Caption -->
+    <div class="max-w-5xl w-full flex flex-col items-center justify-center px-8 sm:px-14">
+      <img id="lightboxImg" src="" alt="" class="max-h-[76vh] max-w-full w-auto h-auto object-contain rounded-nordic border border-hairline bg-stone" />
+      <p id="lightboxCaption" class="mt-5 text-center font-serif text-xl sm:text-2xl text-ink"></p>
+    </div>
+
+    <!-- Next button -->
+    <button id="lightboxNext" type="button" aria-label="Следующее фото" class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-10 p-3 rounded-nordic bg-pure border border-hairline text-ink hover:border-ink transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- CLEAN WHITE SCANDINAVIAN BOOKING MODAL                                  -->
+  <!-- ======================================================================= -->
+  <div id="bookingModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <div id="bookingModalBackdrop" class="fixed inset-0 bg-ink/35 backdrop-blur-[4px]"></div>
+
+    <div class="relative z-10 w-full max-w-lg bg-pure text-ink border border-hairline rounded-nordic p-7 sm:p-9 my-auto">
+      <button id="bookingModalClose" type="button" aria-label="Закрыть окно" class="absolute top-6 right-6 p-2 text-muted hover:text-ink transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <p class="micro-label text-muted">ЗАЯВКА НА БРОНИРОВАНИЕ</p>
+      <h3 id="bookingModalTitle" class="font-serif text-3xl text-ink mt-1.5">Дом у реки</h3>
+      <p class="mt-1 text-xs text-muted">От 2-х суток &bull; Заезд с 16:00, выезд до 12:00</p>
+
+      <!-- Pre-filled Summary -->
+      <div id="bookingSummary" class="mt-5 p-4 bg-alabaster border border-hairline rounded-nordic text-xs text-body leading-relaxed"></div>
+
+      <!-- Form View -->
+      <form id="bookingForm" class="mt-5 space-y-4" novalidate>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label for="bookName" class="block micro-label text-muted mb-1.5">Ваше имя *</label>
+            <input type="text" id="bookName" required placeholder="Например, Анна" class="w-full px-3.5 py-2.5 rounded-nordic bg-alabaster border border-hairline text-sm text-ink focus:outline-none focus:border-taupe" />
+          </div>
+          <div>
+            <label for="bookPhone" class="block micro-label text-muted mb-1.5">Телефон *</label>
+            <input type="tel" id="bookPhone" required placeholder="+7 (999) 000-00-00" class="w-full px-3.5 py-2.5 rounded-nordic bg-alabaster border border-hairline text-sm text-ink focus:outline-none focus:border-taupe" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label for="bookDates" class="block micro-label text-muted mb-1.5">Даты</label>
+            <input type="text" id="bookDates" placeholder="Например, 15.01 — 17.01" class="w-full px-3.5 py-2.5 rounded-nordic bg-alabaster border border-hairline text-sm text-ink focus:outline-none focus:border-taupe" />
+          </div>
+          <div>
+            <label for="bookGuests" class="block micro-label text-muted mb-1.5">Гости</label>
+            <input type="text" id="bookGuests" placeholder="2 взрослых" class="w-full px-3.5 py-2.5 rounded-nordic bg-alabaster border border-hairline text-sm text-ink focus:outline-none focus:border-taupe" />
+          </div>
+        </div>
+
+        <div>
+          <label for="bookComment" class="block micro-label text-muted mb-1.5">Комментарий</label>
+          <textarea id="bookComment" rows="2" placeholder="Пожелания по заезду или вопросы" class="w-full px-3.5 py-2.5 rounded-nordic bg-alabaster border border-hairline text-sm text-ink focus:outline-none focus:border-taupe resize-none"></textarea>
+        </div>
+
+        <p id="bookingError" class="hidden text-xs text-red-700 bg-red-50 border border-red-200 px-3.5 py-2 rounded-nordic">
+          Пожалуйста, укажите ваше имя и номер телефона.
+        </p>
+
+        <button
+          type="submit"
+          class="w-full py-3.5 px-5 rounded-nordic bg-ink text-pure text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-taupe transition-colors"
+        >
+          Подготовить заявку
+        </button>
+      </form>
+
+      <!-- Confirmation View -->
+      <div id="bookingSuccess" class="hidden mt-5 space-y-4">
+        <div class="p-4 bg-alabaster border border-sandBorder rounded-nordic space-y-2">
+          <p class="font-serif text-2xl text-ink">Заявка готова к отправке</p>
+          <p class="text-xs text-body leading-relaxed">
+            Отправьте готовое сообщение напрямую в WhatsApp или позвоните нам, чтобы закрепить выбранные даты.
+          </p>
+          <pre id="bookingPreparedMsg" class="mt-2 p-3 bg-pure border border-hairline text-[11px] text-body whitespace-pre-wrap font-sans rounded-nordic"></pre>
+        </div>
+
+        <div class="space-y-2.5">
+          <a
+            id="bookingWhatsappLink"
+            href="https://wa.me/79154575972"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full text-center py-3.5 px-5 rounded-nordic bg-ink text-pure text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-taupe transition-colors"
+          >
+            Отправить в WhatsApp
+          </a>
+          <div class="grid grid-cols-2 gap-2.5">
+            <button type="button" id="bookingCopyBtn" class="py-3 px-4 rounded-nordic border border-hairline text-ink text-[11px] tracking-[0.16em] uppercase hover:border-ink transition-colors">
+              Скопировать
+            </button>
+            <a href="tel:+79154575972" class="text-center py-3 px-4 rounded-nordic border border-hairline text-ink text-[11px] tracking-[0.16em] uppercase hover:border-ink transition-colors">
+              Позвонить
+            </a>
+          </div>
+          <button type="button" id="bookingEditAgain" class="w-full text-center text-xs text-muted hover:text-ink underline underline-offset-4 pt-1">
+            Изменить данные заявки
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- DISCREET FLOATING LOCAL MEDIA LOADER PILL + MODAL (FOR PREVIEW SANDBOX) -->
+  <!-- ======================================================================= -->
+  <div id="mediaLoaderPillWrap" class="fixed bottom-5 left-5 z-40 flex items-center bg-pure/95 backdrop-blur-sm border border-hairline rounded-nordic shadow-sm">
+    <button
+      type="button"
+      id="openMediaModalBtn"
+      class="flex items-center gap-2.5 pl-4 pr-3 py-2.5 text-xs text-ink hover:text-taupe transition-colors"
+    >
+      <span id="mediaPillDot" class="w-2 h-2 rounded-full bg-sandBorder"></span>
+      <span>Подключить ваши фото и hero-video.mp4</span>
+    </button>
+    <button
+      type="button"
+      id="closeMediaPillBtn"
+      aria-label="Скрыть кнопку подключения медиа"
+      class="px-2.5 py-2.5 border-l border-hairlineLight text-muted hover:text-ink transition-colors text-sm leading-none"
+    >
+      &times;
+    </button>
+  </div>
+
+  <!-- Clean White Media Loader Modal -->
+  <div id="mediaModal" class="fixed inset-0 z-[65] hidden items-center justify-center p-4 sm:p-6 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
+    <div id="mediaModalBackdrop" class="fixed inset-0 bg-ink/35 backdrop-blur-[4px]"></div>
+
+    <div class="relative z-10 w-full max-w-2xl bg-pure text-ink border border-hairline rounded-nordic p-6 sm:p-8 my-auto">
+      <button id="mediaModalClose" type="button" aria-label="Закрыть окно" class="absolute top-5 right-5 p-2 text-muted hover:text-ink transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <p class="micro-label text-muted">ЛОКАЛЬНЫЕ ФОТО И ВИДЕО</p>
+      <h3 id="mediaModalTitle" class="font-serif text-3xl text-ink mt-1">Подключить ваши файлы в превью</h3>
+      <p class="mt-2 text-xs sm:text-sm text-body font-light leading-relaxed">
+        Выберите все ваши фотографии и видео <code class="px-1.5 py-0.5 bg-alabaster border border-hairline text-xs">hero-video.mp4</code> — они мгновенно подставятся в нужные секции и галерею (дубли спален 8P1A2867, 8P1A2882 и скриншот пропускаются автоматически).
+      </p>
+
+      <!-- Dropzone -->
+      <div id="modalDropzone" class="mt-5 p-6 bg-alabaster border border-dashed border-sandBorder rounded-nordic text-center">
+        <p class="font-serif text-xl text-ink">Перетащите фото и hero-video.mp4 сюда</p>
+        <p class="text-xs text-muted mt-1">или выберите файлы с компьютера / телефона одним пакетом</p>
+        <button
+          type="button"
+          id="selectMediaFilesBtn"
+          class="mt-4 px-6 py-3 rounded-nordic bg-ink text-pure text-[11px] tracking-[0.18em] uppercase font-medium hover:bg-taupe transition-colors"
+        >
+          Выбрать фото и видео
+        </button>
+        <input type="file" id="mediaFilesInput" multiple accept="image/*,video/*" class="hidden" />
+      </div>
+
+      <!-- Status Counter -->
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-body">
+        <span id="mediaModalStatus" class="font-medium text-ink">Подключено ваших фото: 0 / 16 &bull; Видео: не загружено</span>
+        <span class="text-muted">Перетаскивать файлы можно и прямо на страницу</span>
+      </div>
+
+      <!-- Compact File Checklist -->
+      <div id="mediaChecklist" class="mt-3 max-h-36 overflow-y-auto grid grid-cols-2 sm:grid-cols-3 gap-1.5 p-3 bg-alabaster border border-hairlineLight rounded-nordic text-[11px]"></div>
+
+      <!-- Two Clean Export Buttons -->
+      <div class="mt-6 pt-5 border-t border-hairlineLight grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button
+          type="button"
+          id="exportAutonomousBtn"
+          class="py-3.5 px-4 rounded-nordic bg-taupe text-pure text-[11px] tracking-[0.15em] uppercase font-medium hover:bg-taupeHover transition-colors"
+        >
+          Скачать автономный HTML с вашими фото
+        </button>
+        <button
+          type="button"
+          id="exportHostingBtn"
+          class="py-3.5 px-4 rounded-nordic border border-ink text-ink text-[11px] tracking-[0.15em] uppercase font-medium hover:bg-ink hover:text-pure transition-colors"
+        >
+          Скачать чистый index.html для хостинга
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-Page Subtle Alabaster Drag & Drop Overlay -->
+  <div id="pageDropOverlay" class="fixed inset-0 z-[70] bg-pure/92 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200 flex items-center justify-center p-6">
+    <div class="max-w-lg w-full border border-dashed border-sandBorder bg-alabaster rounded-nordic p-10 text-center">
+      <p class="micro-label text-taupe mb-2">ДОМ У РЕКИ</p>
+      <p class="font-serif text-3xl text-ink">Отпустите ваши фото и hero-video.mp4</p>
+      <p class="mt-2 text-xs text-body">Все 16 кадров и видео в Hero подключатся автоматически</p>
+    </div>
+  </div>
+
+  <!-- Minimalist Light Toast Container (No alert/confirm) -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-[75] pointer-events-none flex flex-col gap-2 max-w-sm"></div>
+
+  <!-- ======================================================================= -->
+  <!-- APPLICATION JAVASCRIPT                                                  -->
+  <!-- ======================================================================= -->
+  <script>
+    /**
+     * All 16 unique photos (strictly excluding 8P1A2867, 8P1A2882, image_4094a8)
+     * Each entry has exact local filename + curated bright, airy Scandinavian Unsplash fallback
+     */
+    const PHOTO_CATALOG = [
+      {
+        key: '8P1A2821',
+        filename: '8P1A2821.jpg',
+        caption: 'Вечерний фасад дома в огнях гирлянд',
+        category: 'exterior',
+        span: 'lg:col-span-2 lg:row-span-2',
+        fallback: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1600&q=80'
+      },
+      {
+        key: '8P1A2981',
+        filename: '8P1A2981.jpg',
+        caption: 'Дневной вид на барнхаус со стороны мангальной зоны',
+        category: 'exterior',
+        span: 'lg:col-span-2',
+        fallback: 'https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=1400&q=80'
+      },
+      {
+        key: '8P1A2954',
+        filename: '8P1A2954.jpg',
+        caption: 'Открытая терраса 23,5 м² с уличной мебелью',
+        category: 'exterior',
+        span: 'lg:col-span-2',
+        fallback: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1400&q=80'
+      },
+      {
+        key: '8P1A2921',
+        filename: '8P1A2921.jpg',
+        caption: 'Панорамные окна, гостиная и обеденная зона',
+        category: 'living',
+        span: 'lg:col-span-2',
+        fallback: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80'
+      },
+      {
+        key: '8P1A2900',
+        filename: '8P1A2900.jpg',
+        caption: 'Зона отдыха с двумя мягкими диванами',
+        category: 'living',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2905',
+        filename: '8P1A2905.jpg',
+        caption: 'Просторная кухня-гостиная 26,5 м²',
+        category: 'living',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2928',
+        filename: '8P1A2928 copy.jpg',
+        caption: 'Кухня и Яндекс ТВ 55" с эффектом камина',
+        category: 'living',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2903',
+        filename: '8P1A2903.jpg',
+        caption: 'Обеденный стол и гостиная',
+        category: 'living',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2943',
+        filename: '8P1A2943.jpg',
+        caption: 'Первая спальня 6,1 м² при дневном свете',
+        category: 'bedrooms',
+        span: 'lg:col-span-2',
+        fallback: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1400&q=80'
+      },
+      {
+        key: '8P1A3008',
+        filename: '8P1A3008.jpg',
+        caption: 'Вторая спальня 6,1 м² с ортопедическим матрасом 140×200',
+        category: 'bedrooms',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2872',
+        filename: '8P1A2872.jpg',
+        caption: 'Уютные детали интерьера спальни',
+        category: 'bedrooms',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2837',
+        filename: '8P1A2837.jpg',
+        caption: 'Санузел 4,1 м² с душевой зоной и феном',
+        category: 'bath',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2841',
+        filename: '8P1A2841.jpg',
+        caption: 'Умывальник и ванные принадлежности',
+        category: 'bath',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2843',
+        filename: '8P1A2843.jpg',
+        caption: 'Подвесной туалет с гигиеническим душем',
+        category: 'bath',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2972',
+        filename: '8P1A2972.jpg',
+        caption: 'Крытая мангальная зона среди сосен и берёз',
+        category: 'territory',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        key: '8P1A2963',
+        filename: '8P1A2963.jpg',
+        caption: 'Шампуры, уголь и розжиг включены в стоимость',
+        category: 'territory',
+        span: '',
+        fallback: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80'
+      }
+    ];
+
+    const PHOTO_BY_KEY = {};
+    PHOTO_CATALOG.forEach((p) => { PHOTO_BY_KEY[p.key] = p; });
+
+    /* Runtime state for user-loaded local photos/video or embedded exports */
+    const mediaStore = {
+      customUrls: Object.assign({}, window.__EMBEDDED_PHOTOS__ || {}),
+      rawFiles: {},
+      videoUrl: null,
+      videoReady: false,
+      videoVisible: true
+    };
+
+    /* -----------------------------------------------------------------------
+     * Toast Notification & Safe Clipboard Helper
+     * ----------------------------------------------------------------------- */
+    function showToast(text) {
+      const wrap = document.getElementById('toastContainer');
+      if (!wrap) return;
+      const el = document.createElement('div');
+      el.className = 'pointer-events-auto px-4 py-3 bg-pure border border-sandBorder rounded-nordic text-xs text-ink shadow-sm transition-all duration-300 opacity-0 translate-y-2';
+      el.textContent = text;
+      wrap.appendChild(el);
+      requestAnimationFrame(() => el.classList.remove('opacity-0', 'translate-y-2'));
+      setTimeout(() => {
+        el.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => el.remove(), 300);
+      }, 3400);
+    }
+
+    function copyText(text) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+     * Image Resolution + Seamless Nordic Fallback (zero broken icons ever)
+     * ----------------------------------------------------------------------- */
+    function resolvePhotoSrc(key) {
+      if (mediaStore.customUrls[key]) return mediaStore.customUrls[key];
+      return PHOTO_BY_KEY[key] ? PHOTO_BY_KEY[key].filename : '';
+    }
+
+    function attachImageFallback(imgEl) {
+      const key = imgEl.dataset.photoKey;
+      const meta = PHOTO_BY_KEY[key];
+      if (!meta) return;
+
+      imgEl.dataset.fallbackStage = '0';
+      imgEl.onerror = () => {
+        const stage = Number(imgEl.dataset.fallbackStage || '0');
+        if (stage === 0) {
+          imgEl.dataset.fallbackStage = '1';
+          imgEl.src = meta.fallback;
+        } else if (stage === 1) {
+          imgEl.dataset.fallbackStage = '2';
+          imgEl.src = `https://placehold.co/1200x800/EFECE6/54504B?text=${encodeURIComponent(meta.filename)}`;
+        }
+      };
+
+      const targetSrc = resolvePhotoSrc(key);
+      if (imgEl.getAttribute('src') !== targetSrc) {
+        imgEl.src = targetSrc;
+      } else if (imgEl.complete && imgEl.naturalWidth === 0) {
+        imgEl.onerror();
+      }
+    }
+
+    function refreshPhotosByKey(key) {
+      const src = resolvePhotoSrc(key);
+      document.querySelectorAll(`img[data-photo-key="${key}"]`).forEach((img) => {
+        img.dataset.fallbackStage = '0';
+        img.src = src;
+      });
+      if (key === '8P1A2821') {
+        const vid = document.getElementById('heroVideo');
+        if (vid) vid.poster = src;
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+     * Main Initialization
+     * ----------------------------------------------------------------------- */
+    document.addEventListener('DOMContentLoaded', () => {
+      initHeader();
+      initHeroVideo();
+      initSpaceSpreads();
+      initGallery();
+      initLightbox();
+      initCalculator();
+      initBookingModal();
+      initMediaLoader();
+      initAddressCopy();
+      initScrollReveal();
+
+      // Attach fallback handler to all static images
+      document.querySelectorAll('img[data-photo-key]').forEach(attachImageFallback);
+    });
+
+    /* -----------------------------------------------------------------------
+     * 1. Header Scroll State & Mobile White Drawer
+     * ----------------------------------------------------------------------- */
+    function initHeader() {
+      const header = document.getElementById('siteHeader');
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const closeBtn = document.getElementById('mobileMenuClose');
+      const drawer = document.getElementById('mobileDrawer');
+      const backdrop = document.getElementById('mobileDrawerBackdrop');
+      const panel = document.getElementById('mobileDrawerPanel');
+
+      const handleScroll = () => {
+        if (window.scrollY > 60) {
+          header.classList.add('is-scrolled');
+        } else {
+          header.classList.remove('is-scrolled');
+        }
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      const openDrawer = () => {
+        drawer.classList.remove('pointer-events-none', 'opacity-0');
+        drawer.classList.add('opacity-100');
+        panel.classList.remove('translate-x-full');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeDrawer = () => {
+        drawer.classList.add('pointer-events-none', 'opacity-0');
+        drawer.classList.remove('opacity-100');
+        panel.classList.add('translate-x-full');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      };
+
+      menuBtn.addEventListener('click', openDrawer);
+      closeBtn.addEventListener('click', closeDrawer);
+      backdrop.addEventListener('click', closeDrawer);
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventListener('click', closeDrawer));
+    }
+
+    /* -----------------------------------------------------------------------
+     * 2. Hero Video Playback & Quiet Bottom-Right Toggle
+     * ----------------------------------------------------------------------- */
+    function initHeroVideo() {
+      const video = document.getElementById('heroVideo');
+      const controls = document.getElementById('heroVideoControls');
+      const playBtn = document.getElementById('heroTogglePlay');
+      const playLabel = document.getElementById('heroPlayLabel');
+      const modeBtn = document.getElementById('heroToggleMode');
+
+      if (!video) return;
+
+      const revealVideo = () => {
+        mediaStore.videoReady = true;
+        if (mediaStore.videoVisible) {
+          video.classList.remove('opacity-0');
+          video.classList.add('opacity-100');
+        }
+        if (controls) {
+          controls.classList.remove('hidden');
+          controls.classList.add('flex');
+        }
+      };
+
+      video.addEventListener('loadeddata', revealVideo);
+      video.addEventListener('canplay', revealVideo);
+
+      if (playBtn) {
+        playBtn.addEventListener('click', () => {
+          if (video.paused) {
+            video.play().catch(() => {});
+            playLabel.textContent = 'Пауза';
+          } else {
+            video.pause();
+            playLabel.textContent = 'Играть';
+          }
+        });
+      }
+
+      if (modeBtn) {
+        modeBtn.addEventListener('click', () => {
+          mediaStore.videoVisible = !mediaStore.videoVisible;
+          if (mediaStore.videoVisible) {
+            video.classList.remove('opacity-0');
+            video.classList.add('opacity-100');
+            modeBtn.textContent = 'Фото';
+          } else {
+            video.classList.remove('opacity-100');
+            video.classList.add('opacity-0');
+            modeBtn.textContent = 'Видео';
+          }
+        });
+      }
+    }
+
+    function attachUploadedHeroVideo(file) {
+      const video = document.getElementById('heroVideo');
+      const playLabel = document.getElementById('heroPlayLabel');
+      const modeBtn = document.getElementById('heroToggleMode');
+      if (!video) return;
+
+      if (mediaStore.videoUrl && mediaStore.videoUrl.startsWith('blob:')) {
+        try { URL.revokeObjectURL(mediaStore.videoUrl); } catch (e) {}
+      }
+      const url = URL.createObjectURL(file);
+      mediaStore.videoUrl = url;
+      mediaStore.videoVisible = true;
+
+      video.innerHTML = '';
+      video.src = url;
+      video.muted = true;
+      video.loop = true;
+      video.load();
+      video.play().catch(() => {});
+      if (playLabel) playLabel.textContent = 'Пауза';
+      if (modeBtn) modeBtn.textContent = 'Фото';
+    }
+
+    /* -----------------------------------------------------------------------
+     * 3. 50/50 Space Spreads Thumbnail Swap & Lightbox Click
+     * ----------------------------------------------------------------------- */
+    function initSpaceSpreads() {
+      document.querySelectorAll('[data-spread]').forEach((spread) => {
+        const mainWrap = spread.querySelector('[data-spread-main]');
+        const mainImg = mainWrap ? mainWrap.querySelector('img') : null;
+        const thumbs = spread.querySelectorAll('[data-thumb-key]');
+
+        if (mainWrap && mainImg) {
+          mainWrap.addEventListener('click', () => {
+            openLightboxByKey(mainImg.dataset.photoKey);
+          });
+        }
+
+        thumbs.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const key = btn.dataset.thumbKey;
+            const meta = PHOTO_BY_KEY[key];
+            if (!meta || !mainImg) return;
+
+            thumbs.forEach((t) => t.classList.remove('is-active'));
+            btn.classList.add('is-active');
+
+            mainImg.dataset.photoKey = key;
+            mainImg.alt = meta.caption;
+            attachImageFallback(mainImg);
+          });
+        });
+      });
+
+      // Territory section lightbox triggers
+      document.querySelectorAll('[data-lightbox-key]').forEach((el) => {
+        el.addEventListener('click', () => {
+          openLightboxByKey(el.dataset.lightboxKey);
+        });
+      });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 4. Full Photo Gallery (16 Photos) & Minimalist Filters
+     * ----------------------------------------------------------------------- */
+    let activeGalleryFilter = 'all';
+
+    function renderGallery(filter) {
+      activeGalleryFilter = filter;
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) return;
+
+      const list = filter === 'all'
+        ? PHOTO_CATALOG
+        : PHOTO_CATALOG.filter((p) => p.category === filter);
+
+      grid.innerHTML = '';
+      list.forEach((item) => {
+        const spanClass = filter === 'all' ? item.span : '';
+        const fig = document.createElement('figure');
+        fig.className = `group relative overflow-hidden rounded-nordic border border-hairlineLight bg-stone cursor-pointer ${spanClass}`;
+
+        fig.innerHTML = `
+          <img
+            src="${resolvePhotoSrc(item.key)}"
+            data-photo-key="${item.key}"
+            alt="${item.caption}"
+            loading="lazy"
+            class="editorial-img w-full h-full object-cover"
+          />
+          <figcaption class="absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-ink/55 via-ink/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs text-pure font-light">
+            ${item.caption}
+          </figcaption>
+        `;
+
+        const img = fig.querySelector('img');
+        attachImageFallback(img);
+
+        fig.addEventListener('click', () => {
+          openLightboxByKey(item.key, list.map((x) => x.key));
+        });
+
+        grid.appendChild(fig);
+      });
+    }
+
+    function initGallery() {
+      const tabs = document.querySelectorAll('[data-gallery-filter]');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((t) => t.classList.remove('is-active'));
+          tab.classList.add('is-active');
+          renderGallery(tab.dataset.galleryFilter);
+        });
+      });
+      renderGallery('all');
+    }
+
+    /* -----------------------------------------------------------------------
+     * 5. Clean Light Fullscreen Lightbox (Keyboard + Touch Swipe)
+     * ----------------------------------------------------------------------- */
+    let lbKeys = PHOTO_CATALOG.map((p) => p.key);
+    let lbIndex = 0;
+
+    function openLightboxByKey(key, customList = null) {
+      lbKeys = customList && customList.length ? customList : PHOTO_CATALOG.map((p) => p.key);
+      const found = lbKeys.indexOf(key);
+      lbIndex = found >= 0 ? found : 0;
+      renderLightbox();
+    }
+
+    function renderLightbox() {
+      const box = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      const cnt = document.getElementById('lightboxCounter');
+
+      const key = lbKeys[lbIndex];
+      const meta = PHOTO_BY_KEY[key];
+      if (!meta) return;
+
+      img.dataset.photoKey = key;
+      img.alt = meta.caption;
+      attachImageFallback(img);
+      cap.textContent = meta.caption;
+      cnt.textContent = `${lbIndex + 1} / ${lbKeys.length}`;
+
+      box.classList.remove('hidden');
+      box.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function initLightbox() {
+      const box = document.getElementById('lightbox');
+      const closeBtn = document.getElementById('lightboxClose');
+      const prevBtn = document.getElementById('lightboxPrev');
+      const nextBtn = document.getElementById('lightboxNext');
+
+      const close = () => {
+        box.classList.add('hidden');
+        box.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      const step = (delta) => {
+        lbIndex = (lbIndex + delta + lbKeys.length) % lbKeys.length;
+        renderLightbox();
+      };
+
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', () => step(-1));
+      nextBtn.addEventListener('click', () => step(1));
+      box.addEventListener('click', (e) => { if (e.target === box) close(); });
+
+      document.addEventListener('keydown', (e) => {
+        if (box.classList.contains('hidden')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') step(-1);
+        if (e.key === 'ArrowRight') step(1);
+      });
+
+      let startX = 0;
+      box.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].screenX; }, { passive: true });
+      box.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].screenX - startX;
+        if (Math.abs(dx) > 45) step(dx > 0 ? -1 : 1);
+      }, { passive: true });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 6. Interactive Cost Calculator
+     * ----------------------------------------------------------------------- */
+    const calcState = {
+      adults: 2,
+      children: 0,
+      dayguests: 0,
+      checkin: '',
+      checkout: '',
+      nights: 2,
+      total: 0,
+      summary: ''
+    };
+
+    function formatRub(n) {
+      return n.toLocaleString('ru-RU') + ' ₽';
+    }
+
+    function toIsoDate(d) {
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    function toRuDate(iso) {
+      if (!iso) return '';
+      const [y, m, d] = iso.split('-');
+      return `${d}.${m}.${y}`;
+    }
+
+    function initCalculator() {
+      const inEl = document.getElementById('calcCheckin');
+      const outEl = document.getElementById('calcCheckout');
+      const warnEl = document.getElementById('calcMinWarn');
+      const breakEl = document.getElementById('calcBreakdown');
+      const discEl = document.getElementById('calcDiscountNote');
+      const nyEl = document.getElementById('calcNyNote');
+      const totalEl = document.getElementById('calcTotalVal');
+      const submitBtn = document.getElementById('calcSubmitBtn');
+
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      inEl.min = toIsoDate(today);
+
+      // Default: next Friday -> Sunday (2 nights)
+      const defIn = new Date(today);
+      const offsetFri = (5 - today.getDay() + 7) % 7 || 7;
+      defIn.setDate(today.getDate() + offsetFri);
+      const defOut = new Date(defIn);
+      defOut.setDate(defIn.getDate() + 2);
+
+      inEl.value = toIsoDate(defIn);
+      outEl.value = toIsoDate(defOut);
+
+      const calculate = (showWarn = false) => {
+        const dIn = new Date(inEl.value + 'T12:00:00');
+        let dOut = new Date(outEl.value + 'T12:00:00');
+        if (isNaN(dIn.getTime())) return;
+
+        const minOut = new Date(dIn);
+        minOut.setDate(dIn.getDate() + 2);
+        outEl.min = toIsoDate(minOut);
+
+        let adjusted = false;
+        if (isNaN(dOut.getTime()) || dOut < minOut) {
+          dOut = minOut;
+          outEl.value = toIsoDate(dOut);
+          adjusted = true;
+        }
+        warnEl.classList.toggle('hidden', !(adjusted && showWarn));
+
+        const nights = Math.round((dOut - dIn) / 86400000);
+        calcState.checkin = inEl.value;
+        calcState.checkout = outEl.value;
+        calcState.nights = nights;
+
+        const isExactNY =
+          dIn.getMonth() === 11 && dIn.getDate() === 31 &&
+          dOut.getMonth() === 0 && dOut.getDate() === 3 &&
+          nights === 3;
+
+        let overlapsNY = false;
+        let wd = 0, we = 0, sun = 0, baseCost = 0;
+
+        for (let i = 0; i < nights; i++) {
+          const cur = new Date(dIn);
+          cur.setDate(dIn.getDate() + i);
+          const m = cur.getMonth(), dt = cur.getDate();
+          if ((m === 11 && dt === 31) || (m === 0 && (dt === 1 || dt === 2))) {
+            overlapsNY = true;
+          }
+          const dow = cur.getDay();
+          if (dow === 5 || dow === 6) {
+            baseCost += 9900;
+            we++;
+          } else if (dow === 0) {
+            baseCost += 6900;
+            sun++;
+          } else {
+            baseCost += 5900;
+            wd++;
+          }
+        }
+
+        const extraAdults = Math.max(0, calcState.adults - 2);
+        let extraCost = extraAdults * 1000 * nights;
+        const dayGuestsCost = calcState.dayguests * 500;
+
+        const lines = [];
+        if (isExactNY) {
+          baseCost = 55000;
+          extraCost = 0;
+          lines.push(`<div class="flex justify-between gap-2"><span>Новогодний пакет (31.12 — 03.01, до 4 гостей)</span><span class="text-ink font-medium">${formatRub(55000)}</span></div>`);
+        } else {
+          if (wd > 0) lines.push(`<div class="flex justify-between gap-2"><span>Пн–Чт (${wd} сут. × 5 900 ₽)</span><span class="text-ink font-medium">${formatRub(wd * 5900)}</span></div>`);
+          if (we > 0) lines.push(`<div class="flex justify-between gap-2"><span>Пт–Сб (${we} сут. × 9 900 ₽)</span><span class="text-ink font-medium">${formatRub(we * 9900)}</span></div>`);
+          if (sun > 0) lines.push(`<div class="flex justify-between gap-2"><span>Воскресенье (${sun} сут. × 6 900 ₽)</span><span class="text-ink font-medium">${formatRub(sun * 6900)}</span></div>`);
+          if (extraCost > 0) lines.push(`<div class="flex justify-between gap-2"><span>Доп. гости (+${extraAdults} чел. × ${nights} сут. × 1 000 ₽)</span><span class="text-ink font-medium">${formatRub(extraCost)}</span></div>`);
+        }
+
+        if (calcState.children > 0) {
+          lines.push(`<div class="flex justify-between gap-2"><span>Дети до 12 лет (${calcState.children} чел.)</span><span class="text-taupe font-medium">Бесплатно</span></div>`);
+        }
+        if (calcState.dayguests > 0) {
+          lines.push(`<div class="flex justify-between gap-2"><span>Гости без ночёвки (${calcState.dayguests} чел. × 500 ₽)</span><span class="text-ink font-medium">${formatRub(dayGuestsCost)}</span></div>`);
+        }
+
+        const total = baseCost + extraCost + dayGuestsCost;
+        calcState.total = total;
+
+        breakEl.innerHTML = lines.join('');
+        totalEl.textContent = formatRub(total);
+        discEl.classList.toggle('hidden', !(nights >= 5 && !isExactNY));
+        nyEl.classList.toggle('hidden', !overlapsNY);
+
+        const gParts = [`${calcState.adults} взр.`];
+        if (calcState.children > 0) gParts.push(`${calcState.children} дет. до 12 лет`);
+        if (calcState.dayguests > 0) gParts.push(`${calcState.dayguests} без ночёвки`);
+
+        calcState.summary =
+          `Даты: ${toRuDate(calcState.checkin)} — ${toRuDate(calcState.checkout)} (${nights} сут.) • ` +
+          `Гости: ${gParts.join(', ')} • Ориентировочно: ${formatRub(total)}` +
+          (nights >= 5 && !isExactNY ? ' (действует скидка от 5 суток)' : '');
+      };
+
+      inEl.addEventListener('change', () => calculate(true));
+      outEl.addEventListener('change', () => calculate(true));
+
+      document.querySelectorAll('[data-calc-step]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const field = btn.dataset.calcStep;
+          const delta = Number(btn.dataset.delta);
+          const bounds = { adults: [1, 4], children: [0, 3], dayguests: [0, 6] };
+          const [min, max] = bounds[field];
+          calcState[field] = Math.min(max, Math.max(min, calcState[field] + delta));
+          const elMap = { adults: 'calcAdultsVal', children: 'calcChildrenVal', dayguests: 'calcDayguestsVal' };
+          document.getElementById(elMap[field]).textContent = calcState[field];
+          calculate(false);
+        });
+      });
+
+      submitBtn.addEventListener('click', () => {
+        const gParts = [`${calcState.adults} взр.`];
+        if (calcState.children > 0) gParts.push(`${calcState.children} дет.`);
+        if (calcState.dayguests > 0) gParts.push(`${calcState.dayguests} без ночёвки`);
+        openBookingModal({
+          dates: `${toRuDate(calcState.checkin)} — ${toRuDate(calcState.checkout)}`,
+          guests: gParts.join(', '),
+          summary: calcState.summary
+        });
+      });
+
+      calculate(false);
+    }
+
+    /* -----------------------------------------------------------------------
+     * 7. Clean White Booking Modal (Confirmation + WhatsApp / Copy / Call)
+     * ----------------------------------------------------------------------- */
+    let preparedBookingText = '';
+
+    function openBookingModal(prefill = null) {
+      const modal = document.getElementById('bookingModal');
+      const form = document.getElementById('bookingForm');
+      const success = document.getElementById('bookingSuccess');
+      const err = document.getElementById('bookingError');
+      const summaryEl = document.getElementById('bookingSummary');
+
+      // Close mobile menu if open
+      const drawer = document.getElementById('mobileDrawer');
+      if (drawer && !drawer.classList.contains('pointer-events-none')) {
+        document.getElementById('mobileMenuClose').click();
+      }
+
+      form.classList.remove('hidden');
+      success.classList.add('hidden');
+      err.classList.add('hidden');
+
+      const data = prefill || {
+        dates: `${toRuDate(calcState.checkin)} — ${toRuDate(calcState.checkout)}`,
+        guests: `${calcState.adults} взр.`,
+        summary: calcState.summary
+      };
+
+      document.getElementById('bookDates').value = data.dates || '';
+      document.getElementById('bookGuests').value = data.guests || '';
+      summaryEl.textContent = data.summary || 'Базовая стоимость от 5 900 ₽ / сутки (за 2 гостей).';
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function initBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      const closeBtn = document.getElementById('bookingModalClose');
+      const backdrop = document.getElementById('bookingModalBackdrop');
+      const form = document.getElementById('bookingForm');
+      const success = document.getElementById('bookingSuccess');
+      const err = document.getElementById('bookingError');
+      const preparedEl = document.getElementById('bookingPreparedMsg');
+      const waLink = document.getElementById('bookingWhatsappLink');
+      const copyBtn = document.getElementById('bookingCopyBtn');
+      const editBtn = document.getElementById('bookingEditAgain');
+
+      const close = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      document.querySelectorAll('[data-open-booking]').forEach((btn) => {
+        btn.addEventListener('click', () => openBookingModal());
+      });
+
+      const nyBtn = document.getElementById('btnBookNewYear');
+      if (nyBtn) {
+        nyBtn.addEventListener('click', () => {
+          openBookingModal({
+            dates: '31.12 — 03.01 (Новый год)',
+            guests: '4 гостя',
+            summary: 'Новогоднее предложение: с 31 декабря по 3 января — 55 000 ₽ для 4 гостей.'
+          });
+        });
+      }
+
+      closeBtn.addEventListener('click', close);
+      backdrop.addEventListener('click', close);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) close();
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('bookName').value.trim();
+        const phone = document.getElementById('bookPhone').value.trim();
+        const dates = document.getElementById('bookDates').value.trim() || 'Уточнить';
+        const guests = document.getElementById('bookGuests').value.trim() || 'Не указано';
+        const comment = document.getElementById('bookComment').value.trim();
+        const summary = document.getElementById('bookingSummary').textContent.trim();
+
+        if (!name || !phone) {
+          err.classList.remove('hidden');
+          return;
+        }
+        err.classList.add('hidden');
+
+        preparedBookingText =
+          `Здравствуйте! Хочу забронировать «Дом у реки».\n` +
+          `Имя: ${name}\n` +
+          `Телефон: ${phone}\n` +
+          `Даты: ${dates}\n` +
+          `Гости: ${guests}\n` +
+          `Расчёт: ${summary}` +
+          (comment ? `\nКомментарий: ${comment}` : '');
+
+        preparedEl.textContent = preparedBookingText;
+        waLink.href = `https://wa.me/79154575972?text=${encodeURIComponent(preparedBookingText)}`;
+
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      });
+
+      copyBtn.addEventListener('click', () => {
+        if (preparedBookingText && copyText(preparedBookingText)) {
+          showToast('Текст заявки скопирован в буфер обмена');
+        }
+      });
+
+      editBtn.addEventListener('click', () => {
+        success.classList.add('hidden');
+        form.classList.remove('hidden');
+      });
+    }
+
+    /* -----------------------------------------------------------------------
+     * 8. Discreet Local Media Loader (Photos + hero-video.mp4) & 2 HTML Exports
+     * ----------------------------------------------------------------------- */
+    function renderMediaChecklist() {
+      const box = document.getElementById('mediaChecklist');
+      const status = document.getElementById('mediaModalStatus');
+      const dot = document.getElementById('mediaPillDot');
+      if (!box) return;
+
+      const loadedPhotos = PHOTO_CATALOG.filter((p) => Boolean(mediaStore.customUrls[p.key])).length;
+      const vidLoaded = Boolean(mediaStore.videoUrl);
+
+      if (status) {
+        status.textContent = `Подключено ваших фото: ${loadedPhotos} / 16 • Видео: ${vidLoaded ? 'подключено' : 'не загружено'}`;
+      }
+      if (dot) {
+        dot.className = loadedPhotos > 0 || vidLoaded
+          ? 'w-2 h-2 rounded-full bg-taupe'
+          : 'w-2 h-2 rounded-full bg-sandBorder';
+      }
+
+      const items = [
+        `<div class="flex items-center gap-1.5 px-2 py-1 rounded-nordic ${vidLoaded ? 'bg-pure text-ink border border-sandBorder' : 'text-muted'}">
+          <span>${vidLoaded ? '✓' : '○'}</span><span class="truncate">hero-video.mp4</span>
+        </div>`
+      ];
+
+      PHOTO_CATALOG.forEach((p) => {
+        const has = Boolean(mediaStore.customUrls[p.key]);
+        items.push(
+          `<div class="flex items-center gap-1.5 px-2 py-1 rounded-nordic ${has ? 'bg-pure text-ink border border-sandBorder' : 'text-muted'}">
+            <span>${has ? '✓' : '○'}</span><span class="truncate">${p.filename}</span>
+          </div>`
+        );
+      });
+
+      box.innerHTML = items.join('');
+    }
+
+    function processDroppedFiles(fileList) {
+      const files = Array.from(fileList || []);
+      if (!files.length) return;
+
+      let matchedPhotos = 0;
+      let loadedVideo = false;
+      let skipped = 0;
+      const unmatchedImages = [];
+
+      files.forEach((file) => {
+        const lower = file.name.toLowerCase();
+
+        // Video for Hero
+        if (file.type.startsWith('video/') || /\.(mp4|mov|webm)$/i.test(lower)) {
+          attachUploadedHeroVideo(file);
+          loadedVideo = true;
+          return;
+        }
+
+        if (!file.type.startsWith('image/') && !/\.(jpe?g|png|webp|avif)$/i.test(lower)) {
+          return;
+        }
+
+        // Skip duplicate bedroom photos and screenshot
+        if (lower.includes('8p1a2867') || lower.includes('8p1a2882') || lower.includes('image_4094a8')) {
+          skipped++;
+          return;
+        }
+
+        const matched = PHOTO_CATALOG.find((p) => lower.includes(p.key.toLowerCase()));
+        if (matched) {
+          bindUploadedPhoto(matched.key, file);
+          matchedPhotos++;
+        } else {
+          unmatchedImages.push(file);
+        }
+      });
+
+      // If any renamed photos were dropped, fill remaining empty slots
+      unmatchedImages.forEach((file) => {
+        const free = PHOTO_CATALOG.find((p) => !mediaStore.customUrls[p.key]);
+        if (free) {
+          bindUploadedPhoto(free.key, file);
+          matchedPhotos++;
+        }
+      });
+
+      renderMediaChecklist();
+
+      const msgParts = [];
+      if (matchedPhotos > 0) msgParts.push(`подключено фото: ${matchedPhotos}`);
+      if (loadedVideo) msgParts.push('видео в Hero запущено');
+      if (skipped > 0) msgParts.push(`пропущено дублей: ${skipped}`);
+      if (msgParts.length) {
+        showToast(msgParts.join(' • '));
+      } else {
+        showToast('Не найдено новых фото или видеофайлов');
+      }
+    }
+
+    function bindUploadedPhoto(key, file) {
+      const prev = mediaStore.customUrls[key];
+      if (prev && prev.startsWith('blob:')) {
+        try { URL.revokeObjectURL(prev); } catch (e) {}
+      }
+      mediaStore.customUrls[key] = URL.createObjectURL(file);
+      mediaStore.rawFiles[key] = file;
+      refreshPhotosByKey(key);
+    }
+
+    function compressImageToJpegDataUrl(file, maxDim = 1600, quality = 0.84) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const img = new Image();
+          img.onload = () => {
+            try {
+              let { width, height } = img;
+              if (width > maxDim || height > maxDim) {
+                const ratio = Math.min(maxDim / width, maxDim / height);
+                width = Math.round(width * ratio);
+                height = Math.round(height * ratio);
+              }
+              const canvas = document.createElement('canvas');
+              canvas.width = width;
+              canvas.height = height;
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0, width, height);
+              resolve(canvas.toDataURL('image/jpeg', quality));
+            } catch (e) {
+              resolve(reader.result);
+            }
+          };
+          img.onerror = () => resolve(null);
+          img.src = reader.result;
+        };
+        reader.onerror = () => resolve(null);
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function downloadHtmlFile(html, filename) {
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    function cleanCloneForExport(clone) {
+      ['#mediaLoaderPillWrap', '#mediaModal', '#pageDropOverlay', '#embeddedBootScript'].forEach((sel) => {
+        const el = clone.querySelector(sel);
+        if (el) el.remove();
+      });
+      const toast = clone.querySelector('#toastContainer');
+      if (toast) toast.innerHTML = '';
+      clone.querySelectorAll('.reveal').forEach((el) => el.classList.remove('is-visible'));
+    }
+
+    function initMediaLoader() {
+      const pillWrap = document.getElementById('mediaLoaderPillWrap');
+      const openBtn = document.getElementById('openMediaModalBtn');
+      const closePillBtn = document.getElementById('closeMediaPillBtn');
+      const modal = document.getElementById('mediaModal');
+      const modalBackdrop = document.getElementById('mediaModalBackdrop');
+      const modalClose = document.getElementById('mediaModalClose');
+      const selectBtn = document.getElementById('selectMediaFilesBtn');
+      const fileInput = document.getElementById('mediaFilesInput');
+      const pageOverlay = document.getElementById('pageDropOverlay');
+      const exportAutoBtn = document.getElementById('exportAutonomousBtn');
+      const exportHostBtn = document.getElementById('exportHostingBtn');
+
+      if (!modal) return;
+
+      renderMediaChecklist();
+
+      const openModal = () => {
+        renderMediaChecklist();
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (closePillBtn && pillWrap) closePillBtn.addEventListener('click', () => pillWrap.classList.add('hidden'));
+      if (modalClose) modalClose.addEventListener('click', closeModal);
+      if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      });
+
+      if (selectBtn && fileInput) {
+        selectBtn.addEventListener('click', () => {
+          fileInput.value = '';
+          fileInput.click();
+        });
+        fileInput.addEventListener('change', (e) => processDroppedFiles(e.target.files));
+      }
+
+      // Window-wide Drag & Drop
+      let dragCount = 0;
+      window.addEventListener('dragenter', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.types.includes('Files')) return;
+        e.preventDefault();
+        dragCount++;
+        if (pageOverlay) pageOverlay.classList.add('is-open');
+      });
+      window.addEventListener('dragover', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.types.includes('Files')) return;
+        e.preventDefault();
+      });
+      window.addEventListener('dragleave', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.types.includes('Files')) return;
+        dragCount = Math.max(0, dragCount - 1);
+        if (dragCount === 0 && pageOverlay) pageOverlay.classList.remove('is-open');
+      });
+      window.addEventListener('drop', (e) => {
+        if (!e.dataTransfer || !e.dataTransfer.files || !e.dataTransfer.files.length) return;
+        e.preventDefault();
+        dragCount = 0;
+        if (pageOverlay) pageOverlay.classList.remove('is-open');
+        processDroppedFiles(e.dataTransfer.files);
+      });
+
+      // Export 1: Autonomous HTML with optimized JPEG Data URLs embedded
+      if (exportAutoBtn) {
+        exportAutoBtn.addEventListener('click', async () => {
+          showToast('Сжимаем и вшиваем ваши фотографии в автономный HTML…');
+          const embeddedMap = {};
+          for (const item of PHOTO_CATALOG) {
+            if (mediaStore.rawFiles[item.key]) {
+              const dataUrl = await compressImageToJpegDataUrl(mediaStore.rawFiles[item.key], 1600, 0.84);
+              if (dataUrl) embeddedMap[item.key] = dataUrl;
+            } else if (mediaStore.customUrls[item.key] && mediaStore.customUrls[item.key].startsWith('data:')) {
+              embeddedMap[item.key] = mediaStore.customUrls[item.key];
+            }
+          }
+
+          const clone = document.documentElement.cloneNode(true);
+          cleanCloneForExport(clone);
+
+          clone.querySelectorAll('img[data-photo-key]').forEach((img) => {
+            const key = img.dataset.photoKey;
+            if (embeddedMap[key]) img.setAttribute('src', embeddedMap[key]);
+          });
+
+          const cloneVid = clone.querySelector('#heroVideo');
+          if (cloneVid) {
+            cloneVid.removeAttribute('src');
+            cloneVid.innerHTML = '<source src="hero-video.mp4" type="video/mp4" />';
+            cloneVid.classList.remove('opacity-100');
+            cloneVid.classList.add('opacity-0');
+            if (embeddedMap['8P1A2821']) cloneVid.setAttribute('poster', embeddedMap['8P1A2821']);
+          }
+
+          const boot = document.createElement('script');
+          boot.id = 'embeddedBootScript';
+          boot.textContent = `window.__EMBEDDED_PHOTOS__ = ${JSON.stringify(embeddedMap)};`;
+          const head = clone.querySelector('head');
+          if (head) head.appendChild(boot);
+
+          downloadHtmlFile('<!DOCTYPE html>\n' + clone.outerHTML, 'dom-u-reki-autonomous.html');
+          const count = Object.keys(embeddedMap).length;
+          showToast(count > 0 ? `Скачан автономный HTML (вшито фото: ${count})` : 'HTML скачан. Сначала выберите фото, чтобы они вшились внутрь.');
+        });
+      }
+
+      // Export 2: Clean production index.html for domyreki.ru hosting
+      if (exportHostBtn) {
+        exportHostBtn.addEventListener('click', () => {
+          const clone = document.documentElement.cloneNode(true);
+          cleanCloneForExport(clone);
+
+          clone.querySelectorAll('img[data-photo-key]').forEach((img) => {
+            const key = img.dataset.photoKey;
+            if (PHOTO_BY_KEY[key]) img.setAttribute('src', PHOTO_BY_KEY[key].filename);
+          });
+
+          const cloneVid = clone.querySelector('#heroVideo');
+          if (cloneVid) {
+            cloneVid.removeAttribute('src');
+            cloneVid.setAttribute('poster', '8P1A2821.jpg');
+            cloneVid.classList.remove('opacity-100');
+            cloneVid.classList.add('opacity-0');
+            cloneVid.innerHTML = '<source src="hero-video.mp4" type="video/mp4" />';
+          }
+
+          downloadHtmlFile('<!DOCTYPE html>\n' + clone.outerHTML, 'index.html');
+          showToast('Скачан чистый index.html для загрузки на domyreki.ru');
+        });
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+     * 9. Copy Address & IntersectionObserver Scroll Reveal
+     * ----------------------------------------------------------------------- */
+    function initAddressCopy() {
+      const btn = document.getElementById('copyAddressBtn');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const addr = 'Московская область, Павлово-Посадский городской округ, деревня Дмитрово, улица Снежная, 20';
+        if (copyText(addr)) showToast('Адрес скопирован в буфер обмена');
+      });
+    }
+
+    function initScrollReveal() {
+      const nodes = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        nodes.forEach((n) => n.classList.add('is-visible'));
+        return;
+      }
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+      );
+      nodes.forEach((n) => obs.observe(n));
+    }
+  </script>
+</body>
+</html>
